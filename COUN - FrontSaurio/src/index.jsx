@@ -6,6 +6,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import jwt_decode from 'jwt-decode';
 import { HomePage } from './Pages/HomePage'
 import { NotFoundPage } from './Pages/NotFoundPage'
+import { CARDS } from './Pages/CARDS';
+import { Istmo } from './Pages/Universidades/Istmo';
 
 export const AuthContext = createContext();
 
@@ -59,7 +61,16 @@ export const Index = () => {
                 {
                     path: '/',
                     element: <HomePage />
-                }
+                },
+                {
+                  path: '/universidades',
+                  element: <CARDS />
+              },
+              {
+                path: '/Istmo',
+                element: <Istmo />
+            }
+
                 
             ]
         }
