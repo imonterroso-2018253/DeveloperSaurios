@@ -1,0 +1,92 @@
+.star-rating {
+    font-size: 40px;
+  }
+  
+  .star {
+    cursor: pointer;
+    color: #ccc;
+    margin-right: 5px;
+  }
+  
+  .star.filled,
+  .star.half-filled {
+    color: gold;
+  }
+  
+  .star.half-filled:before {
+    content: "\\00bd"; 
+  }
+
+  .App {
+    text-align: center;
+    margin-top: 25px;
+  }
+
+  .btn0 {
+    --color: #00A97F;
+    --color2: rgb(10, 25, 30);
+    padding: 0.8em 1.75em;
+    background-color: transparent;
+    border-radius: 6px;
+    border: .3px solid var(--color);
+    -webkit-transition: .5s;
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: 300;
+    font-size: 17px;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    color: var(--color);
+   }
+   
+   .btn0::after, .btn0::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    -webkit-transform: skew(90deg) translate(-50%, -50%);
+        -ms-transform: skew(90deg) translate(-50%, -50%);
+            transform: skew(90deg) translate(-50%, -50%);
+    position: absolute;
+    inset: 50%;
+    left: 25%;
+    z-index: -1;
+    -webkit-transition: .5s ease-out;
+    transition: .5s ease-out;
+    background-color: var(--color);
+   }
+   
+   .btn0::before {
+    top: -50%;
+    left: -25%;
+    -webkit-transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+        -ms-transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+            transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+   }
+   
+   .btn0:hover::before {
+    -webkit-transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+        -ms-transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+            transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+   }
+   
+   .btn0:hover::after {
+    -webkit-transform: skew(45deg) translate(-50%, -50%);
+        -ms-transform: skew(45deg) translate(-50%, -50%);
+            transform: skew(45deg) translate(-50%, -50%);
+   }
+   
+   .btn0:hover {
+    color: var(--color2);
+   }
+   
+   .btn0:active {
+    -webkit-filter: brightness(.7);
+            filter: brightness(.7);
+    -webkit-transform: scale(.98);
+        -ms-transform: scale(.98);
+            transform: scale(.98);
+   }

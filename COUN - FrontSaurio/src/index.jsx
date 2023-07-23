@@ -8,6 +8,8 @@ import { HomePage } from './Pages/HomePage'
 import { NotFoundPage } from './Pages/NotFoundPage'
 import { CARDS } from './Pages/CARDS';
 import { Istmo } from './Pages/Universidades/Istmo';
+import { Comentarios } from './Pages/comentarios';
+
 
 export const AuthContext = createContext();
 
@@ -69,7 +71,11 @@ export const Index = () => {
               {
                 path: '/Istmo',
                 element: <Istmo />
-            }
+            },
+            {
+              path: '/Comentarios',
+              element: <Comentarios />
+          }
 
                 
             ]
