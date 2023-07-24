@@ -32,7 +32,7 @@ export const Footer = () => {
       </div>
 
       <div className="text-center p-3">
-        © 2023 Copyright: HoteleSaruios
+        © 2023 Copyright: COUN
       </div>
     </footer>
   )

@@ -72,7 +72,7 @@ export const NavBar = () => {
                             </ul>
                             </li>
                           ):<li className="nav-item">
-                            <Link  to="/" className="nav-link">
+                            <Link  to="/Login" className="nav-link">
                             <h3> LogIn</h3></Link>
                             
                           </li>
