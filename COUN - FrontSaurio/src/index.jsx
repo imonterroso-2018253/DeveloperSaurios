@@ -10,12 +10,10 @@ import { LoginPage } from './Pages/LoginPage'
 import { RegisterPage } from './Pages/RegisterPage'
 import { CARDS } from './Pages/CARDS';
 import { Istmo } from './Pages/Universidades/Istmo';
+import { Comentarios } from './Pages/comentarios';
 
 export const AuthContext = createContext();
-
 export const Index = () => {
-
-
   const [loggedIn, setLoggedIn] = useState(false)
 
   const [dataUser, setDataUser] = useState({
@@ -49,11 +47,9 @@ export const Index = () => {
     }
   }, [localStorage.getItem("token")]);
 
-
   if (loading) {
     return <div>Cargando...</div>;
   }
-
   const routes = createBrowserRouter([
     {
       path: '/',
@@ -62,10 +58,7 @@ export const Index = () => {
       children: [
         {
           path: '/',
-          element:
-            loggedIn ? (
-              <HomePage />
-            ) : <LoginPage />
+          element: <HomePage />
         },
         {
           path: '/Login',
@@ -82,9 +75,11 @@ export const Index = () => {
         {
           path: '/Istmo',
           element: <Istmo />
+        },
+        {
+          path: '/Comentarios',
+          element: <Comentarios />
         }
-
-
       ]
     }
   ])
