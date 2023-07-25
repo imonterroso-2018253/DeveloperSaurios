@@ -10,6 +10,9 @@ import { LoginPage } from './Pages/LoginPage'
 import { RegisterPage } from './Pages/RegisterPage'
 import { CARDS } from './Pages/CARDS';
 import { Istmo } from './Pages/Universidades/Istmo';
+import { Rafael } from './Pages/Universidades/Rafael';
+import { Meso } from './Pages/Universidades/Meso';
+import { Pana } from './Pages/Universidades/Pana';
 import { Comentarios } from './Pages/comentarios';
 
 export const AuthContext = createContext();
@@ -75,6 +78,18 @@ export const Index = () => {
         {
           path: '/Istmo',
           element: <Istmo />
+        },
+        {
+          path: '/Rafael',
+          element: <Rafael />
+        },
+        {
+          path: '/Meso',
+          element: <Meso />
+        },
+        {
+          path: '/Pana',
+          element: <Pana />
         },
         {
           path: '/Comentarios',

@@ -6,16 +6,6 @@ import { Link } from "react-router-dom"
 export const CARDS = () => {
     return (
         <>
-
-            <div className="panel">
-                <center>
-                    <div className="cssFont_1">COUN</div>
-                    <img src={imagen} className="imagen" />
-                </center>
-            </div>
-        
-
-
             <div className="centrado">
             <div className="container">
             <div className="card card0">
@@ -74,7 +64,7 @@ export const CARDS = () => {
             <div className="container">
             <div className="card card6">
                 <div className="border">
-                    <h2 className="tuniversidades">Universidad Rafael landivar</h2>
+                <Link to = '/Rafael'><h2 className="tuniversidades">Universidad Rafael Landivar</h2></Link>
                 </div> 
                 </div>
             </div>
@@ -82,7 +72,7 @@ export const CARDS = () => {
             <div className="container">
             <div className="card card7">
                 <div className="border">
-                    <h2 className="tuniversidades">Universidad Mesoamericana</h2>
+                <Link to = '/Meso'><h2 className="tuniversidades">Universidad MesoAmericana</h2></Link>
                 </div> 
                 </div>
             </div>
@@ -90,7 +80,7 @@ export const CARDS = () => {
             <div className="container">
             <div className="card card8">
                 <div className="border">
-                    <h2 className="tuniversidades">Universidad Panamericana</h2>
+                <Link to = '/Pana'><h2 className="tuniversidades">Universidad Panamericana</h2></Link>
                 </div> 
                 </div>
             </div>
