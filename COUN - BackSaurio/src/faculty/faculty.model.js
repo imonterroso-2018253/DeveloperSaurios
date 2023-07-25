@@ -1,7 +1,7 @@
 'use strict'
 const mongoose = require('mongoose');
 
-const careersSchema = mongoose.Schema({
+const facultysSchema = mongoose.Schema({
     name: {
         type: String,
         required: true
@@ -12,4 +12,4 @@ const careersSchema = mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('Careers', careersSchema);
+module.exports = mongoose.model('Faculty', facultysSchema);

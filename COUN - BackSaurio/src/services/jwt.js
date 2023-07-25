@@ -9,13 +9,8 @@ exports.createToken = async(user)=>{
             name: user.name,
             surname: user.surname,
             username: user.username,
-            DPI: user.DPI,
             email: user.email,
-            phone: user.phone,
             role: user.role,
-            job: user.job,
-            direction: user.direction,
-            earnings: user.earnings,
             iat: Math.floor(Date.now()/ 1000), 
             exp: Math.floor(Date.now()/ 1000) + (60 * 120)
         }
@@ -24,4 +19,4 @@ exports.createToken = async(user)=>{
         console.error(err);
         return err;
     }
-} 
+}

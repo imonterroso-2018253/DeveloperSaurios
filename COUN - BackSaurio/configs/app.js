@@ -11,7 +11,8 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 3200;
 const userRoutes = require('../src/user/user.routes');
-const careersRoutes = require('../src/careers/careers.routes');
+const facultyRoutes = require('../src/faculty/faculty.routes');
+const universityRoutes = require('../src/university/university.routes');
 
 //CONFIGURAR EL SERVIDOR HTTP DE EXPRESS
 app.use(express.urlencoded({extended:false}));
@@ -22,7 +23,8 @@ app.use(morgan('dev'));
 
 //Rutas de cada colección
 app.use('/user', userRoutes);
-app.use('/career', careersRoutes);
+app.use('/faculty', facultyRoutes);
+app.use('/university', universityRoutes);
 
 //FUNCIÓN PARA LEVANTAR EL SERVIDOR
 exports.initServer = ()=>{

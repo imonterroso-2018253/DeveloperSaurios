@@ -7,19 +7,14 @@ const { createToken } = require('../services/jwt');
 exports.defaultAdmin = async()=>{
     try{
         let defAdmin = {
-            name: 'ADMINB',
-            surname: 'ADMINB',
-            username: 'ADMINB',
-            DPI: 5983287532465,
-            password: await encrypt('ADMINB'),
-            email: 'ADMINB@kinal.edu.gt',
-            phone: '12345678',
+            name: 'NOJ',
+            surname: 'NOJ',
+            username: 'NOJ',
+            password: await encrypt('NOJ123'),
+            email: 'NOJ@kinal.edu.gt',
             role: 'ADMIN',
-            job: 'Admin',
-            direction: 'Diagonal 6 12-42 Zona 10 Edificio Design Center 1,Ciudad de Guatemala,Guatemala',
-            earnings: 1000.00
         }
-        let existAdmin = await User.findOne({name: 'ADMINB'});
+        let existAdmin = await User.findOne({name: 'NOJ'});
         if(existAdmin) return console.log('Default admin already created');
         let createdAdmin = new User(defAdmin);
         await createdAdmin.save();
@@ -29,26 +24,21 @@ exports.defaultAdmin = async()=>{
     }
 }
 
-exports.defaultClient = async()=>{
+exports.defaultUser = async()=>{
     try{
-        let defClient = {
-            name: 'Batzin',
-            surname: 'Mugsnaine',
-            username: 'Client',
-            DPI: 5983287532741,
+        let defUser = {
+            name: 'Ian',
+            surname: 'Monterroso',
+            username: 'Imonterroso',
             password: await encrypt('123'),
-            email: 'batzin@kinal.edu.gt',
-            phone: '12345678',
-            role: 'CLIENT',
-            job: 'Vendedor de empanadas',
-            direction: 'Diagonal 6 12-42 Zona 10 Edificio Design Center 1,Ciudad de Guatemala,Guatemala',
-            earnings: 1000.00
+            email: 'imonterroso@kinal.edu.gt',
+            role: 'USER',
         }
-        let existClient = await User.findOne({name: 'Batzin'});
-        if(existClient) return console.log('Default client already created');
-        let createdClient = new User(defClient);
-        await createdClient.save();
-        return console.log('Default client created');
+        let existUser = await User.findOne({name: 'Ian'});
+        if(existUser) return console.log('Default user already created');
+        let createdUser = new User(defUser);
+        await createdUser.save();
+        return console.log('Default user created');
     }catch(err){
         return console.error(err);
     }
