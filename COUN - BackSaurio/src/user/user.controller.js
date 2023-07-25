@@ -7,14 +7,14 @@ const { createToken } = require('../services/jwt');
 exports.defaultAdmin = async()=>{
     try{
         let defAdmin = {
-            name: 'Josue',
-            surname: 'Noj',
-            username: 'Noj',
-            password: await encrypt('123'),
-            email: 'noj@kinal.edu.gt',
+            name: 'NOJ',
+            surname: 'NOJ',
+            username: 'NOJ',
+            password: await encrypt('NOJ123'),
+            email: 'NOJ@kinal.edu.gt',
             role: 'ADMIN',
         }
-        let existAdmin = await User.findOne({name: 'Josue'});
+        let existAdmin = await User.findOne({name: 'NOJ'});
         if(existAdmin) return console.log('Default admin already created');
         let createdAdmin = new User(defAdmin);
         await createdAdmin.save();
