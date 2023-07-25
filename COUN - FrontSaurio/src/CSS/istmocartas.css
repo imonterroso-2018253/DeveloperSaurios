@@ -70,18 +70,16 @@
    margin: 0 auto;
 } */
 
-.containerU{
+.containerU {
     display: flex;
     margin: 8vh;
     margin-left: 15vw;
     text-align: center;
     align-content: center;
-    
-
 }
-.TitulosU{
+
+.TitulosU {
     margin: 8vh;
-    
 }
 
 .cssFont_2 {
@@ -95,18 +93,17 @@
     font-style: normal;
     font-variant: normal;
     text-transform: none;
-    }
+}
 
-
-    .cssFont_3 {
-        font-family: Segoe Print;
-        font-size: 20px;
-        letter-spacing: 0px;
-        word-spacing: 0px;
-        color: #267173;
-        font-weight: normal;
-        text-decoration: none;
-        font-style: normal;
-        font-variant: normal;
-        text-transform: none;
-        }
+.cssFont_3 {
+    font-family: Segoe Print;
+    font-size: 20px;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    color: #267173;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}

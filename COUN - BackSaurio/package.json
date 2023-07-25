@@ -1,7 +1,7 @@
 {
-  "name": "coun",
+  "name": "bank",
   "version": "1.0.0",
-  "description": "El backend del proyecto coun",
+  "description": "El backend del proyecto bancario",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

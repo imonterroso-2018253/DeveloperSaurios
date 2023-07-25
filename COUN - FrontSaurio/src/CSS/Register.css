@@ -1,0 +1,14 @@
+.body21 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 120vh;
+    background: burlywood;
+    background:
+        linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url('https://i.pinimg.com/originals/f0/62/b6/f062b6a188b35680768564000f3d731e.jpg');
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
