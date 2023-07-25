@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500&display=swap");
 
-.container {
+.container6 {
   display: grid;
   grid-template-columns: 300px 300px 300px;
   grid-gap: 50px;
@@ -11,7 +11,7 @@
   font-family: 'Baloo Paaji 2', cursive;
 }
 
-.card {
+.cards {
   background-color: #222831;
   height: 37rem;
   border-radius: 5px;
@@ -21,6 +21,94 @@
   box-shadow: rgba(0, 0, 0, 0.7);
   color: white;
 }
+
+/*Peralta*/
+
+.body3mil{
+  background-color: #edeaea;
+}
+
+.UsacContainer {
+  display: flex;
+  margin: 8vh;
+  margin-left: 15vw;
+  text-align: center;
+  align-content: center;
+}
+
+.TitulosUSAC {
+  margin: 8vh;
+  margin-left: 1vw;
+}
+
+.container3mil {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-gap: 50px;
+  justify-content: center;
+  align-items: center;
+  height: 120vh;
+  background-color: #edeaea;
+  font-family: 'Baloo Paaji 2', cursive;
+}
+
+.Facultades {
+  background-color: #ffffff;
+  height: 45rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(255, 253, 253);
+}
+
+.FacultadIMG {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 5px solid #DFE3EE;
+  margin-top: 20px;
+  box-shadow: 0 5px 5px rgb(8, 7, 7);
+}
+
+.containerText {
+  display: contents;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 28px;
+  font-size: 1.2em;
+}
+
+.containerTitle {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 40px;
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  color: #105b78;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.containerParr {
+  font-family: sans-serif;
+  font-size: 20px;
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  text-align: center;
+  color: #000000;
+  text-shadow: rgba(0, 0, 0, 0.2);
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+
+/*Peralta*/
+
 
 .card__name {
   margin-top: 15px;
