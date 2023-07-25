@@ -8,12 +8,13 @@ import { HomePage } from './Pages/HomePage'
 import { NotFoundPage } from './Pages/NotFoundPage'
 import { LoginPage } from './Pages/LoginPage'
 import { RegisterPage } from './Pages/RegisterPage'
-import { CARDS } from './Pages/CARDS';
+import { Universidades } from './Pages/Universidades';
 import { Istmo } from './Pages/Universidades/Istmo';
 import { Rafael } from './Pages/Universidades/Rafael';
 import { Meso } from './Pages/Universidades/Meso';
 import { Pana } from './Pages/Universidades/Pana';
-import { Comentarios } from './Pages/comentarios';
+import { SanCarlos } from './Pages/Universidades/SanCarlos';
+import { Comentarios } from './Pages/Comentarios';
 
 export const AuthContext = createContext();
 export const Index = () => {
@@ -53,6 +54,7 @@ export const Index = () => {
   if (loading) {
     return <div>Cargando...</div>;
   }
+
   const routes = createBrowserRouter([
     {
       path: '/',
@@ -73,7 +75,7 @@ export const Index = () => {
         },
         {
           path: '/universidades',
-          element: <CARDS />
+          element: <Universidades />
         },
         {
           path: '/Istmo',
@@ -90,6 +92,11 @@ export const Index = () => {
         {
           path: '/Pana',
           element: <Pana />
+          
+        },
+        {
+          path: '/SanCarlos',
+          element: <SanCarlos />
         },
         {
           path: '/Comentarios',

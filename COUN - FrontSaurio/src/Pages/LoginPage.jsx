@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import "../CSS/Login.css";
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../index';
 
@@ -61,33 +61,32 @@ export const LoginPage = () => {
     }
   };
 
-
   return (
     <>
       <body className='body20'>
         <div className='wrapper'>
           <form action="">
 
-            <h1>Login</h1>
+            <center><h1>LogIn</h1></center>
 
             <div className='input-box1'>
-              <input className='input1' type="text" onChange={handleChange} placeholder='Username' required />
+              <input className='input1' type="text" onChange={handleChange} placeholder='Usuario' required />
               <i className="fa-solid fa-user" ></i>
             </div>
 
             <div className='input-box1'>
-              <input className='input1 ' type="password" onChange={handleChange} placeholder='Password' required />
+              <input className='input1 ' type="password" onChange={handleChange} placeholder='Contraseña' required />
               <i className="fa-solid fa-lock "></i>
             </div>
 
             <div className='remember-forgot'>
-              <a href="#">Forgot password?</a>
+              <a href="#">¿Olvidaste tu contraseña?</a>
             </div>
 
-            <button type='submit' onClick={login} className='btn1'>Login</button>
+            <button type='submit' onClick={login} className='btn1 btn0'>Iniciar sesión</button>
 
             <div className='register-link'>
-              <p>Don´t have an account? <a href="#">Register</a></p>
+              <p>¿Aún no creas tu cuenta? <Link to="/Register">Registrarse</Link></p>
             </div>
 
           </form>

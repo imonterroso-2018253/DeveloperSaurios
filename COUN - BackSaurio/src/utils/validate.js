@@ -13,7 +13,6 @@ exports.validateData = (data)=>{
     return msg.trim();
 }
 
-
 exports.encrypt = async(password)=>{
     try{
         return bcrypt.hashSync(password, 10)
