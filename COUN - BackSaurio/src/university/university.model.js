@@ -11,11 +11,12 @@ const universitySchema = mongoose.Schema({
         type: String,
         required: true
     },
-    career: {
-        type: mongoose.Schema.Types.ObjectId, ref: 'Career',
+    faculty: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Faculty',
         required: true
-    },
-    comments: {
+    }],
+    price: {
         type: Number,
         required: true
     }
