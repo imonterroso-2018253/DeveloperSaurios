@@ -50,7 +50,7 @@ export const RegisterPage = () => {
       navigate('/Login'); // Navegar a la página de usuarios después del registro exitoso.
     } catch (err) {
       // Mostrar mensaje de error si ocurre algún problema durante el registro.
-      alert(err.response.data.message + ': También verifica que los parámetros, como la longitud del correo electrónico o DPI, sean correctos.');
+      alert(err.response.data.message + ': También verifica que los parámetros, como la longitud del correo, sean correctos.');
     }
   };
 

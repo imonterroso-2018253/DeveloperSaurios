@@ -84,21 +84,6 @@ export const UVG = () => {
             <br />
 
             <div class="container3mil fade-in-animation">
-                <div class="Facultades">
-                    <img src="https://www.universidadesonline.com.gt/logos/original/logo-universidad-del-valle-de-guatemala.png" alt="Person" class="FacultadIMG" />
-                    <br />
-                    <center>
-                        <p class="containerTitle">Facultad de Ingeniería</p>
-                    </center>
-                    <div class="card_content3mil">
-                        <div class="containerText">
-                            <p class="containerParr">Prepara profesionales con alto nivel académico, formación integral, científica, técnica y social humanística, en las áreas de conocimiento de: Economía, Contaduría Pública y Auditoría, Administración de Empresas.</p>
-                        </div>
-                        <div class="btn-container">
-                            <button onClick={() => handleClick(urls[0])} class="btn draw-border">Información</button>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="Facultades">
                     <img src="https://www.universidadesonline.com.gt/logos/original/logo-universidad-del-valle-de-guatemala.png" alt="Person" class="FacultadIMG" />
@@ -108,10 +93,29 @@ export const UVG = () => {
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">Prepara profesionales con alto nivel académico, formación integral, científica, técnica y social humanística, en las áreas de conocimiento de: Economía, Contaduría Pública y Auditoría, Administración de Empresas.</p>
+                            <p class="containerParr">En la Facultad de Ciencias Sociales creemos que un mundo mejor es posible. Consideramos que, a través de la investigación, la intervención clínica, la docencia y la extensión, podemos aportar datos,
+                                formar opiniones y definir proyectos, programas y políticas que: 1) Inciden en la creación de sociedades más justas, equitativas y pacíficas, 2) Procuran la salud mental integral para todos y todas, 3) Contribuyen a la conservación e
+                                interpretación de nuestro patrimonio arqueológico e histórico.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[1])} class="btn draw-border">Información</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="Facultades">
+                    <img src="https://www.universidadesonline.com.gt/logos/original/logo-universidad-del-valle-de-guatemala.png" alt="Person" class="FacultadIMG" />
+                    <br />
+                    <center>
+                        <p class="containerTitle">Facultad de Ingeniería</p>
+                    </center>
+                    <div class="card_content3mil">
+                        <div class="containerText">
+                            <p class="containerParr">La Facultad de Ingeniería ofrece al mundo ingenieros que comprenden el mundo con las ciencias y  aplican el conocimiento científico, innovando y resolviendo problemas con la ingeniería.
+                                Los ingenieros contribuimos impactando de forma positiva en nuestra sociedad. Creamos nuevos productos, desarrollamos nuevas tecnologías, innovamos procesos y emprendemos negocios que cambian nuestras vidas.</p>
+                        </div>
+                        <div class="btn-container">
+                            <button onClick={() => handleClick(urls[0])} class="btn draw-border">Información</button>
                         </div>
                     </div>
                 </div>
@@ -124,7 +128,8 @@ export const UVG = () => {
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">Prepara profesionales con alto nivel académico, formación integral, científica, técnica y social humanística, en las áreas de conocimiento de: Economía, Contaduría Pública y Auditoría, Administración de Empresas.</p>
+                            <p class="containerParr">Formamos ciudadanos con conocimientos en las distintas áreas básicas de las ciencias y humanidades, capaces de establecer una relación crítica y comprometida con la realidad circundante.  Asimismo, promovemos
+                                la adquisición de habilidades y destrezas que les permitan diagnosticar y transformar el contexto complejo que los rodea.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[2])} class="btn draw-border">Información</button>
@@ -137,6 +142,8 @@ export const UVG = () => {
             <br />
 
             <div class="container3mil fade-in-animation">
+
+                
                 <div class="Facultades">
                     <img src="https://www.universidadesonline.com.gt/logos/original/logo-universidad-del-valle-de-guatemala.png" alt="Person" class="FacultadIMG" />
                     <br />
@@ -145,13 +152,14 @@ export const UVG = () => {
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">Prepara profesionales con alto nivel académico, formación integral, científica, técnica y social humanística, en las áreas de conocimiento de: Economía, Contaduría Pública y Auditoría, Administración de Empresas.</p>
+                            <p class="containerParr">La Facultad de Educación fue creada en 1968 y tiene como principal objetivo impactar la calidad educativa de Guatemala, profesionalizando maestros en servicio y ofreciendo especializaciones en el campo educativo.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[3])} class="btn draw-border">Información</button>
                         </div>
                     </div>
                 </div>
+
             </div>
 
             <br />

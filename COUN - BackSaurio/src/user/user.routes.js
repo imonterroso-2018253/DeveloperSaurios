@@ -6,7 +6,7 @@ const api = express.Router();
 const { ensureAuth, isAdmin } = require('../services/authenticated');
 
 api.get('/' , userController.test);
-api.post('/register', [ensureAuth, isAdmin], userController.register);
+api.post('/register', userController.register);
 api.post('/login', userController.login);
 api.delete('/delete/:id', [ensureAuth, isAdmin], userController.delete);
 api.put('/update/:id', [ensureAuth], userController.update);

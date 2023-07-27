@@ -29,6 +29,7 @@ export const Index = () => {
     username: '',
     role: ''
   });
+  
   const [loading, setLoading] = useState(true);
 
   const getUserDataFromToken = () => {

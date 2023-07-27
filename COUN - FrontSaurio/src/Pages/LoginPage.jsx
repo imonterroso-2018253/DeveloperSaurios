@@ -70,12 +70,12 @@ export const LoginPage = () => {
             <center><h1>LogIn</h1></center>
 
             <div className='input-box1'>
-              <input className='input1' type="text" onChange={handleChange} placeholder='Usuario' required />
+              <input className='input1' type="text" name='username' id="username" onChange={handleChange} placeholder='username' required />
               <i className="fa-solid fa-user" ></i>
             </div>
 
             <div className='input-box1'>
-              <input className='input1 ' type="password" onChange={handleChange} placeholder='Contraseña' required />
+              <input className='input1 ' type="password" name='password' id="password" onChange={handleChange} placeholder='password' required />
               <i className="fa-solid fa-lock "></i>
             </div>
 
