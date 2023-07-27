@@ -41,7 +41,7 @@ const NavBar = () => {
         </li>
 
         <li className="nav-item">
-          <Link to="/universidades" className="nav-link">
+          <Link to="/Universidades" className="nav-link">
             <h3>Universidades</h3>
           </Link>
         </li>

@@ -7,7 +7,7 @@ import { useEffect } from "react"
 import { useState } from "react"
 import { Footer } from '../../components/Footer'
 
-export const SanCarlos = () => {
+export const Galileo = () => {
     const MAX_STARS = 10;
 
     const [rating, setRating] = useState(0);
@@ -20,16 +20,15 @@ export const SanCarlos = () => {
 
     // Llamada a la función con un array de URLs
     const urls = [
-        "https://farusac.edu.gt/",
-        "http://fausac.gt/",
-        "http://economicas.usac.edu.gt/",
-        "https://derecho.cloud/",
-        "https://medicina.usac.edu.gt/",
-        "https://portal.ccqqfar.usac.edu.gt./",
-        "http://humanidades.usac.edu.gt/portal/",
-        "https://portal.ingenieria.usac.edu.gt/",
-        "https://odontologia.usac.edu.gt/",
-        "http://portal.fmvz.usac.edu.gt/"
+        "https://www.galileo.edu/fisicc/",
+        "https://www.galileo.edu/facti/",
+        "https://www.galileo.edu/faced/",
+        "https://www.galileo.edu/facom/",
+        "https://www.galileo.edu/factede/",
+        "https://www.galileo.edu/fabiq/",
+        "https://www.galileo.edu/ficon/",
+        "https://www.galileo.edu/facisa/",
+        "https://www.galileo.edu/facultad-de-administracion/"
     ];
 
     // Función para abrir en nueva pestaña al hacer clic en un botón
@@ -49,11 +48,11 @@ export const SanCarlos = () => {
 
             <div className="UsacContainer fade-in-animation">
 
-                <img src="https://www.usac.edu.gt/g/escudo10.png" alt="" width={'300vw'} height={'300vh'} />
+                <img src="https://www.cig.org.gt/assets/img/icons/logo%20Universidad%20Galileo.jpg" alt="" width={'300vw'} height={'300vh'} />
 
-                <div className="TitulosUSAC">
-                    <h1 class="cssFont_2" >UNIVERSIDAD SAN CARLOS DE GUATEMALA</h1>
-                    <p className="cssFont_3" >Promoviendo la eduación superior autónoma, pública y gratuita</p>
+                <div className="TitulosU">
+                    <h1 class="cssFont_2" >UNIVERSIDAD GALILEO</h1>
+                    <p className="cssFont_3" >Educar es cambiar visiones y transformar vidas</p>
                     <div className="App">
                         <div className="App">
                             <div className="star-rating">
@@ -90,16 +89,17 @@ export const SanCarlos = () => {
             <br />
 
             <div class="container3mil fade-in-animation">
-
                 <div class="Facultades">
-                    <img src="https://www.usac.edu.gt/g/escudo10.png" alt="Person" class="FacultadIMG" />
+                    <img src="https://www.cig.org.gt/assets/img/icons/logo%20Universidad%20Galileo.jpg" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Arquitectura</p>
+                        <p class="containerTitle">Facultad de Ciencias de la Computación.</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">Caracterizada por ser una Facultad que desarrolla actividades de enseñanza aprendizaje, investigación y extensión, orientadas a la búsqueda de solución de problemas en las áreas de su especialidad.</p>
+                            <p class="containerParr">La Facultad de Ingeniería de Sistemas, Informática y Ciencias de la Computación, FISICC, es la entidad donde se establecieron
+                                las bases que dieron origen a Universidad Galileo. Su experiencia académica, catedráticos y la actualización constante del contenido de los cursos y del equipo de
+                                los laboratorios, le ha permitido mantenerse a la vanguardia de la tecnología de punta.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[0])} class="btn draw-border">Información</button>
@@ -108,30 +108,15 @@ export const SanCarlos = () => {
                 </div>
 
                 <div class="Facultades">
-                    <img src="https://www.usac.edu.gt/g/escudo10.png" alt="Person" class="FacultadIMG" />
+                    <img src="https://www.cig.org.gt/assets/img/icons/logo%20Universidad%20Galileo.jpg" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Agronomía</p>
+                        <p class="containerTitle">Facultad de Educación</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">Se ha caracterizado por ser una Unidad Académica que va a la vanguardia educativa en el ámbito de nuestra tricentenaria Universidad de San Carlos de Guatemala.</p>
-                        </div>
-                        <div class="btn-container">
-                            <button onClick={() => handleClick(urls[1])} class="btn draw-border">Información</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="Facultades">
-                    <img src="https://www.usac.edu.gt/g/escudo10.png" alt="Person" class="FacultadIMG" />
-                    <br />
-                    <center>
-                        <p class="containerTitle">Facultad de Ciencias Económicas</p>
-                    </center>
-                    <div class="card_content3mil">
-                        <div class="containerText">
-                            <p class="containerParr">Prepara profesionales con alto nivel académico, formación integral, científica, técnica y social humanística, en las áreas de conocimiento de: Economía, Contaduría Pública y Auditoría, Administración de Empresas.</p>
+                            <p class="containerParr">A través de esta unidad académica se capacita y forma a docentes, planificadores, psicopedagogos y administradores educativos, dentro de un ambiente que propicia la permanente búsqueda
+                                de excelencia académica que contribuya al crecimiento humano y desarrollo del país. </p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[2])} class="btn draw-border">Información</button>
@@ -139,21 +124,39 @@ export const SanCarlos = () => {
                     </div>
                 </div>
 
-            </div>
+                <div class="Facultades">
+                    <img src="https://www.cig.org.gt/assets/img/icons/logo%20Universidad%20Galileo.jpg" alt="Person" class="FacultadIMG" />
+                    <br />
+                    <center>
+                        <p class="containerTitle">Facultad de Ciencia, Tecnología e Industria</p>
+                    </center>
+                    <div class="card_content3mil">
+                        <div class="containerText">
+                            <p class="containerParr">Basa su proceso de aprendizaje en el desarrollo de competencias necesarias para concebir conceptos de desarrollo en el área de negocios, productos y sistemas
+                                de fabricación, y prestación de servicios. Simultáneamente se fomenta la creatividad, a través de actividades con profesionales y empresarios nacionales e internacionales, con los que se intercambia conocimiento y
+                                experiencias. Incluye aspectos relacionados con el análisis, la planeación, el control, la calidad, el diseño de productos y otros aspectos de la manufactura de clase mundial.</p>
+                        </div>
+                        <div class="btn-container">
+                            <button onClick={() => handleClick(urls[1])} class="btn draw-border">Información</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div >
 
             <br />
 
             <div class="container3mil fade-in-animation">
-
                 <div class="Facultades">
-                    <img src="https://www.usac.edu.gt/g/escudo10.png" alt="Person" class="FacultadIMG" />
+                    <img src="https://www.cig.org.gt/assets/img/icons/logo%20Universidad%20Galileo.jpg" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Ciencias Jurídicas y Sociales</p>
+                        <p class="containerTitle">Facultad de Ciencias de la Comunicación</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">Ofrece programas de estudio en el campo del derecho, como la Licenciatura en Ciencias Jurídicas y Sociales, Abogado y Notario. También realiza actividades de investigación, extensión y servicio social.</p>
+                            <p class="containerParr">En la Facultad de Ciencias de la Comunicación se forman profesionales en la comunicación y el diseño preparados para la investigación, elaboración, producción y distribución de materiales gráficos,
+                                audiovisuales y digitales que incluyen los factores de movimiento, tiempo y espacio virtual, que rompen y mejoran los espacios tradicionalmente utilizados para la comunicación.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[3])} class="btn draw-border">Información</button>
@@ -162,14 +165,15 @@ export const SanCarlos = () => {
                 </div>
 
                 <div class="Facultades">
-                    <img src="https://www.usac.edu.gt/g/escudo10.png" alt="Person" class="FacultadIMG" />
+                    <img src="https://www.cig.org.gt/assets/img/icons/logo%20Universidad%20Galileo.jpg" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Ciencias Médicas</p>
+                        <p class="containerTitle">Facultad de Ciencia y Tecnología del Deporte</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">Fue fundada en 1681 y es el centro de enseñanza superior de Medicina más grande e importante de Guatemala.</p>
+                            <p class="containerParr">La facultad de Ciencias y Tecnología del Deporte fue creada con la finalidad de brindar una adecuada capacitación a los profesionales que se desempeñan dentro del área del deporte. Su visión es convertirse en
+                                líder a nivel latinoamericano en desarrollar y promover la cultura de profesionalización y la superación de especialistas deportivos de alto rendimiento, para ubicar a Guatemala en un estatus de excelencia internacional.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[4])} class="btn draw-border">Información</button>
@@ -178,36 +182,36 @@ export const SanCarlos = () => {
                 </div>
 
                 <div class="Facultades">
-                    <img src="https://www.usac.edu.gt/g/escudo10.png" alt="Person" class="FacultadIMG" />
+                    <img src="https://www.cig.org.gt/assets/img/icons/logo%20Universidad%20Galileo.jpg" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Químicas y Farmacia</p>
+                        <p class="containerTitle">Facultad de Biología, Química y Farmacia</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">Es una unidad académica de la Universidad de San Carlos de Guatemala que ofrece carreras relacionadas con la química y la farmacia.</p>
+                            <p class="containerParr">Es la responsable de la formación de profesionales capaces de actuar como factores dinámicos, con sentido creativo, crítico, participativo y gerencial dentro de empresas relacionadas con las áreas de biología,
+                                química, farmacia, y otras concernientes directa e indirectamente a la salud y el ambiente, desde el punto de vista del impacto económico.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[5])} class="btn draw-border">Información</button>
                         </div>
                     </div>
                 </div>
-
             </div>
 
             <br />
 
             <div class="container3mil fade-in-animation">
-
                 <div class="Facultades">
-                    <img src="https://www.usac.edu.gt/g/escudo10.png" alt="Person" class="FacultadIMG" />
+                    <img src="https://www.cig.org.gt/assets/img/icons/logo%20Universidad%20Galileo.jpg" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Humanidades</p>
+                        <p class="containerTitle">Facultad de Ingeniería de la Construcción</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">Tiene como objetivo formar humanistas con capacidades analíticas y críticas que les permitan incursionar en los distintos campos del saber, siendo capaces de conocer, analizar e interpretar la realidad histórica, ya sea nacional o mundial, pero siempre con la intención de encontrar soluciones a una problemática determinada.</p>
+                            <p class="containerParr">Fue creada y diseñada para formar profesionales en las áreas técnicas, operativas y administrativas, con visión hacia la mejora empresarial mediante la valoración de la calidad, eficiencia y efectividad y actualización
+                                tecnológica, del ramo de la construcción.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[6])} class="btn draw-border">Información</button>
@@ -216,14 +220,15 @@ export const SanCarlos = () => {
                 </div>
 
                 <div class="Facultades">
-                    <img src="https://www.usac.edu.gt/g/escudo10.png" alt="Person" class="FacultadIMG" />
+                    <img src="https://www.cig.org.gt/assets/img/icons/logo%20Universidad%20Galileo.jpg" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Inginiería</p>
+                        <p class="containerTitle">Facultad de Ciencias de la Salud</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">Es una de las 10 facultades que conforman la Universidad de San Carlos de Guatemala. Fundada en 1880, es la facultad de ingeniería más grande e importante de Guatemala. Atiende a una población estudiantil de más de doce mil estudiantes de pregrado siendo por ende una de las unidades académicas más pobladas de la Universidad.</p>
+                            <p class="containerParr">Se creó en el año 2002 con una nueva visión de crear carreras que den alternativas con excelencia académica y desarrollo humano de profesionales que intervengan de manera integral en la salud de la población usuaria de
+                                los servicios de salud públicos o privados.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[7])} class="btn draw-border">Información</button>
@@ -232,43 +237,21 @@ export const SanCarlos = () => {
                 </div>
 
                 <div class="Facultades">
-                    <img src="https://www.usac.edu.gt/g/escudo10.png" alt="Person" class="FacultadIMG" />
+                    <img src="https://www.cig.org.gt/assets/img/icons/logo%20Universidad%20Galileo.jpg" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Odontología</p>
+                        <p class="containerTitle">Facultad de Administración</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">La Facultad de Odontología de la USAC es una de las unidades académicas más reconocidas y prestigiosas de Guatemala en el campo de la odontología. Esta facultad forma parte de la Universidad de San Carlos de Guatemala, la cual es una de las instituciones de educación superior más antiguas y destacadas de América Latina.</p>
+                            <p class="containerParr">Somos una entidad académica de Universidad Galileo, dedicada a la formación de Administradores de Empresas y Mercadólogos. Los programas de la Facultad son apoyados con diplomados y certificaciones incluidas dentro del pensum de
+                                estudio para generar un desarrollo integral y actualización continua de nuestros estudiantes.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[8])} class="btn draw-border">Información</button>
                         </div>
                     </div>
                 </div>
-
-            </div>
-
-            <br />
-
-            <div class="container3mil fade-in-animation">
-
-            <div class="Facultades">
-                    <img src="https://www.usac.edu.gt/g/escudo10.png" alt="Person" class="FacultadIMG" />
-                    <br />
-                    <center>
-                        <p class="containerTitle">Facultad de Médicina Veterinaria y Zootecnia</p>
-                    </center>
-                    <div class="card_content3mil">
-                        <div class="containerText">
-                            <p class="containerParr">La Facultad de Medicina Veterinaria y Zootecnia es una de las diez facultades que conforman la Universidad de San Carlos de Guatemala, la única universidad estatal de Guatemala. Fue fundada en el año 1957 y se dedica a formar profesionales integrales y competentes en la Medicina Veterinaria y Zootecnia.</p>
-                        </div>
-                        <div class="btn-container">
-                            <button onClick={() => handleClick(urls[9])} class="btn draw-border">Información</button>
-                        </div>
-                    </div>
-                </div>
-
             </div>
 
             <br />
@@ -277,11 +260,10 @@ export const SanCarlos = () => {
                 <input type="checkbox" id="btn-social" />
                 <label for="btn-social" class="fa fa-play"></label>
                 <div class="icon-social">
-                    <a href="https://www.usac.edu.gt/index.php" target="_blank" rel="noopener noreferrer">
-                        <img src="https://www.usac.edu.gt/img/logo_usac2018.svg" alt="" />
+                    <a href="https://www.galileo.edu/" target="_blank" rel="noopener noreferrer">
+                        <img src="https://www.galileo.edu/wp-content/themes/galileo-theme/img/logo-header.png" alt="" class="social-logo" />
                     </a>
-                    <a href="https://www.facebook.com/UsacOficial" target="_blank" rel="noopener noreferrer" class="fa fa-facebook">
-                    </a>
+                    <a href="https://www.facebook.com/ugalileo" target="_blank" rel="noopener noreferrer" class="fa fa-facebook"></a>
                 </div>
             </div>
         </>

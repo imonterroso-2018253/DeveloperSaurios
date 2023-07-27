@@ -14,6 +14,9 @@ import { Rafael } from './Pages/Universidades/Rafael';
 import { Meso } from './Pages/Universidades/Meso';
 import { Pana } from './Pages/Universidades/Pana';
 import { SanCarlos } from './Pages/Universidades/SanCarlos';
+import { UVG } from './Pages/Universidades/UVG'
+import { Galileo } from './Pages/Universidades/Galileo'
+import { UMG } from './Pages/Universidades/UMG'
 import { Comentarios } from './Pages/Comentarios';
 
 export const AuthContext = createContext();
@@ -74,7 +77,7 @@ export const Index = () => {
           element: <RegisterPage />
         },
         {
-          path: '/universidades',
+          path: '/Universidades',
           element: <Universidades />
         },
         {
@@ -97,6 +100,18 @@ export const Index = () => {
         {
           path: '/SanCarlos',
           element: <SanCarlos />
+        },
+        {
+          path: '/UVG',
+          element: <UVG />
+        },
+        {
+          path: '/Galileo',
+          element: <Galileo />
+        },
+        {
+          path: '/UMG',
+          element: <UMG />
         },
         {
           path: '/Comentarios',

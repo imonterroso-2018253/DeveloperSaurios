@@ -1,31 +1,55 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500&display=swap");
 
-.container6 {
-  display: grid;
-  grid-template-columns: 300px 300px 300px;
-  grid-gap: 50px;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f5f5f5;
-  font-family: 'Baloo Paaji 2', cursive;
-}
-
-.cards {
-  background-color: #222831;
-  height: 37rem;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.7);
-  color: white;
-}
-
 /*Peralta*/
 
-.body3mil{
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .btn-container3mil {
+    bottom: 10px;
+    /* Ajusta esta propiedad para controlar la distancia desde la parte inferior en dispositivos móviles */
+  }
+}
+
+.card_content3mil {
+  position: relative;
+  padding: 16px 12px 32px 24px;
+  margin: 16px 8px 8px 0;
+  max-height: 290px;
+  overflow-y: scroll;
+  text-align: justify;
+}
+
+.card_content3mil::-webkit-scrollbar {
+  width: 8px;
+}
+
+.card_content3mil::-webkit-scrollbar-track {
+  box-shadow: 0;
+  border-radius: 0;
+}
+
+.card_content3mil::-webkit-scrollbar-thumb {
+  background: #c89b3f;
+  border-radius: 15px;
+}
+
+.body3mil {
   background-color: #edeaea;
+  display: flex;
+  justify-content: center;
+  /* Centrar horizontalmente */
+  align-items: center;
+  /* Centrar verticalmente */
+  min-height: 100vh;
+  /* Ajustar altura del contenido */
+}
+
+.body4mil {
+  background-color: #d6d5d5;
 }
 
 .UsacContainer {
@@ -34,6 +58,8 @@
   margin-left: 15vw;
   text-align: center;
   align-content: center;
+  max-width: 100%;
+  height: auto;
 }
 
 .TitulosUSAC {
@@ -41,25 +67,84 @@
   margin-left: 1vw;
 }
 
+@media screen and (max-width: 768px) {
+  .UsacContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .UsacContainer img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .cssFont_2 {
+    font-size: 40px;
+  }
+
+  .cssFont_3 {
+    font-size: 16px;
+  }
+
+  .star-rating {
+    font-size: 30px;
+  }
+}
+
+.containerRegresar {
+  position: relative;
+}
+
+.btnRegresar {
+  position: absolute;
+  top: 10px;
+  /* Ajusta esta propiedad para controlar la distancia desde la parte superior */
+  left: 10px;
+  /* Ajusta esta propiedad para controlar la distancia desde la izquierda */
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 9999;
+  /* Asegúrate de que el botón esté por encima de otros elementos */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos cuando el cursor está sobre el botón */
+.btnRegresar:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos cuando se hace clic en el botón */
+.btnRegresar:active {
+  background-color: #003d80;
+}
+
 .container3mil {
   display: grid;
-  grid-template-columns: 300px 300px 300px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 50px;
   justify-content: center;
   align-items: center;
-  height: 120vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
   background-color: #edeaea;
   font-family: 'Baloo Paaji 2', cursive;
+  position: relative;
 }
 
 .Facultades {
   background-color: #ffffff;
-  height: 45rem;
-  border-radius: 5px;
+  height: 100%;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: rgb(255, 253, 253);
+  padding: 20px;
 }
 
 .FacultadIMG {
@@ -75,7 +160,10 @@
   display: contents;
   grid-template-columns: 1fr 1fr;
   grid-gap: 28px;
-  font-size: 1.2em;
+  font-size: 16px;
+  margin-bottom: 20px;
+  /* Agrega un margen inferior para separar el texto del botón */
+
 }
 
 .containerTitle {
@@ -96,7 +184,7 @@
   font-size: 20px;
   letter-spacing: 0px;
   word-spacing: 0px;
-  text-align: center;
+  text-align: justify;
   color: #000000;
   text-shadow: rgba(0, 0, 0, 0.2);
   font-weight: normal;
@@ -106,24 +194,32 @@
   text-transform: none;
 }
 
+@media screen and (max-width: 768px) {
+  .UsacContainer {
+    flex-direction: column;
+    margin: 4vh;
+  }
+
+  .UsacContainer .TitulosUSAC {
+    margin: 4vh;
+  }
+
+  .container3mil {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 30px;
+  }
+
+  .Facultades {
+    height: auto;
+  }
+
+  .FacultadIMG {
+    height: 150px;
+    width: 150px;
+  }
+}
 
 /*Peralta*/
-
-
-.card__name {
-  margin-top: 15px;
-  font-size: 1.5em;
-}
-
-.card__image {
-  height: 160px;
-  width: 160px;
-  border-radius: 50%;
-  border: 5px solid #272133;
-  margin-top: 20px;
-  box-shadow: 0 10px 50px rgba(235, 25, 110, 1);
-}
-
 
 .draw-border {
   box-shadow: inset 0 0 0 4px #58cdd1;
@@ -191,10 +287,9 @@
   width: 13rem;
 }
 
-.btn:focus {
+/* .btn:focus {
   outline: 2px dotted #55d7dc;
-}
-
+} */
 
 .social-icons {
   padding: 0;
