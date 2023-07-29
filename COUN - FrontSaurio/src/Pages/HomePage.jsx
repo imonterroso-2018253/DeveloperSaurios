@@ -1,67 +1,33 @@
 import React from 'react';
 import logo from '../assets/logo.png';
 import '../CSS/HomePage.css';
+import { Footer } from '../components/Footer'
 
 export const HomePage = () => {
   return (
     <>
-      <header className="header">
-        <div className="logo">
-          <img src={logo} alt="Logo" />
-          <h1>GuateUni</h1>
+      <body className='fade-in-animation body5mil'>
+
+        <div className='contenedorHP'>
+
+          <div className=''>
+            <img src={logo} alt="Person" class="hpIMG" />
+          </div>
+
+          <div className='containerHP'>
+            <h1 className='titulo'>COUN</h1>
+
+            <span className='slogan'>Opinión formada, información bien lograda</span>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati quaerat tempore minima saepe, tenetur, nobis, maiores quasi assumenda pariatur eveniet quo dolor modi dolore facilis autem veritatis explicabo et ducimus.
+              cum, blanditiis corrupti odit sed saepe, dolore vel quidem dolores doloribus illum maxime! Enim, sint corrupti saepe iusto dignissimos ducimus alias distinctio nihil.
+              In repudnte similique! Unde aperiam dolorem saepe natus rerum cum veniam soluta veritatis, suscipit tempore, eos recusandae est officiis cumque a iusto quis? Repudiandae maxime excepturi soluta!
+            </p>
+          </div>
+
         </div>
-      </header>
-      <main>
-        <section id="inicio" className="inicio">
-          <div className="contenido-inicio">
-            <h1>Bienvenido al Blog de GuateUni</h1>
-            <p>Explora las diversas universidades en Guatemala y mantente actualizado con las últimas noticias y eventos.</p>
-            <a href="#universidades" className="boton-explorar">Explorar</a>
-          </div>
-        </section>
-        <section id="universidades" className="universidades">
-          <h2>Universidades en Guatemala</h2>
-          {/* Aquí puedes agregar imágenes y descripciones de las universidades */}
-        </section>
-        <section id="noticias" className="noticias">
-          <h2>Noticias Recientes</h2>
-          {/* Aquí puedes agregar las noticias */}
-        </section>
-        <section id="contacto" className="contacto">
-          <h2>Contacto</h2>
-          <p>Email: info@guateuni.com</p>
-          <p>Teléfono: +1 123-456-7890</p>
-          <div className="redes-sociales">
-            <a href="#" className="icono-facebook"></a>
-            <a href="#" className="icono-twitter"></a>
-            <a href="#" className="icono-instagram"></a>
-          </div>
-        </section>
-      </main>
-      <footer className="footer">
-        <div className="contenido-footer">
-          <div className="footer-logo">
-            <img src={logo} alt="Logo" />
-            <span>GuateUni</span>
-          </div>
-          <div className="contacto">
-            <h2>Contacto</h2>
-            <p>Email: info@guateuni.com</p>
-            <p>Teléfono: +1 123-456-7890</p>
-          </div>
-          <div className="redes-sociales">
-            <h2>Síguenos</h2>
-            <ul>
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Instagram</a></li>
-            </ul>
-          </div>
-        </div>
-        <div className="derechos">
-          <p>&copy; {new Date().getFullYear()} GuateUni - Todos los derechos reservados.</p>
-        </div>
-      </footer>
+
+      </body>
     </>
   );
 }

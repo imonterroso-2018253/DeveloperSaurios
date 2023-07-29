@@ -6,8 +6,6 @@ import '../../CSS/stars.css'
 import { useEffect } from "react"
 import { useState } from "react"
 
-
-
 export const Pana = () => {
   const MAX_STARS = 10;
 

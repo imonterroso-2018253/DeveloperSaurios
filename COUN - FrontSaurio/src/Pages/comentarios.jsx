@@ -4,9 +4,6 @@ import { useEffect } from "react"
 import { useState } from "react"
 import '../CSS/comentarios.css'
 
-
-
-
 export const Comentarios = () => {
 
     return (

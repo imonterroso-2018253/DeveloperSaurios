@@ -15,6 +15,63 @@
   min-height: 100vh;
 }   
 
+/* Footer.css */
+/* Estilos para el Footer */
+.footer {
+	background-color: #343a40;
+	color: #ffffff;
+	padding: 40px 0;
+  }
+  
+  .footer-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .footer-logo {
+	font-size: 24px;
+	font-weight: bold;
+	color: #ffffff;
+	margin-bottom: 20px;
+	text-decoration: none;
+  }
+  
+  .social-icons {
+	margin-top: 20px;
+  }
+  
+  .social-icons a {
+	display: inline-block;
+	color: #ffffff;
+	background-color: #212529;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 18px;
+	text-align: center;
+	margin: 0 5px;
+	text-decoration: none;
+  }
+  
+  /* Media queries para hacer el Footer responsive */
+  @media screen and (min-width: 576px) {
+	.footer-content {
+	  flex-direction: row;
+	}
+  
+	.footer-logo {
+	  margin-bottom: 0;
+	  margin-right: 40px;
+	}
+  }
+  
+
+
+/*-----------------------------------------------*/
+
 .container-bar{
 	width: 100%;
 	max-width: 50px;

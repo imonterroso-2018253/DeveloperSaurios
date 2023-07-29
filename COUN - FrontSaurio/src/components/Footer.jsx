@@ -1,39 +1,43 @@
-import React from 'react'
-import '../CSS/Footer.css'
+import React from 'react';
+import '../CSS/Footer.css';
 
-const logoW = {color: "white"}
+const logoW = { color: "white" };
 
 export const Footer = () => {
   return (
-    <footer className="bg-dark text-white pt-5 py-2">
-      <div className="container">
-        <div className="row text-center text-white">
-          <h3 className=""><a href="#" className="logo">DeveloperSaurios</a></h3>
-          <div className="cold-md-5">
-            <a className=" btn-outline-light btn-floating m-1 " href="#!" role="button"
-            ><i className="fab fa-facebook-f" style={logoW}></i></a>
-
-            <a className=" btn-outline-light btn-floating m-1 " href="#!" role="button"
-            ><i className="fab fa-twitter " style={logoW}></i></a>
-
-            <a className=" btn-outline-light btn-floating m-1" href="#!" role="button"
-            ><i className="fab fa-google " style={logoW}></i></a>
-
-            <a className=" btn-outline-light btn-floating m-1" href="#!" role="button"
-            ><i className="fab fa-instagram " style={logoW}></i></a>
-
-            <a className=" btn-outline-light btn-floating m-1" href="#!" role="button"
-            ><i className="fab fa-linkedin-in " style={logoW}></i></a>
-
-            <a className=" btn-outline-light btn-floating m-1" href="#!" role="button"
-            ><i className="fab fa-github " style={logoW}></i></a>
+    <footer className="footer">
+      <div className="container12">
+        <div className="footer-content">
+          <h3 className="footer-logo"><a href="#" className="logo">DeveloperSaurios</a></h3>
+          <div className="social-icons">
+            <a className="btn-outline-light btn-floating m-1" href="#!" role="button">
+              <i className="fab fa-facebook-f" style={logoW}></i>
+            </a>
+            <a className="btn-outline-light btn-floating m-1" href="#!" role="button">
+              <i className="fab fa-twitter" style={logoW}></i>
+            </a>
+            <a className="btn-outline-light btn-floating m-1" href="#!" role="button">
+              <i className="fab fa-google" style={logoW}></i>
+            </a>
+            <a className="btn-outline-light btn-floating m-1" href="#!" role="button">
+              <i className="fab fa-instagram" style={logoW}></i>
+            </a>
+            <a className="btn-outline-light btn-floating m-1" href="#!" role="button">
+              <i className="fab fa-linkedin-in" style={logoW}></i>
+            </a>
+            <a className="btn-outline-light btn-floating m-1" href="#!" role="button">
+              <i className="fab fa-github" style={logoW}></i>
+            </a>
           </div>
         </div>
       </div>
 
       <div className="text-center p-3">
-        © 2023 Copyright: COUN
+        © 2023 DeveloperSaurios. Todos los derechos reservados.
       </div>
     </footer>
-  )
-}
+  );
+};
+
+export default Footer;
+

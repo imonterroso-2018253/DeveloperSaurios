@@ -11,17 +11,41 @@ export const Istmo = () => {
 
   const [rating, setRating] = useState(0);
 
+  function abrirEnNuevaPestana(urls) {
+    urls.forEach((url) => {
+      window.open(url, "_blank");
+    });
+  }
+
+  // Llamada a la función con un array de URLs
+  const urls = [
+    "https://www.uvg.edu.gt/facultades/ingenieria/",
+    "https://www.uvg.edu.gt/facultades/ciencias-sociales/",
+    "https://www.uvg.edu.gt/facultades/ciencias-y-humanidades/",
+    "https://www.uvg.edu.gt/facultades/educacion/"
+  ];
+
+  // Función para abrir en nueva pestaña al hacer clic en un botón
+  const handleClick = (url) => {
+    abrirEnNuevaPestana([url]);
+  };
+
   const handleStarClick = (index, isHalf) => {
     setRating(index + (isHalf ? 0.5 : 1));
   };
 
   return (
     <>
-      <div className="containerU">
 
-        <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Escudo-UNIS.png" alt="" width={'290vw'} height={'300vh'} />
+      <div className="containerRegresar">
+        <Link to="/Universidades"><button className="btnRegresar">Regresar</button></Link>
+      </div>
 
-        <div className="TitulosU">
+      <div className="UsacContainer fade-in-animation">
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Escudo-UNIS.png" alt="" width={'300vw'} height={'300vh'} />
+
+        <div className="TitulosUSAC">
           <h1 class="cssFont_2" >UNIVERSIDAD DEL ISTMO</h1>
           <p className="cssFont_3" >Saber para servir</p>
           <div className="App">
@@ -53,43 +77,75 @@ export const Istmo = () => {
         </div>
       </div>
 
-      <div class="container6">
-        <div class="cards">
+      <div className="body4mil fade-in-animation">
+        <center> <h1 class="cssFont_2" >FACULTADES</h1></center>
+      </div>
 
-          <img src="https://unis.edu.gt/wp-content/uploads/2023/01/2022-DG-3-scaled.jpg" alt="Person" class="card__image" />
+      <div class="container3mil fade-in-animation">
 
+        <div class="Facultades">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Escudo-UNIS.png" alt="Person" class="FacultadIMG" />
           <center>
-            <p class="card__name">Facultad de Arquitectura y Diseño</p>
+            <p class="containerTitle">Facultad de Arquitectura y Diseño</p>
           </center>
-
-          <div class="grid-container">
-            <br />
+          <div class="card_content3mil">
+            <div class="containerText">
+              <p class="containerParr">En la Facultad de Ciencias Sociales creemos que un mundo mejor es posible. Consideramos que, a través de la investigación, la intervención clínica, la docencia y la extensión, podemos aportar datos,
+                formar opiniones y definir proyectos, programas y políticas que: 1) Inciden en la creación de sociedades más justas, equitativas y pacíficas, 2) Procuran la salud mental integral para todos y todas, 3) Contribuyen a la conservación e
+                interpretación de nuestro patrimonio arqueológico e histórico.</p>
+            </div>
+            <div class="btn-container">
+              <button onClick={() => handleClick(urls[0])} class="btn draw-border">Información</button>
+            </div>
           </div>
-          <button class="btn draw-border">Comentarios</button>
         </div>
 
-        <div class="cards">
-
-          <img src="https://unis.edu.gt/wp-content/uploads/2023/02/IMG_1150-4-scaled.jpg" alt="Person" class="card__image" />
-
+        <div class="Facultades">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Escudo-UNIS.png" alt="Person" class="FacultadIMG" />
           <center>
-            <p class="card__name">Facultad de Ciencias Económicas</p>
+            <p class="containerTitle">Facultad de Ciencias Económicas</p>
           </center>
-          <div class="grid-container">
-            <br />
+          <div class="card_content3mil">
+            <div class="containerText">
+              <p class="containerParr">En la Facultad de Ciencias Sociales creemos que un mundo mejor es posible. Consideramos que, a través de la investigación, la intervención clínica, la docencia y la extensión, podemos aportar datos,
+                formar opiniones y definir proyectos, programas y políticas que: 1) Inciden en la creación de sociedades más justas, equitativas y pacíficas, 2) Procuran la salud mental integral para todos y todas, 3) Contribuyen a la conservación e
+                interpretación de nuestro patrimonio arqueológico e histórico.</p>
+            </div>
+            <div class="btn-container">
+              <button onClick={() => handleClick(urls[0])} class="btn draw-border">Información</button>
+            </div>
           </div>
-          <button class="btn draw-border">Comentarios</button>
         </div>
-        <div class="cards">
-          <img src="https://unis.edu.gt/wp-content/uploads/2023/02/2021-PER-Radio-1-1-scaled-e1676652470156.jpg" alt="Person" class="card__image" />
 
+        <div class="Facultades">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Escudo-UNIS.png" alt="Person" class="FacultadIMG" />
           <center>
-            <p class="card__name">Facultad de Comunicación</p>
+            <p class="containerTitle">Facultad de Comunicación</p>
           </center>
-          <div class="grid-container">
-            <br /><br />
+          <div class="card_content3mil">
+            <div class="containerText">
+              <p class="containerParr">En la Facultad de Ciencias Sociales creemos que un mundo mejor es posible. Consideramos que, a través de la investigación, la intervención clínica, la docencia y la extensión, podemos aportar datos,
+                formar opiniones y definir proyectos, programas y políticas que: 1) Inciden en la creación de sociedades más justas, equitativas y pacíficas, 2) Procuran la salud mental integral para todos y todas, 3) Contribuyen a la conservación e
+                interpretación de nuestro patrimonio arqueológico e histórico.</p>
+            </div>
+            <div class="btn-container">
+              <button onClick={() => handleClick(urls[0])} class="btn draw-border">Información</button>
+            </div>
           </div>
-          <button class="btn draw-border">Comentarios</button>
+        </div>
+
+      </div>
+
+      <br />
+
+      <div class="container-bar fade-in-animation">
+        <input type="checkbox" id="btn-social" />
+        <label for="btn-social" class="fa fa-play"></label>
+        <div class="icon-social">
+          <a href="https://www.uvg.edu.gt/" target="_blank" rel="noopener noreferrer">
+            <img src="https://www.universidadesonline.com.gt/logos/original/logo-universidad-del-valle-de-guatemala.png" alt="" class="social-logo" />
+          </a>
+          <a href="https://www.facebook.com/universidaddelvallegt" target="_blank" rel="noopener noreferrer" class="fa fa-facebook"></a>
         </div>
       </div>
     </>
