@@ -7,7 +7,7 @@ import { useEffect } from "react"
 import { useState } from "react"
 import { Footer } from '../../components/Footer'
 
-export const Pana = () => {
+export const Vinci = () => {
     const MAX_STARS = 10;
 
     const [rating, setRating] = useState(0);
@@ -49,10 +49,10 @@ export const Pana = () => {
 
             <div className="UsacContainer fade-in-animation">
 
-                <img src="https://www.universidadesonline.com.gt/logos/original/logo-universidad-panamericana-de-guatemala.webp" alt="" width={'300vw'} height={'300vh'} />
+                <img src="https://udv.edu.gt/wp-content/uploads/2018/07/favicon.png" alt="" width={'300vw'} height={'300vh'} />
 
                 <div className="TitulosUSAC">
-                    <h1 class="cssFont_2" >UNIVERSIDAD PANAMERICANA</h1>
+                    <h1 class="cssFont_2" >UNIVERSIDAD DA VINCI DE GUATEMALA</h1>
                     <p className="cssFont_3" >Promoviendo la eduación superior autónoma, pública y gratuita</p>
                     <div className="App">
                         <div className="App">
@@ -92,14 +92,14 @@ export const Pana = () => {
             <div class="container3mil fade-in-animation">
 
                 <div class="Facultades">
-                    <img src="https://www.universidadesonline.com.gt/logos/original/logo-universidad-panamericana-de-guatemala.webp" alt="Person" class="FacultadIMG" />
+                    <img src="https://udv.edu.gt/wp-content/uploads/2018/07/favicon.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">FACULTAD DE INGENIERÍA Y CIENCIAS APLICADAS</p>
+                        <p class="containerTitle">Facultad de Ciencias Criminológicas, Criminalísticas y de Seguridad</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">Nuestros estudiantes son los impulsores de la ciencia, tecnología e innovación del presente y el futuro. Nuestras carreras se enfocan en el usuario para favorecer el diseño de productos y servicios únicos que generen desarrollo y crecimiento para el país y el mundo. </p>
+                            <p class="containerParr">Caracterizada por ser una Facultad que desarrolla actividades de enseñanza aprendizaje, investigación y extensión, orientadas a la búsqueda de solución de problemas en las áreas de su especialidad.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[0])} class="btn draw-border">Información</button>
@@ -108,14 +108,14 @@ export const Pana = () => {
                 </div>
 
                 <div class="Facultades">
-                    <img src="https://www.universidadesonline.com.gt/logos/original/logo-universidad-panamericana-de-guatemala.webp" alt="Person" class="FacultadIMG" />
+                    <img src="https://udv.edu.gt/wp-content/uploads/2018/07/favicon.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">FACULTAD DE CIENCIAS DE LA COMUNICACIÓN</p>
+                        <p class="containerTitle">Facultad de Enfermería y Ciencias del Cuidado de la Salud</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">Vamos a desarrollar tu talento, porque contamos con los mejores catedráticos que son profesionales activos y reconocidos en sus campos de trabajo; contamos con el edificio Multimedia más completo y moderno de Guatemala, equipado con laboratorio de postproducción, laboratorio de diseño, islas de edición, estudio profesional  de TV con capacidad para tres sets, un laboratorio profesional de audio con radio en línea universitaria. </p>
+                            <p class="containerParr">La Universidad Da Vinci de Guatemala ha diseñado la carrera de Técnico Universitario en Enfermería dirigida a egresados de educación media que deseen formarse y adquirir conocimientos para desempeñarse profesionalmente en el campo de la enfermería.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[1])} class="btn draw-border">Información</button>
@@ -124,14 +124,14 @@ export const Pana = () => {
                 </div>
 
                 <div class="Facultades">
-                    <img src="https://www.universidadesonline.com.gt/logos/original/logo-universidad-panamericana-de-guatemala.webp" alt="Person" class="FacultadIMG" />
+                    <img src="https://udv.edu.gt/wp-content/uploads/2018/07/favicon.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Ciencias Económicas</p>
+                        <p class="containerTitle">Facultad de Humanidades</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">Prepara profesionales con alto nivel académico, formación integral, científica, técnica y social humanística, en las áreas de conocimiento de: Economía, Contaduría Pública y Auditoría, Administración de Empresas.</p>
+                            <p class="containerParr">Las Ciencias Sociales y Humanidades se encargan del estudio del ser humano como ente social, dando gran énfasis a aspectos como el comportamiento, interacciones humanas y la cultura.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[2])} class="btn draw-border">Información</button>
@@ -146,7 +146,7 @@ export const Pana = () => {
             <div class="container3mil fade-in-animation">
 
                 <div class="Facultades">
-                    <img src="https://www.universidadesonline.com.gt/logos/original/logo-universidad-panamericana-de-guatemala.webp" alt="Person" class="FacultadIMG" />
+                    <img src="https://udv.edu.gt/wp-content/uploads/2018/07/favicon.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
                         <p class="containerTitle">Facultad de Ciencias Jurídicas y Sociales</p>
@@ -162,14 +162,14 @@ export const Pana = () => {
                 </div>
 
                 <div class="Facultades">
-                    <img src="https://www.universidadesonline.com.gt/logos/original/logo-universidad-panamericana-de-guatemala.webp" alt="Person" class="FacultadIMG" />
+                    <img src="https://udv.edu.gt/wp-content/uploads/2018/07/favicon.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Ciencias Médicas</p>
+                        <p class="containerTitle">Facultad de Ciencias Odontológicas</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">Fue fundada en 1681 y es el centro de enseñanza superior de Medicina más grande e importante de Guatemala.</p>
+                            <p class="containerParr">El título de Cirujano Dentista de la Facultad de Ciencias Odontológicas conlleva un programa académico, en el cual se forman profesionales capaces de abordar con criterio y habilidad técnica la prevención, el diagnóstico, el pronóstico, así como el tratamiento y rehabilitación de enfermedades y situaciones clínicas estomatológicas, con alta calidad, precisión y estética.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[4])} class="btn draw-border">Información</button>
@@ -178,14 +178,14 @@ export const Pana = () => {
                 </div>
 
                 <div class="Facultades">
-                    <img src="https://www.universidadesonline.com.gt/logos/original/logo-universidad-panamericana-de-guatemala.webp" alt="Person" class="FacultadIMG" />
+                    <img src="https://udv.edu.gt/wp-content/uploads/2018/07/favicon.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">FACULTAD DE CIENCIAS DE LA SALUD</p>
+                        <p class="containerTitle">Facultad de Químicas y Farmacia</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">Estamos comprometidos con la formación integral de profesionales del área de la salud, a través de una educación de calidad, con ética y que responde a las variantes demandas del entorno. </p>
+                            <p class="containerParr">Es una unidad académica de la Universidad de San Carlos de Guatemala que ofrece carreras relacionadas con la química y la farmacia.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[5])} class="btn draw-border">Información</button>
@@ -200,14 +200,14 @@ export const Pana = () => {
             <div class="container3mil fade-in-animation">
 
                 <div class="Facultades">
-                    <img src="https://www.universidadesonline.com.gt/logos/original/logo-universidad-panamericana-de-guatemala.webp" alt="Person" class="FacultadIMG" />
+                    <img src="https://udv.edu.gt/wp-content/uploads/2018/07/favicon.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Humanidades</p>
+                        <p class="containerTitle">Facultad de Ciencias Jurídicas, Sociales y Relaciones Internacionales</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">Tiene como objetivo formar humanistas con capacidades analíticas y críticas que les permitan incursionar en los distintos campos del saber, siendo capaces de conocer, analizar e interpretar la realidad histórica, ya sea nacional o mundial, pero siempre con la intención de encontrar soluciones a una problemática determinada.</p>
+                            <p class="containerParr">La Licenciatura en Ciencias Jurídicas y Sociales tiene como objetivo general formar juristas con excelencia académica, capaces de ejercer la abogacía y el notariado aplicando de manera objetiva y efectiva los postulados deontológicos y derechos fundamentales.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[6])} class="btn draw-border">Información</button>
@@ -216,14 +216,14 @@ export const Pana = () => {
                 </div>
 
                 <div class="Facultades">
-                    <img src="https://www.universidadesonline.com.gt/logos/original/logo-universidad-panamericana-de-guatemala.webp" alt="Person" class="FacultadIMG" />
+                    <img src="https://udv.edu.gt/wp-content/uploads/2018/07/favicon.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
                         <p class="containerTitle">Facultad de Inginiería</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">Es una de las 10 facultades que conforman la Universidad de San Carlos de Guatemala. Fundada en 1880, es la facultad de ingeniería más grande e importante de Guatemala. Atiende a una población estudiantil de más de doce mil estudiantes de pregrado siendo por ende una de las unidades académicas más pobladas de la Universidad.</p>
+                            <p class="containerParr">El egresado de la Carrera de Ingeniería de Sistemas de la Universidad Da Vinci de Guatemala, es un profesional capaz de analizar, diseñar, desarrollar sistemas y gestionar proyectos, que involucran personas, procesos e información, para automatizaciones mediante diseño, programación, mantenimiento e innovación de sistemas de información y de redes, aplicando las tecnologías de la información.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[7])} class="btn draw-border">Información</button>
@@ -232,14 +232,14 @@ export const Pana = () => {
                 </div>
 
                 <div class="Facultades">
-                    <img src="https://www.universidadesonline.com.gt/logos/original/logo-universidad-panamericana-de-guatemala.webp" alt="Person" class="FacultadIMG" />
+                    <img src="https://udv.edu.gt/wp-content/uploads/2018/07/favicon.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Odontología</p>
+                        <p class="containerTitle">Facultad de Ciencias Médicas y de la Vida</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">La Facultad de Odontología de la USAC es una de las unidades académicas más reconocidas y prestigiosas de Guatemala en el campo de la odontología. Esta facultad forma parte de la Universidad de San Carlos de Guatemala, la cual es una de las instituciones de educación superior más antiguas y destacadas de América Latina.</p>
+                            <p class="containerParr">La Facultad de Ciencias Médicas y de la vida se propone formar Recurso Humanos en Deportes, a través de un programa modular de dos y cuatro años, en tres áreas: Área de Formación Básica, Área de Formación Específica y Área de Formación Profesional. Integradas por las líneas curriculares de Investigación, Metabolismo Biomecánica Nutrición Salud y Principios y Valores.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[8])} class="btn draw-border">Información</button>
@@ -254,14 +254,46 @@ export const Pana = () => {
             <div class="container3mil fade-in-animation">
 
             <div class="Facultades">
-                    <img src="https://www.universidadesonline.com.gt/logos/original/logo-universidad-panamericana-de-guatemala.webp" alt="Person" class="FacultadIMG" />
+                    <img src="https://udv.edu.gt/wp-content/uploads/2018/07/favicon.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">FACULTAD DE CIENCIAS DE LA EDUCACIÓN</p>
+                        <p class="containerTitle">Facultad de Música y Artes Visuales</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">La Facultad de Ciencias de la Educación se ha comprometido en la formación de profesionales, con ética y valores, con amplio conocimiento de las teorías educativas y la investigación como herramienta para obtener información y generar conocimiento. Con la finalidad de lograr cambios significativos en el desarrollo de las personas y de la sociedad. </p>
+                            <p class="containerParr">El grado académico de TÉCNICO UNIVERSITARIO consta de dos años de estudios (4 semestres) que abarcan el desarrollo de habilidades y adquisición de conocimiento a nivel técnico  en  áreas  de la producción de música y sonido digital.</p>
+                        </div>
+                        <div class="btn-container">
+                            <button onClick={() => handleClick(urls[9])} class="btn draw-border">Información</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Facultades">
+                    <img src="https://udv.edu.gt/wp-content/uploads/2018/07/favicon.png" alt="Person" class="FacultadIMG" />
+                    <br />
+                    <center>
+                        <p class="containerTitle">Facultad de Ciencias Administrativas y Comerciales</p>
+                    </center>
+                    <div class="card_content3mil">
+                        <div class="containerText">
+                            <p class="containerParr">La globalización de los mercados sustentados en la apertura comercial representa actualmente grandes oportunidades de negocios para las personas físicas y jurídicas.</p>
+                        </div>
+                        <div class="btn-container">
+                            <button onClick={() => handleClick(urls[9])} class="btn draw-border">Información</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Facultades">
+                    <img src="https://udv.edu.gt/wp-content/uploads/2018/07/favicon.png" alt="Person" class="FacultadIMG" />
+                    <br />
+                    <center>
+                        <p class="containerTitle">Facultad de Ciencias Agronómicas</p>
+                    </center>
+                    <div class="card_content3mil">
+                        <div class="containerText">
+                            <p class="containerParr">La Facultad de Ciencias Agronómicas ofrece la carrera de Ingeniería Agronómica, enfocada en profesionales con alto nivel académico en producción agrícola. Formamos graduados competitivos con habilidades empresariales y administrativas para satisfacer las demandas del sector productivo y académico.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[9])} class="btn draw-border">Información</button>
@@ -270,6 +302,7 @@ export const Pana = () => {
                 </div>
 
             </div>
+            
 
             <br />
 

@@ -17,6 +17,10 @@ import { SanCarlos } from './Pages/Universidades/SanCarlos';
 import { UVG } from './Pages/Universidades/UVG'
 import { Galileo } from './Pages/Universidades/Galileo'
 import { UMG } from './Pages/Universidades/UMG'
+import { Vinci } from './Pages/Universidades/Vinci'
+import { Pablo } from './Pages/Universidades/Pablo'
+import { Occi } from './Pages/Universidades/Occi'
+import { Users } from './Pages/ADMIN/Users';
 import { Comentarios } from './Pages/Comentarios';
 
 export const AuthContext = createContext();
@@ -113,6 +117,22 @@ export const Index = () => {
         {
           path: '/UMG',
           element: <UMG />
+        },
+        {
+          path: '/Vinci',
+          element: <Vinci />
+        },
+        {
+          path: '/Pablo',
+          element: <Pablo />
+        },
+        {
+          path: '/Occi',
+          element: <Occi />
+        },
+        {
+          path: '/Users',
+          element: <Users />
         },
         {
           path: '/Comentarios',

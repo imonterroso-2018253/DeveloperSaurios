@@ -49,3 +49,16 @@
 .custom-navbar .navbar-collapse {
   padding: 0 10px; /* Puedes ajustar el valor de padding según tus necesidades */
 }
+/* Custom styles for the dropdown menu */
+.navbar .dropdown-menu {
+  background-color: #343a40; /* Set your desired background color here */
+  border: none; /* Optional: Remove the dropdown border */
+}
+
+.navbar .dropdown-menu a {
+  color: #ffffff; /* Set the text color for dropdown items */
+}
+
+.navbar .dropdown-menu a:hover {
+  background-color: #454d55; /* Set the background color for dropdown items on hover */
+}

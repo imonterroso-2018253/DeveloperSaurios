@@ -1,16 +1,30 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../index';
 import logo from '../assets/logo.png';
 import '../../src/CSS/Navbar.css';
 
 const NavBar = () => {
-  const { dataUser, LoggedIn } = useContext(AuthContext);
-  const _id = dataUser.sub;
+  const { dataUser } = useContext(AuthContext);
+    const [loggedIn, setLoggedIn] = useState(false);
 
-  const logOut = () => {
-    localStorage.clear();
-  };
+    const _id = dataUser ? dataUser.sub : null;
+
+    const logOut = () => {
+        localStorage.clear();
+
+    };
+
+    const getUserLogged = () => {
+        const token = localStorage.getItem("token");
+        if (token && dataUser) {
+            setLoggedIn(true);
+        }
+    };
+
+    useEffect(() => {
+        getUserLogged();
+    }, [dataUser]);
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark custom-navbar">
@@ -46,38 +60,46 @@ const NavBar = () => {
               </Link>
             </li>
 
-            {dataUser.role === 'ADMIN' && (
-              <li className="nav-item">
-                <Link to="/Users" className="nav-link">
-                  <h3>Usuarios</h3>
-                </Link>
-              </li>
-            )}
+            <li className="nav-item">
+  <Link to="/Users" className="nav-link">
+    <h3>Usuarios</h3>
+  </Link>
+</li>
             
           </ul>
 
           <ul className="navbar-nav mb-lg-0">
-            {LoggedIn ? (
-              <li className="nav-item dropdown">
-                <span className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Welcome {dataUser.name}, {dataUser.role}
-                </span>
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                    <Link to="/" className="nav-link text-dark" onClick={() => logOut()}>
-                      <h3>LogOut</h3>
-                    </Link>
-                  </li>
-                </ul>
-              </li>
-            ) : (
-              <li className="nav-item">
-                <Link to="/Login" className="nav-link">
-                  <h3>LogIn</h3>
+        {loggedIn && dataUser ? (
+          <>
+            <li className="nav-item dropdown">
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Bienvenido, {dataUser.name}, {dataUser.role}
+              </a>
+              <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                {/* <li><Link to={`/UpdateP/${_id}`} className="dropdown-item">Actualizar</Link></li> */}
+                <Link to="/Perfil" className="nav-link">
+                  <p className="h5">&nbsp; Perfil</p>
                 </Link>
-              </li>
-            )}
-          </ul>
+                <Link to="/Login" className="nav-link" onClick={() => logOut()}>
+                  &nbsp; LogOut
+                </Link>
+              </ul>
+            </li>
+          </>
+        ) : (
+          <li className="nav-item">
+            <Link to="/Login" className="nav-link">
+              LogIn
+            </Link>
+          </li>
+        )}
+      </ul>
         </div>
       </div>
     </nav>

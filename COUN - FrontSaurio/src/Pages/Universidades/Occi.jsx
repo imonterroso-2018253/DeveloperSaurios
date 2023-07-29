@@ -7,7 +7,7 @@ import { useEffect } from "react"
 import { useState } from "react"
 import { Footer } from '../../components/Footer'
 
-export const Pana = () => {
+export const Occi = () => {
     const MAX_STARS = 10;
 
     const [rating, setRating] = useState(0);
@@ -49,10 +49,10 @@ export const Pana = () => {
 
             <div className="UsacContainer fade-in-animation">
 
-                <img src="https://www.universidadesonline.com.gt/logos/original/logo-universidad-panamericana-de-guatemala.webp" alt="" width={'300vw'} height={'300vh'} />
+                <img src="https://losabogadosenguatemala.com/wp-content/uploads/2022/01/LOGO-UNIVERSIDAD-DE-OCCIDENTE-2022.png" alt="" width={'300vw'} height={'300vh'} />
 
                 <div className="TitulosUSAC">
-                    <h1 class="cssFont_2" >UNIVERSIDAD PANAMERICANA</h1>
+                    <h1 class="cssFont_2" >UNIVERSIDAD OCCIDENTAL DE GUATEMALA</h1>
                     <p className="cssFont_3" >Promoviendo la eduación superior autónoma, pública y gratuita</p>
                     <div className="App">
                         <div className="App">
@@ -92,14 +92,14 @@ export const Pana = () => {
             <div class="container3mil fade-in-animation">
 
                 <div class="Facultades">
-                    <img src="https://www.universidadesonline.com.gt/logos/original/logo-universidad-panamericana-de-guatemala.webp" alt="Person" class="FacultadIMG" />
+                    <img src="https://losabogadosenguatemala.com/wp-content/uploads/2022/01/LOGO-UNIVERSIDAD-DE-OCCIDENTE-2022.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">FACULTAD DE INGENIERÍA Y CIENCIAS APLICADAS</p>
+                        <p class="containerTitle">ARQUITECTURA</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">Nuestros estudiantes son los impulsores de la ciencia, tecnología e innovación del presente y el futuro. Nuestras carreras se enfocan en el usuario para favorecer el diseño de productos y servicios únicos que generen desarrollo y crecimiento para el país y el mundo. </p>
+                            <p class="containerParr">El objetivo de esta carrera es formar arquitectos profesionales capaces de analizar, planificar, diseñar, dirigir y supervisar obras de construcción, tanto públicas como privadas, brindándoles las herramientas y el conocimiento suficiente para desempeñar la labor con excelencia.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[0])} class="btn draw-border">Información</button>
@@ -108,14 +108,14 @@ export const Pana = () => {
                 </div>
 
                 <div class="Facultades">
-                    <img src="https://www.universidadesonline.com.gt/logos/original/logo-universidad-panamericana-de-guatemala.webp" alt="Person" class="FacultadIMG" />
+                    <img src="https://losabogadosenguatemala.com/wp-content/uploads/2022/01/LOGO-UNIVERSIDAD-DE-OCCIDENTE-2022.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">FACULTAD DE CIENCIAS DE LA COMUNICACIÓN</p>
+                        <p class="containerTitle">HUMANIDADES</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">Vamos a desarrollar tu talento, porque contamos con los mejores catedráticos que son profesionales activos y reconocidos en sus campos de trabajo; contamos con el edificio Multimedia más completo y moderno de Guatemala, equipado con laboratorio de postproducción, laboratorio de diseño, islas de edición, estudio profesional  de TV con capacidad para tres sets, un laboratorio profesional de audio con radio en línea universitaria. </p>
+                            <p class="containerParr">Los aspirantes a las carreras orientadas a la educación, son personas que se caracterizan por tener un alto compromiso con el trabajo social y pedagógico. Esta, como todas las carreras educativas, te llevará a exigirte y a demostrar tus capacidades de la mejor manera en la gestión y el control de la enseñanza.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[1])} class="btn draw-border">Información</button>
@@ -124,10 +124,10 @@ export const Pana = () => {
                 </div>
 
                 <div class="Facultades">
-                    <img src="https://www.universidadesonline.com.gt/logos/original/logo-universidad-panamericana-de-guatemala.webp" alt="Person" class="FacultadIMG" />
+                    <img src="https://losabogadosenguatemala.com/wp-content/uploads/2022/01/LOGO-UNIVERSIDAD-DE-OCCIDENTE-2022.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Ciencias Económicas</p>
+                        <p class="containerTitle">FACULTAD DE CIENCIAS JURÍDICAS Y SOCIALES</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
@@ -146,14 +146,14 @@ export const Pana = () => {
             <div class="container3mil fade-in-animation">
 
                 <div class="Facultades">
-                    <img src="https://www.universidadesonline.com.gt/logos/original/logo-universidad-panamericana-de-guatemala.webp" alt="Person" class="FacultadIMG" />
+                    <img src="https://losabogadosenguatemala.com/wp-content/uploads/2022/01/LOGO-UNIVERSIDAD-DE-OCCIDENTE-2022.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Ciencias Jurídicas y Sociales</p>
+                        <p class="containerTitle">INGENIERÍA</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">Ofrece programas de estudio en el campo del derecho, como la Licenciatura en Ciencias Jurídicas y Sociales, Abogado y Notario. También realiza actividades de investigación, extensión y servicio social.</p>
+                            <p class="containerParr">El objetivo de esta carrera es preparar a profesionales competitivos, capaces de aplicar nuevas tecnologías computacionales, desarrollar softwares para solucionar problemas informáticos y disminuir la vulnerabilidad de sistemas, con métodos, modelos y estándares de calidad.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[3])} class="btn draw-border">Información</button>
@@ -162,14 +162,14 @@ export const Pana = () => {
                 </div>
 
                 <div class="Facultades">
-                    <img src="https://www.universidadesonline.com.gt/logos/original/logo-universidad-panamericana-de-guatemala.webp" alt="Person" class="FacultadIMG" />
+                    <img src="https://losabogadosenguatemala.com/wp-content/uploads/2022/01/LOGO-UNIVERSIDAD-DE-OCCIDENTE-2022.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Ciencias Médicas</p>
+                        <p class="containerTitle">DERECHO</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">Fue fundada en 1681 y es el centro de enseñanza superior de Medicina más grande e importante de Guatemala.</p>
+                            <p class="containerParr">Esta es una carrera de mucha transcendencia. La abogacía es una profesión que debe mantenerse al día de los diversos cambios legislativos que afectan a sus áreas de trabajo para desempeñar su labor con diligencia y efectividad.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[4])} class="btn draw-border">Información</button>
@@ -178,98 +178,58 @@ export const Pana = () => {
                 </div>
 
                 <div class="Facultades">
-                    <img src="https://www.universidadesonline.com.gt/logos/original/logo-universidad-panamericana-de-guatemala.webp" alt="Person" class="FacultadIMG" />
+                    <img src="https://losabogadosenguatemala.com/wp-content/uploads/2022/01/LOGO-UNIVERSIDAD-DE-OCCIDENTE-2022.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">FACULTAD DE CIENCIAS DE LA SALUD</p>
+                        <p class="containerTitle">CIENCIAS ECONÓMICAS</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">Estamos comprometidos con la formación integral de profesionales del área de la salud, a través de una educación de calidad, con ética y que responde a las variantes demandas del entorno. </p>
+                            <p class="containerParr">Esta es una carrera de mucha transcendencia. La abogacía es una profesión que debe mantenerse al día de los diversos cambios legislativos que afectan a sus áreas de trabajo para desempeñar su labor con diligencia y efectividad.</p>
                         </div>
                         <div class="btn-container">
-                            <button onClick={() => handleClick(urls[5])} class="btn draw-border">Información</button>
+                            <button onClick={() => handleClick(urls[4])} class="btn draw-border">Información</button>
                         </div>
                     </div>
                 </div>
 
-            </div>
-
-            <br />
-
-            <div class="container3mil fade-in-animation">
+              </div>
+              <div class="container3mil fade-in-animation">
 
                 <div class="Facultades">
-                    <img src="https://www.universidadesonline.com.gt/logos/original/logo-universidad-panamericana-de-guatemala.webp" alt="Person" class="FacultadIMG" />
+                    <img src="https://losabogadosenguatemala.com/wp-content/uploads/2022/01/LOGO-UNIVERSIDAD-DE-OCCIDENTE-2022.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Humanidades</p>
+                        <p class="containerTitle">CIENCIAS DE LA SALUD</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">Tiene como objetivo formar humanistas con capacidades analíticas y críticas que les permitan incursionar en los distintos campos del saber, siendo capaces de conocer, analizar e interpretar la realidad histórica, ya sea nacional o mundial, pero siempre con la intención de encontrar soluciones a una problemática determinada.</p>
+                            <p class="containerParr">Los aspirantes a esta carrera, se caracterizan por ser personas respetuosas, comunicativas, empáticas y con un gran sentido humano, capaces de sobrellevar situaciones estresantes por el bien del prójimo.</p>
                         </div>
                         <div class="btn-container">
-                            <button onClick={() => handleClick(urls[6])} class="btn draw-border">Información</button>
+                            <button onClick={() => handleClick(urls[3])} class="btn draw-border">Información</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="Facultades">
-                    <img src="https://www.universidadesonline.com.gt/logos/original/logo-universidad-panamericana-de-guatemala.webp" alt="Person" class="FacultadIMG" />
+                    <img src="https://losabogadosenguatemala.com/wp-content/uploads/2022/01/LOGO-UNIVERSIDAD-DE-OCCIDENTE-2022.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Inginiería</p>
+                        <p class="containerTitle">ODONTOLOGÍA</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">Es una de las 10 facultades que conforman la Universidad de San Carlos de Guatemala. Fundada en 1880, es la facultad de ingeniería más grande e importante de Guatemala. Atiende a una población estudiantil de más de doce mil estudiantes de pregrado siendo por ende una de las unidades académicas más pobladas de la Universidad.</p>
+                            <p class="containerParr">El modelo educativo de la facultad de Odontología se entremezcla en un modelo tradicional de enseñanza y uno creciente por competencias. En este último se busca que la enseñanza se centralice en el estudiante, pretendiendo como fin último un aprendizaje significativo, mediante la individualización y la estimulación de la creatividad en la construcción de su propio conocimiento.</p>
                         </div>
                         <div class="btn-container">
-                            <button onClick={() => handleClick(urls[7])} class="btn draw-border">Información</button>
+                            <button onClick={() => handleClick(urls[4])} class="btn draw-border">Información</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="Facultades">
-                    <img src="https://www.universidadesonline.com.gt/logos/original/logo-universidad-panamericana-de-guatemala.webp" alt="Person" class="FacultadIMG" />
-                    <br />
-                    <center>
-                        <p class="containerTitle">Facultad de Odontología</p>
-                    </center>
-                    <div class="card_content3mil">
-                        <div class="containerText">
-                            <p class="containerParr">La Facultad de Odontología de la USAC es una de las unidades académicas más reconocidas y prestigiosas de Guatemala en el campo de la odontología. Esta facultad forma parte de la Universidad de San Carlos de Guatemala, la cual es una de las instituciones de educación superior más antiguas y destacadas de América Latina.</p>
-                        </div>
-                        <div class="btn-container">
-                            <button onClick={() => handleClick(urls[8])} class="btn draw-border">Información</button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <br />
-
-            <div class="container3mil fade-in-animation">
-
-            <div class="Facultades">
-                    <img src="https://www.universidadesonline.com.gt/logos/original/logo-universidad-panamericana-de-guatemala.webp" alt="Person" class="FacultadIMG" />
-                    <br />
-                    <center>
-                        <p class="containerTitle">FACULTAD DE CIENCIAS DE LA EDUCACIÓN</p>
-                    </center>
-                    <div class="card_content3mil">
-                        <div class="containerText">
-                            <p class="containerParr">La Facultad de Ciencias de la Educación se ha comprometido en la formación de profesionales, con ética y valores, con amplio conocimiento de las teorías educativas y la investigación como herramienta para obtener información y generar conocimiento. Con la finalidad de lograr cambios significativos en el desarrollo de las personas y de la sociedad. </p>
-                        </div>
-                        <div class="btn-container">
-                            <button onClick={() => handleClick(urls[9])} class="btn draw-border">Información</button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+                
+              </div>
 
             <br />
 
