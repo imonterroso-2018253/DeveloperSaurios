@@ -28,7 +28,7 @@ export const HomePage = () => {
 
             <div className="containerHP">
               <h1 className="titulo"><b>COUN</b></h1>
-
+              <br />
               <h2 className="">Sean bienvenidos a <b>COUN</b> <p><b>CO</b>nocimientos de las <b>UN</b>iversidades.</p></h2>
               <p className='pHP'>
                 ¡Bienvenidos a COUN, tu fuente confiable de información sobre universidades y educación superior! Somos un equipo apasionado por brindar conocimientos valiosos para ayudarte en tu búsqueda de la educación adecuada. Ya sea que estés buscando información sobre universidades, maestrías, cursos o programas académicos, estás en el lugar indicado.

@@ -10,7 +10,8 @@ exports.defaultFaculty = async()=>{
     try{
         let defFaculty = {
             name: 'Facultad de Arquitectura',
-            description: 'Formar profesionistas en los campos de arquitectura, urbanismo, arquitectura de paisaje y diseño industrial, comprometidos con la sociedad, capaces, informados, críticos, reflexivos y responsables.'
+            description: 'Formar profesionistas en los campos de arquitectura, urbanismo, arquitectura de paisaje y diseño industrial, comprometidos con la sociedad, capaces, informados, críticos, reflexivos y responsables.',
+            mensuality: 200
         }
         let existFaculty = await Faculty.findOne({name: 'Facultad de Arquitectura'});
         if(existFaculty) return console.log('Default faculty already created');
@@ -26,7 +27,8 @@ exports.defaultFaculty2 = async()=>{
     try{
         let defFaculty = {
             name: 'Facultad de Artes y Diseño',
-            description: 'La Facultad de Artes y Diseño es la institución encargada de formar profesionistas e investigadores de las artes y el diseño; de resguardar sus acervos históricos y artísticos, cumpliendo con altos estándares internacionales.'
+            description: 'La Facultad de Artes y Diseño es la institución encargada de formar profesionistas e investigadores de las artes y el diseño; de resguardar sus acervos históricos y artísticos, cumpliendo con altos estándares internacionales.',
+            mensuality: 300
         }
         let existFaculty = await Faculty.findOne({name: 'Facultad de Artes y Diseño'});
         if(existFaculty) return console.log('Default faculty already created');
@@ -42,7 +44,8 @@ exports.defaultFaculty3 = async()=>{
     try{
         let defFaculty = {
             name: 'Facultad de Contaduría y Administración',
-            description: 'Formar profesionistas emprendedores y competentes en áreas de negocios, con el conocimiento, los valores, las actitudes y las habilidades cognitivas, sociales, emocionales y digitales esenciales para participar en la cuarta revolución industrial.'
+            description: 'Formar profesionistas emprendedores y competentes en áreas de negocios, con el conocimiento, los valores, las actitudes y las habilidades cognitivas, sociales, emocionales y digitales esenciales para participar en la cuarta revolución industrial.',
+            mensuality: 500
         }
         let existFaculty = await Faculty.findOne({name: 'Facultad de Contaduría y Administración'});
         if(existFaculty) return console.log('Default faculty already created');
@@ -58,7 +61,8 @@ exports.defaultFaculty4 = async()=>{
     try{
         let defFaculty = {
             name: 'Facultad de Derecho',
-            description: 'Este programa de estudios está diseñado para el perfeccionamiento profesional a través de la formación en la doctrina y práctica penal contemporánea.'
+            description: 'Este programa de estudios está diseñado para el perfeccionamiento profesional a través de la formación en la doctrina y práctica penal contemporánea.',
+            mensuality: 400
         }
         let existFaculty = await Faculty.findOne({name: 'Facultad de Derecho'});
         if(existFaculty) return console.log('Default faculty already created');

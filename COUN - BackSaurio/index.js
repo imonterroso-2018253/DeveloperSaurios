@@ -5,6 +5,8 @@ const mongoConfig = require('./configs/mongo');
 const app = require('./configs/app');
 const userController = require('./src/user/user.controller');
 const facultyController = require('./src/faculty/faculty.controller');
+const universityController = require('./src/university/university.controller')
+/* const forgotPasswordController = require('./src/forgotPassword/forgotPassword.controller'); */
 
 mongoConfig.connect();
 app.initServer();
@@ -14,3 +16,4 @@ facultyController.defaultFaculty();
 facultyController.defaultFaculty2();
 facultyController.defaultFaculty3();
 facultyController.defaultFaculty4();
+universityController.defaultUniversity();

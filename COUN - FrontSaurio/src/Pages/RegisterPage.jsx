@@ -7,6 +7,7 @@ import { useContext } from 'react';
 import { AuthContext } from '../index';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import Swal from 'sweetalert2';
 
 /*
   Componente funcional RegisterPage: representa la página de registro de nuevos usuarios.
@@ -46,13 +47,27 @@ export const RegisterPage = () => {
   const register = async (e) => {
     try {
       const { data } = await axios.post(`http://localhost:3200/user/register`, form, { headers: headers });
-      alert(data.message);
-      navigate('/Login'); // Navegar a la página de usuarios después del registro exitoso.
+  
+      // Mostrar alerta de éxito utilizando sweetalert2 después del registro exitoso
+      Swal.fire({
+        icon: 'success',
+        title: '¡Registro exitoso!',
+        text: data.message,
+        confirmButtonText: 'Aceptar'
+      });
+  
+      navigate('/Login'); // Navegar a la página de inicio de sesión después del registro exitoso.
     } catch (err) {
       // Mostrar mensaje de error si ocurre algún problema durante el registro.
-      alert(err.response.data.message + ': También verifica que los parámetros, como la longitud del correo, sean correctos.');
+      Swal.fire({
+        icon: 'error',
+        title: '¡Error!',
+        text: err.response.data.message + ': También verifica que los parámetros, como la longitud del correo, sean correctos.',
+        confirmButtonText: 'Aceptar'
+      });
     }
   };
+  
 
   // Renderizar el formulario de registro
   return (
@@ -97,14 +112,14 @@ export const RegisterPage = () => {
                 id="password"
                 name="password"
                 placeholder="Contraseña" />
-              <span // Botón para alternar la visibilidad de la contraseña.
+              
+            </div>
+            <span // Botón para alternar la visibilidad de la contraseña.
                 className="eye-icon"
                 onClick={() => setShowPassword(!showPassword)}
               >
                 <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
               </span>
-            </div>
-
             <div className="input-box1">
               <input type="text"
                 className='input1'

@@ -1,29 +1,95 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import Comment  from "../components/comment"
+import { AuthContext } from '../index';
 import { useEffect } from "react"
-import { useState } from "react"
+import { useState, useContext } from "react"
+import { useParams } from "react-router-dom";
+import axios from "axios";
 import '../CSS/comentarios.css'
 
 export const Comentarios = () => {
+	const { dataUser } = useContext(AuthContext);
+	const { id } = useParams();
+	const headers = {
+		'Content-Type': 'application/json',
+		'Authorization': localStorage.getItem('token')
+	  };
+
+	const [university, setUniversity] = useState([])
+	const [comments, setComments] = useState([]);
+
+	const [form, setForm] = useState({
+		user: dataUser.sub,
+		university: id,
+		comment: '',
+		
+	});
+
+	const handleChange = (e) => {
+		setForm({
+		  ...form,
+		  [e.target.name]: e.target.value
+		});
+	};
+
+	const addComment = async(e) =>{
+		try {
+			const { data } = await axios.post(`http://localhost:3200/comments/save`, form, { headers: headers });
+			console.log(form)
+		} catch (err) {
+			console.log(err)
+		}
+	}
+
+	
+
+
+	const getComments = async () => {
+        try {
+          const { data } = await axios(`http://localhost:3200/comments/get/${id}`, { headers: headers })
+          setComments(data)
+          
+        } catch (err) {
+          console.log(err)
+        }
+      }
+
+	  const getUniversity = async () => {
+        try {
+          const { data } = await axios(`http://localhost:3200/university/get/${id}`, { headers: headers })
+          setUniversity(data)
+          console.log(data)
+        } catch (err) {
+          console.log(err)
+        }
+      }
+
+	  useEffect(() => {
+        getUniversity();
+        getComments();
+    }, [dataUser])
 
     return (
         <>
         <br /><br />
         <div className="containerC">
-            <h1>Comentarios sobre Universidad tal</h1>
+		<h1>Comentarios sobre {university.length > 0 ? university[0].name : 'Universidad Desconocida'}</h1>
+
             <br /><br />
             <h4>Puedes comentar y ver comentarios de otros usuarios</h4>
         </div>
         <br /><br />
        
+	   
 
         <div class="containerC" >
             
             <form action="#">
              <ul>         
          <div class="comment-container">
-             <textarea class="comment-textarea" placeholder="Escribe tu comentario aquí..."></textarea>
-             <button class="btn0"> Comentar</button>
+             <textarea class="comment-textarea"  onChange={handleChange} name='comment' id="comment" placeholder="Escribe tu comentario aquí..."></textarea>
+             <button class="btn0" onClick={(e) => {  addComment(e) }}> Comentar</button>
          </div>
         
       </ul>
@@ -36,79 +102,35 @@ export const Comentarios = () => {
 		<h1>Comentarios </h1>
 
 		<ul id="comments-list" class="comments-list">
-			<li>
-				<div class="comment-main-level">
+			
 				
-					<div class="comment-avatar"><img src="http://i9.photobucket.com/albums/a88/creaticode/avatar_1_zps8e1c80cd.jpg" alt=""/></div>
-					
-					<div class="comment-box">
-						<div class="comment-head">
-							<h6 class="comment-name by-author"><a href="http://creaticode.com/blog">Agustin Ortiz</a></h6>
-							<span>hace 20 minutos</span>
-							<i class="fa fa-reply"></i>
-							<i class="fa fa-heart"></i>
-						</div>
-						<div class="comment-content">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
-						</div>
-					</div>
-				</div>
-				<ul class="comments-list reply-list">
-					<li>
-						
-						<div class="comment-avatar"><img src="http://i9.photobucket.com/albums/a88/creaticode/avatar_2_zps7de12f8b.jpg" alt=""/></div>
-						
-						<div class="comment-box">
-							<div class="comment-head">
-								<h6 class="comment-name"><a href="http://creaticode.com/blog">Lorena Rojero</a></h6>
-								<span>hace 10 minutos</span>
-								<i class="fa fa-reply"></i>
-								<i class="fa fa-heart"></i>
-							</div>
-							<div class="comment-content">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
-							</div>
-						</div>
-					</li>
+				
+				
+				{
+					Array.isArray(comments) &&
+					comments.map(({ _id, user, date, comment, likesCount }, i) => {
+						return (
+						<Comment
+							key={i}
+							id={_id}
+							user={user?.username}
+							date={date}
+							comment={comment}
+							likesN={likesCount}
+							
+						/>
+						);
+					})
+					}
 
-					<li>
-	
-						<div class="comment-avatar"><img src="http://i9.photobucket.com/albums/a88/creaticode/avatar_1_zps8e1c80cd.jpg" alt=""/></div>
-					
-						<div class="comment-box">
-							<div class="comment-head">
-								<h6 class="comment-name by-author"><a href="http://creaticode.com/blog">Agustin Ortiz</a></h6>
-								<span>hace 10 minutos</span>
-								<i class="fa fa-reply"></i>
-								<i class="fa fa-heart"></i>
-							</div>
-							<div class="comment-content">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
-							</div>
-						</div>
-					</li>
-				</ul>
-			</li>
 
-			<li>
-				<div class="comment-main-level">
 					
-					<div class="comment-avatar"><img src="http://i9.photobucket.com/albums/a88/creaticode/avatar_2_zps7de12f8b.jpg" alt=""/></div>
-					<div class="comment-box">
-						<div class="comment-head">
-							<h6 class="comment-name"><a href="http://creaticode.com/blog">Lorena Rojero</a></h6>
-							<span>hace 10 minutos</span>
-							<i class="fa fa-reply"></i>
-							<i class="fa fa-heart"></i>
-						</div>
-						<div class="comment-content">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
-						</div>
-					</div>
-				</div>
-			</li>
+			
+
+			
 		</ul>
 	</div>
+
 {/* <div className="cuadrado">
     <h3>(nombre de la persona)</h3>
     <br />

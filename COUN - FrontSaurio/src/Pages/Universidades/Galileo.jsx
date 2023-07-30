@@ -73,7 +73,7 @@ export const Galileo = () => {
                     </div>
 
                     <div>
-                        <Link to={'/Comentarios'}><button class="btn0"> Comentar
+                        <Link to={'/Comentarios'}><button class="btn0"> Comentarios
                         </button></Link>
                         &nbsp; &nbsp;<button class="btn0"> Calificar
                         </button>
@@ -88,56 +88,56 @@ export const Galileo = () => {
 
             <br />
 
-            <div class="container3mil fade-in-animation">
-                <div class="Facultades">
+            <div className="container3mil fade-in-animation">
+                <div className="Facultades">
                     <img src="https://www.cig.org.gt/assets/img/icons/logo%20Universidad%20Galileo.jpg" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Ciencias de la Computación.</p>
+                        <p className="containerTitle">Facultad de Ciencias de la Computación.</p>
                     </center>
-                    <div class="card_content3mil">
+                    <div className="card_content3mil">
                         <div class="containerText">
                             <p class="containerParr">La Facultad de Ingeniería de Sistemas, Informática y Ciencias de la Computación, FISICC, es la entidad donde se establecieron
                                 las bases que dieron origen a Universidad Galileo. Su experiencia académica, catedráticos y la actualización constante del contenido de los cursos y del equipo de
                                 los laboratorios, le ha permitido mantenerse a la vanguardia de la tecnología de punta.</p>
                         </div>
-                        <div class="btn-container">
+                        <div className="btn-container">
                             <button onClick={() => handleClick(urls[0])} class="btn draw-border">Información</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="Facultades">
+                <div className="Facultades">
                     <img src="https://www.cig.org.gt/assets/img/icons/logo%20Universidad%20Galileo.jpg" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Educación</p>
+                        <p className="containerTitle">Facultad de Educación</p>
                     </center>
-                    <div class="card_content3mil">
-                        <div class="containerText">
-                            <p class="containerParr">A través de esta unidad académica se capacita y forma a docentes, planificadores, psicopedagogos y administradores educativos, dentro de un ambiente que propicia la permanente búsqueda
+                    <div className="card_content3mil">
+                        <div className="containerText">
+                            <p className="containerParr">A través de esta unidad académica se capacita y forma a docentes, planificadores, psicopedagogos y administradores educativos, dentro de un ambiente que propicia la permanente búsqueda
                                 de excelencia académica que contribuya al crecimiento humano y desarrollo del país. </p>
                         </div>
-                        <div class="btn-container">
+                        <div className="btn-container">
                             <button onClick={() => handleClick(urls[2])} class="btn draw-border">Información</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="Facultades">
+                <div className="Facultades">
                     <img src="https://www.cig.org.gt/assets/img/icons/logo%20Universidad%20Galileo.jpg" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Ciencia, Tecnología e Industria</p>
+                        <p className="containerTitle">Facultad de Ciencia, Tecnología e Industria</p>
                     </center>
-                    <div class="card_content3mil">
-                        <div class="containerText">
-                            <p class="containerParr">Basa su proceso de aprendizaje en el desarrollo de competencias necesarias para concebir conceptos de desarrollo en el área de negocios, productos y sistemas
+                    <div className="card_content3mil">
+                        <div className="containerText">
+                            <p className="containerParr">Basa su proceso de aprendizaje en el desarrollo de competencias necesarias para concebir conceptos de desarrollo en el área de negocios, productos y sistemas
                                 de fabricación, y prestación de servicios. Simultáneamente se fomenta la creatividad, a través de actividades con profesionales y empresarios nacionales e internacionales, con los que se intercambia conocimiento y
                                 experiencias. Incluye aspectos relacionados con el análisis, la planeación, el control, la calidad, el diseño de productos y otros aspectos de la manufactura de clase mundial.</p>
                         </div>
-                        <div class="btn-container">
-                            <button onClick={() => handleClick(urls[1])} class="btn draw-border">Información</button>
+                        <div className="btn-container">
+                            <button onClick={() => handleClick(urls[1])} className="btn draw-border">Información</button>
                         </div>
                     </div>
                 </div>

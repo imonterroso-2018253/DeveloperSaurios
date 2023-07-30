@@ -62,3 +62,34 @@
     color: #000000;
     font-weight: 600;
 }
+/* Form.css */
+
+.form-submit-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .form-submit-btn input[type="submit"] {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .form-submit-btn input[type="submit"]:hover {
+    background-color: #5f9ea0;
+    color: #fff;
+  }
+  
+  .form-submit-btn input[type="submit"]:last-child {
+    background-color: #ccc;
+    color: #333;
+  }
+  
+  .form-submit-btn input[type="submit"]:last-child:hover {
+    background-color: #999;
+  }
+  

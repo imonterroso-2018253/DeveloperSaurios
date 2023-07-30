@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../index';
+import Swal from 'sweetalert2';
 
 /**
  * Componente funcional Login: página de inicio de sesión.
@@ -36,10 +37,10 @@ export const LoginPage = () => {
   const login = async (e) => {
     try {
       e.preventDefault(); // Evitar envío del formulario y recarga de página
-
+  
       // Realizar la petición al backend para iniciar sesión
       const { data } = await axios.post('http://localhost:3200/user/login', credentials);
-
+  
       // Si el inicio de sesión es exitoso, actualizar el estado global y redirigir a la página principal
       if (data.token) {
         setLoggedIn(true);
@@ -49,17 +50,31 @@ export const LoginPage = () => {
           username: data.userLogged.username,
           role: data.userLogged.role
         });
-
+  
         navigate('/');
+  
+        // Mostrar alerta de éxito utilizando sweetalert2
+        Swal.fire({
+          icon: 'success',
+          title: '¡Inicio de sesión exitoso!',
+          text: data.message,
+          showConfirmButton: false,
+          timer: 1500
+        });
       }
 
-      // Mostrar mensaje de respuesta del servidor
-      alert(data.message);
+      
     } catch (err) {
-      // Mostrar mensaje de error en caso de que ocurra algún problema
-      alert(err.response.data.message);
+      // Mostrar alerta de error utilizando sweetalert2
+      Swal.fire({
+        icon: 'error',
+        title: '¡Error!',
+        text: err.response.data.message,
+        confirmButtonText: 'Aceptar'
+      });
     }
   };
+  
 
   return (
     <>
@@ -80,7 +95,7 @@ export const LoginPage = () => {
             </div>
 
             <div className='remember-forgot'>
-              <a href="#">¿Olvidaste tu contraseña?</a>
+              <Link to="/forgotPassword">¿Olvidaste tu contraseña?</Link>
             </div>
 
             <button type='submit' onClick={login} className='btn1 btn00'>Iniciar sesión</button>

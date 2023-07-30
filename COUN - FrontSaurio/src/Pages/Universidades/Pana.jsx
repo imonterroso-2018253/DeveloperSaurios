@@ -74,7 +74,7 @@ export const Pana = () => {
                     </div>
 
                     <div>
-                        <Link to={'/Comentarios'}><button class="btn0"> Comentar
+                        <Link to={'/Comentarios'}><button class="btn0"> Comentarios
                         </button></Link>
                         &nbsp; &nbsp;<button class="btn0"> Calificar
                         </button>

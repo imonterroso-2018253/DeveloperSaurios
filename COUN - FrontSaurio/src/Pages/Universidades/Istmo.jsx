@@ -68,7 +68,7 @@ export const Istmo = () => {
           </div>
 
           <div>
-            <Link to={'/Comentarios'}><button class="btn0"> Comentar
+            <Link to={'/Comentarios/64c5c1f2f86eb00e72d5489d'}><button class="btn0"> Comentarios
             </button></Link>
             &nbsp; &nbsp;<button class="btn0"> Calificar
             </button>
@@ -90,9 +90,9 @@ export const Istmo = () => {
           </center>
           <div class="card_content3mil">
             <div class="containerText">
-              <p class="containerParr">En la Facultad de Ciencias Sociales creemos que un mundo mejor es posible. Consideramos que, a través de la investigación, la intervención clínica, la docencia y la extensión, podemos aportar datos,
-                formar opiniones y definir proyectos, programas y políticas que: 1) Inciden en la creación de sociedades más justas, equitativas y pacíficas, 2) Procuran la salud mental integral para todos y todas, 3) Contribuyen a la conservación e
-                interpretación de nuestro patrimonio arqueológico e histórico.</p>
+              <p class="containerParr">La Facultad de Arquitectura y Diseño de la Universidad del Istmo de Guatemala es un centro 
+              académico líder en la formación de profesionales creativos y altamente capacitados en las áreas de arquitectura y diseño. Ubicada en un campus moderno y equipado, 
+              la facultad se destaca por su compromiso con la excelencia académica, la innovación y el desarrollo sostenible.</p>
             </div>
             <div class="btn-container">
               <button onClick={() => handleClick(urls[0])} class="btn draw-border">Información</button>
@@ -107,9 +107,9 @@ export const Istmo = () => {
           </center>
           <div class="card_content3mil">
             <div class="containerText">
-              <p class="containerParr">En la Facultad de Ciencias Sociales creemos que un mundo mejor es posible. Consideramos que, a través de la investigación, la intervención clínica, la docencia y la extensión, podemos aportar datos,
-                formar opiniones y definir proyectos, programas y políticas que: 1) Inciden en la creación de sociedades más justas, equitativas y pacíficas, 2) Procuran la salud mental integral para todos y todas, 3) Contribuyen a la conservación e
-                interpretación de nuestro patrimonio arqueológico e histórico.</p>
+              <p class="containerParr">La Facultad de Ciencias Económicas de la Universidad del Istmo de Guatemala es un prestigioso centro académico dedicado a la formación de 
+              profesionales altamente capacitados en el campo de la economía y las ciencias financieras. Con una sólida trayectoria y un enfoque en la excelencia académica, esta 
+              facultad se posiciona como líder en la región por la calidad de sus programas y la preparación de sus egresados.</p>
             </div>
             <div class="btn-container">
               <button onClick={() => handleClick(urls[0])} class="btn draw-border">Información</button>
@@ -124,9 +124,9 @@ export const Istmo = () => {
           </center>
           <div class="card_content3mil">
             <div class="containerText">
-              <p class="containerParr">En la Facultad de Ciencias Sociales creemos que un mundo mejor es posible. Consideramos que, a través de la investigación, la intervención clínica, la docencia y la extensión, podemos aportar datos,
-                formar opiniones y definir proyectos, programas y políticas que: 1) Inciden en la creación de sociedades más justas, equitativas y pacíficas, 2) Procuran la salud mental integral para todos y todas, 3) Contribuyen a la conservación e
-                interpretación de nuestro patrimonio arqueológico e histórico.</p>
+              <p class="containerParr">La Facultad de Comunicación de la Universidad del Istmo de Guatemala es una institución educativa líder en la formación de profesionales en 
+              el campo de la comunicación. Reconocida por su excelencia académica y enfoque en la práctica, esta facultad se destaca por brindar a los estudiantes las herramientas 
+              necesarias para sobresalir en diversos medios de comunicación y desarrollarse como comunicadores integrales.</p>
             </div>
             <div class="btn-container">
               <button onClick={() => handleClick(urls[0])} class="btn draw-border">Información</button>
@@ -142,10 +142,10 @@ export const Istmo = () => {
         <input type="checkbox" id="btn-social" />
         <label for="btn-social" class="fa fa-play"></label>
         <div class="icon-social">
-          <a href="https://www.uvg.edu.gt/" target="_blank" rel="noopener noreferrer">
-            <img src="https://www.universidadesonline.com.gt/logos/original/logo-universidad-del-valle-de-guatemala.png" alt="" class="social-logo" />
+          <a href="https://unis.edu.gt/" target="_blank" rel="noopener noreferrer">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Escudo-UNIS.png" alt="" class="social-logo" />
           </a>
-          <a href="https://www.facebook.com/universidaddelvallegt" target="_blank" rel="noopener noreferrer" class="fa fa-facebook"></a>
+          <a href="https://www.facebook.com/unisgt" target="_blank" rel="noopener noreferrer" class="fa fa-facebook"></a>
         </div>
       </div>
     </>

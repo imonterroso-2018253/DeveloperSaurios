@@ -11,7 +11,7 @@ exports.defaultAdmin = async()=>{
             surname: 'NOJ',
             username: 'NOJ',
             password: await encrypt('NOJ123'),
-            email: 'NOJ@kinal.edu.gt',
+            email: 'batzinedgar10@gmail.com',
             role: 'ADMIN',
         }
         let existAdmin = await User.findOne({name: 'NOJ'});
@@ -74,6 +74,9 @@ exports.login = async(req, res)=>{
         //Validar que exista el usuario en la BD
         let user = await User.findOne({username: data.username})
         //Validar que la contraseña coincida
+        if(!user) return res.status.send({message: 'invalid credentials'})
+       
+
         if(user && await checkPassword(data.password, user.password)) {
             let token = await createToken(user)
             let userLogged = {
@@ -82,7 +85,7 @@ exports.login = async(req, res)=>{
                 role: user.role
             }
             return res.send({message: 'User logged successfully', token, userLogged})
-        }
+        }else return res.status.send({message: 'invalid credentials'})
     }catch(err){
         console.error(err)
         return res.status(500).send({message: 'Error not logged'})

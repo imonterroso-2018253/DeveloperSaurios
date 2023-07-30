@@ -100,3 +100,36 @@
   -ms-transform: scale(.98);
   transform: scale(.98);
 }
+
+.star-rating.enabled .star {
+  cursor: pointer;
+}
+
+.star-rating.enabled .star:hover {
+  color: gold;
+}
+
+.star-rating.enabled .star.filled {
+  color: gold;
+}
+
+.star-rating.enabled .star.half-filled:before {
+  content: '\2605';
+  position: absolute;
+  left: 0;
+  color: gold;
+}
+
+.star {
+  color: #ccc; /* Color de las estrellas por defecto (gris) */
+  cursor: pointer; /* Agrega el cursor de tipo "pointer" para indicar que se pueden seleccionar */
+}
+
+.star-rating.enabled .star {
+  color: #007bff; /* Color de las estrellas cuando se puede calificar (celeste) */
+}
+
+.star-rating.enabled .star:hover,
+.star-rating.enabled .star:hover ~ .star {
+  color: #007bff; /* Color de las estrellas al pasar el ratón cuando se puede calificar (celeste) */
+}

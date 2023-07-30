@@ -22,6 +22,10 @@ import { Pablo } from './Pages/Universidades/Pablo'
 import { Occi } from './Pages/Universidades/Occi'
 import { Users } from './Pages/ADMIN/Users';
 import { Comentarios } from './Pages/Comentarios';
+import { Perfil } from './Pages/USER/Perfil'
+import { ForgotPasswordPage } from './components/ForgotPasswordPage'
+import { UpdateUser } from './Pages/UpdateUser';
+import { UpdateProfile } from './Pages/USER/UpdateProfile';
 
 export const AuthContext = createContext();
 export const Index = () => {
@@ -33,7 +37,7 @@ export const Index = () => {
     username: '',
     role: ''
   });
-  
+
   const [loading, setLoading] = useState(true);
 
   const getUserDataFromToken = () => {
@@ -78,6 +82,17 @@ export const Index = () => {
           element: <LoginPage />
         },
         {
+          path: '/Perfil',
+          element: <Perfil />
+        },
+        {
+          path: '/UpdateP/:id',
+          element:
+              loggedIn ? (
+                  <UpdateProfile />
+              ) : <LoginPage />
+        },
+        {
           path: '/Register',
           element: <RegisterPage />
         },
@@ -100,7 +115,7 @@ export const Index = () => {
         {
           path: '/Pana',
           element: <Pana />
-          
+
         },
         {
           path: '/SanCarlos',
@@ -132,10 +147,24 @@ export const Index = () => {
         },
         {
           path: '/Users',
-          element: <Users />
+          element:
+            loggedIn ? (
+              dataUser.role == 'ADMIN' ? <Users /> : <HomePage />
+            ) : <LoginPage />
         },
         {
-          path: '/Comentarios',
+          path: '/UpdateU/:id',
+          element:
+            loggedIn ? (
+              <UpdateUser />
+            ) : <LoginPage />
+        },
+        {
+          path: '/forgotPassword',
+          element: <ForgotPasswordPage />
+        },
+        {
+          path: '/Comentarios/:id',
           element: <Comentarios />
         }
       ]

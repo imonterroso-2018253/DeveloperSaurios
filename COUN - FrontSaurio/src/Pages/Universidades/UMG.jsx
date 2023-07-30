@@ -73,7 +73,7 @@ export const UMG = () => {
                     </div>
 
                     <div>
-                        <Link to={'/Comentarios'}><button class="btn0"> Comentar
+                        <Link to={'/Comentarios'}><button class="btn0"> Comentarios
                         </button></Link>
                         &nbsp; &nbsp;<button class="btn0"> Calificar
                         </button>
@@ -97,9 +97,9 @@ export const UMG = () => {
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">La Facultad de Ingeniería de Sistemas, Informática y Ciencias de la Computación, FISICC, es la entidad donde se establecieron
-                                las bases que dieron origen a Universidad Galileo. Su experiencia académica, catedráticos y la actualización constante del contenido de los cursos y del equipo de
-                                los laboratorios, le ha permitido mantenerse a la vanguardia de la tecnología de punta.</p>
+                            <p class="containerParr">La Facultad de Arquitectura de la Universidad Mariano Gálvez de Guatemala ofrece programas de Arquitectura, 
+                            Moda y Diseño. Dentro de la Arquitectura, hay una especialización en Interiores. La facultad tiene un perfil profesional, un pensum de estudios y 
+                            un calendario académico en su sitio web.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[0])} class="btn draw-border">Información</button>
@@ -111,13 +111,12 @@ export const UMG = () => {
                     <img src="https://umg.edu.gt/assets/umg.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Ciencia, Tecnología e Industria</p>
+                        <p class="containerTitle">Facultad de Ciencias de la Administración</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">Basa su proceso de aprendizaje en el desarrollo de competencias necesarias para concebir conceptos de desarrollo en el área de negocios, productos y sistemas
-                                de fabricación, y prestación de servicios. Simultáneamente se fomenta la creatividad, a través de actividades con profesionales y empresarios nacionales e internacionales, con los que se intercambia conocimiento y
-                                experiencias. Incluye aspectos relacionados con el análisis, la planeación, el control, la calidad, el diseño de productos y otros aspectos de la manufactura de clase mundial.</p>
+                            <p class="containerParr">La Facultad de Ciencias de la Administración es una de las facultades de la Universidad Mariano Gálvez de Guatemala. 
+                            Ofrece programas de licenciatura y posgrado en áreas como Administración de Empresas, Administración Pública, Mercadotecnia y Publicidad.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[1])} class="btn draw-border">Información</button>
@@ -129,12 +128,14 @@ export const UMG = () => {
                     <img src="https://umg.edu.gt/assets/umg.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Educación</p>
+                        <p class="containerTitle">Facultad de Ciencias de la Comunicación</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">A través de esta unidad académica se capacita y forma a docentes, planificadores, psicopedagogos y administradores educativos, dentro de un ambiente que propicia la permanente búsqueda
-                                de excelencia académica que contribuya al crecimiento humano y desarrollo del país. </p>
+                            <p class="containerParr">La Facultad de Ciencias de la Comunicación de la Universidad Mariano Gálvez de Guatemala 
+                            es una escuela que ofrece programas de comunicación, periodismo y ciencias de la información. Algunas de las carreras que 
+                            se pueden estudiar son: Licenciatura en Ciencias de la Comunicación con Énfasis en Publicidad, Profesorado en Ciencias de la 
+                            Comunicación y Maestría en Comunicación Estratégica. </p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[2])} class="btn draw-border">Información</button>
@@ -151,12 +152,13 @@ export const UMG = () => {
                     <img src="https://umg.edu.gt/assets/umg.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Ciencias de la Comunicación</p>
+                        <p class="containerTitle">Facultad de Ciencias de la Económicas</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">En la Facultad de Ciencias de la Comunicación se forman profesionales en la comunicación y el diseño preparados para la investigación, elaboración, producción y distribución de materiales gráficos,
-                                audiovisuales y digitales que incluyen los factores de movimiento, tiempo y espacio virtual, que rompen y mejoran los espacios tradicionalmente utilizados para la comunicación.</p>
+                            <p class="containerParr">La Facultad de Ciencias Económicas es una de las 13 facultades que tiene la Universidad Mariano 
+                            Gálvez de Guatemala. Su objetivo es formar profesionales en las ciencias económicas, que son de gran importancia para el desarrollo de una empresa. 
+                            Ofrece carreras de pregrado y posgrado en áreas como economía, contaduría, auditoría y comercio internacional.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[3])} class="btn draw-border">Información</button>
@@ -168,12 +170,12 @@ export const UMG = () => {
                     <img src="https://umg.edu.gt/assets/umg.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Ciencia y Tecnología del Deporte</p>
+                        <p class="containerTitle">Facultad de Ciencias Jurídicas y Sociales</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">La facultad de Ciencias y Tecnología del Deporte fue creada con la finalidad de brindar una adecuada capacitación a los profesionales que se desempeñan dentro del área del deporte. Su visión es convertirse en
-                                líder a nivel latinoamericano en desarrollar y promover la cultura de profesionalización y la superación de especialistas deportivos de alto rendimiento, para ubicar a Guatemala en un estatus de excelencia internacional.</p>
+                            <p class="containerParr">La Facultad de Ciencias Jurídicas y Sociales es una de las 13 facultades de la Universidad Mariano Gálvez de Guatemala. 
+                            Ofrece programas de estudio en áreas como Derecho y Leyes, Seguridad, Criminología y Estudios Forenses.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[4])} class="btn draw-border">Información</button>
@@ -185,12 +187,13 @@ export const UMG = () => {
                     <img src="https://umg.edu.gt/assets/umg.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Biología, Química y Farmacia</p>
+                        <p class="containerTitle">Facultad de Ciencias Médicas y de la Salud</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">Es la responsable de la formación de profesionales capaces de actuar como factores dinámicos, con sentido creativo, crítico, participativo y gerencial dentro de empresas relacionadas con las áreas de biología,
-                                química, farmacia, y otras concernientes directa e indirectamente a la salud y el ambiente, desde el punto de vista del impacto económico.</p>
+                            <p class="containerParr">La Facultad de Ciencias Médicas y de la Salud de la Universidad Mariano Gálvez de Guatemala es una institución que ofrece 
+                            programas de formación profesional en el área de la salud, como Medicina y Cirugía, Enfermería, Nutrición y Fisioterapia. Su misión es el desarrollo 
+                            integral de profesionales de la salud con competencias éticas, científicas, tecnológicas y humanitarias.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[5])} class="btn draw-border">Información</button>
@@ -206,12 +209,12 @@ export const UMG = () => {
                     <img src="https://umg.edu.gt/assets/umg.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Ingeniería de la Construcción</p>
+                        <p class="containerTitle">Facultad de Ciencias Quimícas y Biológicas</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">Fue creada y diseñada para formar profesionales en las áreas técnicas, operativas y administrativas, con visión hacia la mejora empresarial mediante la valoración de la calidad, eficiencia y efectividad y actualización
-                                tecnológica, del ramo de la construcción.</p>
+                            <p class="containerParr">La Facultad de Ciencias Químicas y Biológicas de la Universidad Mariano Gálvez de Guatemala ofrece la carrera de Licenciatura en 
+                            Química Biológica, entre otras. Puedes encontrar más información sobre la facultad, sus programas, requisitos y contacto en su página web.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[6])} class="btn draw-border">Información</button>
@@ -220,15 +223,15 @@ export const UMG = () => {
                 </div>
 
                 <div class="Facultades">
-                    <img src="https://www.cig.org.gt/assets/img/icons/logo%20Universidad%20Galileo.jpg" alt="Person" class="FacultadIMG" />
+                    <img src="https://umg.edu.gt/assets/umg.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Ciencias de la Salud</p>
+                        <p class="containerTitle">Facultad de Humanidades</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">Se creó en el año 2002 con una nueva visión de crear carreras que den alternativas con excelencia académica y desarrollo humano de profesionales que intervengan de manera integral en la salud de la población usuaria de
-                                los servicios de salud públicos o privados.</p>
+                            <p class="containerParr">La Facultad de Humanidades de la Universidad Mariano Gálvez de Guatemala es una unidad académica que ofrece programas de educación, 
+                            ciencias sociales, comunicación y administración. Su misión es formar profesionales competentes, éticamente responsables y socialmente abiertos al cambio.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[7])} class="btn draw-border">Información</button>
@@ -237,10 +240,10 @@ export const UMG = () => {
                 </div>
 
                 <div class="Facultades">
-                    <img src="https://www.cig.org.gt/assets/img/icons/logo%20Universidad%20Galileo.jpg" alt="Person" class="FacultadIMG" />
+                    <img src="https://umg.edu.gt/assets/umg.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Administración</p>
+                        <p class="containerTitle">Facultad de Ingeniería Matemática y Ciencias Físicas</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
@@ -258,10 +261,10 @@ export const UMG = () => {
 
             <div class="container3mil fade-in-animation">
                 <div class="Facultades">
-                    <img src="https://www.cig.org.gt/assets/img/icons/logo%20Universidad%20Galileo.jpg" alt="Person" class="FacultadIMG" />
+                    <img src="https://umg.edu.gt/assets/umg.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Ingeniería de la Construcción</p>
+                        <p class="containerTitle">Facultad de Ingeniería en Sistemas</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
@@ -275,10 +278,10 @@ export const UMG = () => {
                 </div>
 
                 <div class="Facultades">
-                    <img src="https://www.cig.org.gt/assets/img/icons/logo%20Universidad%20Galileo.jpg" alt="Person" class="FacultadIMG" />
+                    <img src="https://umg.edu.gt/assets/umg.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Ciencias de la Salud</p>
+                        <p class="containerTitle">Facultad de Odontología</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
@@ -292,10 +295,10 @@ export const UMG = () => {
                 </div>
 
                 <div class="Facultades">
-                    <img src="https://www.cig.org.gt/assets/img/icons/logo%20Universidad%20Galileo.jpg" alt="Person" class="FacultadIMG" />
+                    <img src="https://umg.edu.gt/assets/umg.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Administración</p>
+                        <p class="containerTitle">Facultad de Psicología</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
@@ -313,10 +316,10 @@ export const UMG = () => {
 
             <div class="container3mil fade-in-animation">
                 <div class="Facultades">
-                    <img src="https://www.cig.org.gt/assets/img/icons/logo%20Universidad%20Galileo.jpg" alt="Person" class="FacultadIMG" />
+                    <img src="https://umg.edu.gt/assets/umg.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Ingeniería de la Construcción</p>
+                        <p class="containerTitle">Facultad de Teología</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">

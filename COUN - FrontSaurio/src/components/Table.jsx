@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { User } from './User'
+import '../../src/CSS/Table.css';
 import axios from "axios";
 import NavBar from '../components/Navbar';
 import { Link, useNavigate } from 'react-router-dom'
@@ -51,65 +52,50 @@ export const Table = () => {
 
   return (
     <>
-       <div className="container-fluid12">
-        <div className="table-responsive table-sm ">
-          <br /><br />
+      <div className="container-fluid12">
+        <div className="table-responsive table-sm">
           <center>
-            <h1 className='text-dark'>Usuarios</h1><br />
-            <button onClick={() => navigateToAdd()} className="btn btn-info text-white" style={{backgroundColor:'#075a75'}}> &nbsp;&nbsp;&nbsp;&nbsp;Agregar Usuario &nbsp;&nbsp;&nbsp;&nbsp;</button>
+            <h1 className="table-title text-dark">Usuarios</h1>
+            <button onClick={() => navigateToAdd()} className="add-user-button">
+              Agregar Usuario
+            </button>
           </center>
+          <br /><br /><br />
 
-          <br /><br />
-          <table className="table table-light table-hover ">
+          <table className="table table-dark table-hover custom-purple-table">
             <thead className="table-success border-dark">
-              <tr className="">
+              <tr>
                 <th scope="col">Name</th>
-                
                 <th scope="col">Username</th>
-                <th scope="col">DPI</th>
                 <th scope="col">Email</th>
-                <th scope="col">Phone</th>
                 <th scope="col">Role</th>
-                <th scope="col">Job</th>
-                <th scope="col">Direction</th>
-                <th scope="col">Earnings</th>
                 <th scope="col">Actions</th>
               </tr>
             </thead>
 
             <tbody>
               {
-                users.map(({ _id, name, username, DPI, email, phone, role, job, direction, earnings }, index) => {
+                users.map(({ _id, name, username, email, role }, index) => {
                   return (
                     <tr key={index}>
 
                       <User
                         name={name}
-                       
                         username={username}
-                        DPI={DPI}
                         email={email}
-                        phone={phone}
                         role={role}
-                        job={job}
-                        direction={direction}
-                        earnings={earnings}
                       ></User>
 
                       <td>
-                        <Link className="btn8 text-dark" to={`/AccountP/${_id}`}>
-                          <i className="fa-solid fa-wallet"></i>
-                        </Link>
-                        <br />
-                        <Link className="btn8 text-dark" to={`/UpdateU/${_id}`}>
-                          <i class="fa-solid fa-pen-to-square"></i>
+                        <Link className="btn8 text-white" to={`/UpdateU/${_id}`}>
+                          <i class="fa-fw fa fa-pencil-alt"></i>
                         </Link>
                         <br />
                         <div onClick={() => deleteUser(_id)} className="btn8 ">
                           <i class="fa-solid fa-trash"></i>
                         </div>
                       </td>
-                      
+
                     </tr>
                   )
                 })

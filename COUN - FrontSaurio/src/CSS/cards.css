@@ -1,7 +1,6 @@
 .container {
-    height: 70vh;
-    width: 60vw;
-    padding: 0 20px;
+    height: fit-content;
+    padding: 0 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,8 +9,8 @@
 
 .border {
     position: relative;
-    height: 342px;
-    width: 260px;
+    height: 350px;
+    width: 300px;
     background: transparent;
     border-radius: 15px;
     border: 2px solid red;
@@ -26,8 +25,7 @@
 .card {
     position: relative;
     height: 379px;
-    width: 300px;
-    margin: 30px;
+    width: 350px;
     border-radius: 20px;
     transition: .8s ease;
     overflow: hidden;
@@ -48,6 +46,9 @@
 }
 
 .cards-container {
+    padding: 5vw;
+    padding-left: 8vw;
+    padding-right: 8vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -56,7 +57,7 @@
 .container {
     width: calc(33.33% - 60px);
     /* Ajusta el ancho de cada tarjeta, de 3 en 3 */
-    margin: 30px;
+    margin: 20px;
     /* Resto de estilos ... */
 }
 

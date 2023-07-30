@@ -59,13 +59,23 @@ const NavBar = () => {
                 <h3>Universidades</h3>
               </Link>
             </li>
-
             <li className="nav-item">
-  <Link to="/Users" className="nav-link">
-    <h3>Usuarios</h3>
-  </Link>
-</li>
-            
+              <Link to="/Ranking" className="nav-link">
+                <h3>Ranking</h3>
+              </Link>
+            </li>
+            {
+                            dataUser.role == 'ADMIN' ? (
+                                <>
+                                    <li className="nav-item">
+                                        <Link to='/Users' className="nav-link">
+                                            <h3>Usuarios</h3>
+                                        </Link>
+                                    </li>
+
+                                </>
+                            ) : <></>
+                        }
           </ul>
 
           <ul className="navbar-nav mb-lg-0">

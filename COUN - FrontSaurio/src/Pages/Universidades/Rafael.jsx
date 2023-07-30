@@ -74,7 +74,7 @@ export const Rafael = () => {
                     </div>
 
                     <div>
-                        <Link to={'/Comentarios'}><button class="btn0"> Comentar
+                        <Link to={'/Comentarios'}><button class="btn0"> Comentarios
                         </button></Link>
                         &nbsp; &nbsp;<button class="btn0"> Calificar
                         </button>
@@ -262,10 +262,10 @@ export const Rafael = () => {
                 <input type="checkbox" id="btn-social" />
                 <label for="btn-social" class="fa fa-play"></label>
                 <div class="icon-social">
-                    <a href="https://www.usac.edu.gt/index.php" target="_blank" rel="noopener noreferrer">
-                        <img src="https://www.usac.edu.gt/img/logo_usac2018.svg" alt="" />
+                    <a href="https://principal.url.edu.gt/" target="_blank" rel="noopener noreferrer">
+                        <img src="https://seeklogo.com/images/U/universidad-rafael-landivar-logo-531484FDAB-seeklogo.com.png" alt="" />
                     </a>
-                    <a href="https://www.facebook.com/UsacOficial" target="_blank" rel="noopener noreferrer" class="fa fa-facebook">
+                    <a href="https://www.facebook.com/url.landivar" target="_blank" rel="noopener noreferrer" class="fa fa-facebook">
                     </a>
                 </div>
             </div>

@@ -17,7 +17,8 @@
  }
 
  .comment-container {
-    max-width: 600px;
+    width: 85%;
+    max-width: 800px; /* Asegura que el ancho máximo sea de 800px */
     margin: auto;
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -25,7 +26,7 @@
   }
   
   .comment-textarea {
-    width: 35rem;
+    width: 100%;
     min-height: 50px;
     resize: vertical;
     border: 1px solid #e0e0e0;
@@ -34,6 +35,17 @@
     line-height: 1.6;
     margin-bottom: 15px;
   }
+  
+  @media (max-width: 768px) {
+    .comment-textarea {
+      width: 100%;
+      font-size: 14px; /* Reducimos el tamaño de fuente para pantallas pequeñas */
+      line-height: 1.5;
+    }
+  }
+  
+  
+  
   
   .comment-button {
     background-color: #1877f2;
@@ -257,16 +269,16 @@
     
     .comment-box .comment-name.by-author, .comment-box .comment-name.by-author a {color: #03658c;}
     .comment-box .comment-name.by-author:after {
-        content: 'autor';
+        content: '';
         background: #03658c;
         color: #FFF;
-        font-size: 12px;
+        font-size: 3px;
         padding: 3px 5px;
         font-weight: 700;
         margin-left: 10px;
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
-        border-radius: 3px;
+        border-radius: 30px;
     }
     
     /** =====================
@@ -285,4 +297,52 @@
             width: 320px;
         }
     }
- 
+    .heart-checkbox {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+      }
+      
+      .heart-checkbox input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+      }
+      
+      .heart-checkbox i {
+        color: #ccc; /* Color del corazón no seleccionado */
+      }
+      
+      .heart-checkbox input:checked + i {
+        color: red; /* Color del corazón cuando está seleccionado */
+      }
+
+      .comment-head {
+        display: flex;
+        justify-content: space-between;
+      }
+      
+      .likes-container {
+        display: flex;
+        align-items: center; /* Alinear el icono de corazón y el número de likes verticalmente */
+      }
+      
+      .heart-checkbox {
+        margin-right: 8px; /* Espacio entre el icono de corazón y el número de likes */
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .comments-container {
+          width: 95%;
+          max-width: none; /* Quitar el ancho máximo en pantallas más pequeñas */
+        }
+      
+        .comments-list .comment-box {
+          width: 100%; /* El comentario ocupará todo el ancho del contenedor en pantallas más pequeñas */
+        }
+      
+        .comment-box .comment-content {
+          font-size: 14px; /* Reducir el tamaño de fuente para mejorar la legibilidad */
+          padding: 8px; /* Reducir el padding para dar más espacio en pantallas más pequeñas */
+        }
+      }

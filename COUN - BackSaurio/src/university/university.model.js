@@ -15,11 +15,7 @@ const universitySchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Faculty',
         required: true
-    }],
-    price: {
-        type: Number,
-        required: true
-    }
+    }]
 });
 
 module.exports = mongoose.model('University', universitySchema);
