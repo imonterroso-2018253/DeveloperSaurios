@@ -7,7 +7,7 @@ import { useEffect } from "react"
 import { useState } from "react"
 import { Footer } from '../../components/Footer'
 
-export const Rafael = () => {
+export const Vinci = () => {
     const MAX_STARS = 10;
 
     const [rating, setRating] = useState(0);
@@ -49,10 +49,10 @@ export const Rafael = () => {
 
             <div className="UsacContainer fade-in-animation">
 
-                <img src="https://seeklogo.com/images/U/universidad-rafael-landivar-logo-531484FDAB-seeklogo.com.png" alt="" width={'300vw'} height={'300vh'} />
+                <img src="https://udv.edu.gt/wp-content/uploads/2018/07/favicon.png" alt="" width={'300vw'} height={'300vh'} />
 
                 <div className="TitulosUSAC">
-                    <h1 class="cssFont_2" >UNIVERSIDAD SAN CARLOS DE GUATEMALA</h1>
+                    <h1 class="cssFont_2" >UNIVERSIDAD DA VINCI DE GUATEMALA</h1>
                     <p className="cssFont_3" >Promoviendo la eduación superior autónoma, pública y gratuita</p>
                     <div className="App">
                         <div className="App">
@@ -92,16 +92,14 @@ export const Rafael = () => {
             <div class="container3mil fade-in-animation">
 
                 <div class="Facultades">
-                    <img src="https://seeklogo.com/images/U/universidad-rafael-landivar-logo-531484FDAB-seeklogo.com.png" alt="Person" class="FacultadIMG" />
+                    <img src="https://udv.edu.gt/wp-content/uploads/2018/07/favicon.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Ciencias de la Salud</p>
+                        <p class="containerTitle">Facultad de Ciencias Criminológicas, Criminalísticas y de Seguridad</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">La Facultad de Ciencias de la Salud fue fundada el 1 de julio de 1998, por lo que es la facultad más joven de la Universidad Rafael Landívar. Se inició con la carrera de Enfermería a nivel de técnico universitario; para el 2000 se incorporó el técnico en Fisioterapia, y en el 2001 la carrera de Terapia de Audición, Voz y Lenguaje.
-
-</p>
+                            <p class="containerParr">Caracterizada por ser una Facultad que desarrolla actividades de enseñanza aprendizaje, investigación y extensión, orientadas a la búsqueda de solución de problemas en las áreas de su especialidad.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[0])} class="btn draw-border">Información</button>
@@ -110,15 +108,14 @@ export const Rafael = () => {
                 </div>
 
                 <div class="Facultades">
-                    <img src="https://seeklogo.com/images/U/universidad-rafael-landivar-logo-531484FDAB-seeklogo.com.png" alt="Person" class="FacultadIMG" />
+                    <img src="https://udv.edu.gt/wp-content/uploads/2018/07/favicon.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Ciencias Políticas y Sociales</p>
+                        <p class="containerTitle">Facultad de Enfermería y Ciencias del Cuidado de la Salud</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">La Facultad de Ciencias Políticas y Sociales es una unidad académica cuya misión es impulsar el desarrollo de las ciencias sociales en Guatemala, formando profesionales comprometidos profundamente con la realidad nacional y el contexto internacional, que incidan positiva y participativamente en la transformación de una sociedad guatemalteca más justa y más humana.
-</p>
+                            <p class="containerParr">La Universidad Da Vinci de Guatemala ha diseñado la carrera de Técnico Universitario en Enfermería dirigida a egresados de educación media que deseen formarse y adquirir conocimientos para desempeñarse profesionalmente en el campo de la enfermería.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[1])} class="btn draw-border">Información</button>
@@ -127,14 +124,14 @@ export const Rafael = () => {
                 </div>
 
                 <div class="Facultades">
-                    <img src="https://seeklogo.com/images/U/universidad-rafael-landivar-logo-531484FDAB-seeklogo.com.png" alt="Person" class="FacultadIMG" />
+                    <img src="https://udv.edu.gt/wp-content/uploads/2018/07/favicon.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Ingeniería</p>
+                        <p class="containerTitle">Facultad de Humanidades</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">La Facultad de Ingeniería de la Universidad Rafael Landívar es la unidad académica responsable de la formación, con excelencia académica y valores, de estudiantes interesados en ciencias aplicadas bajo diferentes áreas disciplinares de ingeniería.</p>
+                            <p class="containerParr">Las Ciencias Sociales y Humanidades se encargan del estudio del ser humano como ente social, dando gran énfasis a aspectos como el comportamiento, interacciones humanas y la cultura.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[2])} class="btn draw-border">Información</button>
@@ -149,14 +146,14 @@ export const Rafael = () => {
             <div class="container3mil fade-in-animation">
 
                 <div class="Facultades">
-                    <img src="https://seeklogo.com/images/U/universidad-rafael-landivar-logo-531484FDAB-seeklogo.com.png" alt="Person" class="FacultadIMG" />
+                    <img src="https://udv.edu.gt/wp-content/uploads/2018/07/favicon.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Humanidades</p>
+                        <p class="containerTitle">Facultad de Ciencias Jurídicas y Sociales</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">La Facultad de Humanidades es una unidad académica integrada por los departamentos de Ciencias de la Comunicación, Psicología, Letras y Filosofía, Educación e Idiomas. Ofrece una diversidad de programas académicos en los niveles de diplomado, profesorado, licenciatura y maestría; con presencia en Campus Central y en todos los demás campus y sedes.</p>
+                            <p class="containerParr">Ofrece programas de estudio en el campo del derecho, como la Licenciatura en Ciencias Jurídicas y Sociales, Abogado y Notario. También realiza actividades de investigación, extensión y servicio social.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[3])} class="btn draw-border">Información</button>
@@ -165,14 +162,14 @@ export const Rafael = () => {
                 </div>
 
                 <div class="Facultades">
-                    <img src="https://seeklogo.com/images/U/universidad-rafael-landivar-logo-531484FDAB-seeklogo.com.png" alt="Person" class="FacultadIMG" />
+                    <img src="https://udv.edu.gt/wp-content/uploads/2018/07/favicon.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Teología</p>
+                        <p class="containerTitle">Facultad de Ciencias Odontológicas</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">La Facultad de Teología de la Universidad Rafael Landívar (URL) se fundó en 1986, buscando ser promotora y formadora de religiosos y religiosas, inicialmente. Posteriormente, y acorde a los signos de los tiempos, se ha preocupado por la formación teológica de mujeres y hombres laicos, en su mayoría profesionales, que participan activamente en movimientos eclesiales y parroquiales.</p>
+                            <p class="containerParr">El título de Cirujano Dentista de la Facultad de Ciencias Odontológicas conlleva un programa académico, en el cual se forman profesionales capaces de abordar con criterio y habilidad técnica la prevención, el diagnóstico, el pronóstico, así como el tratamiento y rehabilitación de enfermedades y situaciones clínicas estomatológicas, con alta calidad, precisión y estética.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[4])} class="btn draw-border">Información</button>
@@ -181,14 +178,14 @@ export const Rafael = () => {
                 </div>
 
                 <div class="Facultades">
-                    <img src="https://seeklogo.com/images/U/universidad-rafael-landivar-logo-531484FDAB-seeklogo.com.png" alt="Person" class="FacultadIMG" />
+                    <img src="https://udv.edu.gt/wp-content/uploads/2018/07/favicon.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Ciencias Económicas y Empresariales</p>
+                        <p class="containerTitle">Facultad de Químicas y Farmacia</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">La Facultad de Ciencias Económicas y Empresariales inició sus actividades académicas en enero de 1962, como respuesta a la gran demanda de formación universitaria existente entre 1950 y 1960. Actualmente, la facultad ofrece una competitiva preparación académica, con una sólida formación en valores y liderazgo emprendedor, que propicia la creatividad, la innovación y el pensamiento crítico.</p>
+                            <p class="containerParr">Es una unidad académica de la Universidad de San Carlos de Guatemala que ofrece carreras relacionadas con la química y la farmacia.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[5])} class="btn draw-border">Información</button>
@@ -203,14 +200,14 @@ export const Rafael = () => {
             <div class="container3mil fade-in-animation">
 
                 <div class="Facultades">
-                    <img src="https://seeklogo.com/images/U/universidad-rafael-landivar-logo-531484FDAB-seeklogo.com.png" alt="Person" class="FacultadIMG" />
+                    <img src="https://udv.edu.gt/wp-content/uploads/2018/07/favicon.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Ciencias Ambientales y Agrícolas</p>
+                        <p class="containerTitle">Facultad de Ciencias Jurídicas, Sociales y Relaciones Internacionales</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">Nuestra misión es constituir una plataforma para la formación integral de profesionales en las ciencias ambientales y agrícolas, excelentes en cuanto a sus competencias técnico-científicas, con altos valores, orientados a contribuir al desarrollo del país, aprovechando racionalmente sus recursos naturales y liderando el cambio de modelo productivo hacia uno más sostenible, humano y justo.</p>
+                            <p class="containerParr">La Licenciatura en Ciencias Jurídicas y Sociales tiene como objetivo general formar juristas con excelencia académica, capaces de ejercer la abogacía y el notariado aplicando de manera objetiva y efectiva los postulados deontológicos y derechos fundamentales.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[6])} class="btn draw-border">Información</button>
@@ -219,14 +216,14 @@ export const Rafael = () => {
                 </div>
 
                 <div class="Facultades">
-                    <img src="https://seeklogo.com/images/U/universidad-rafael-landivar-logo-531484FDAB-seeklogo.com.png" alt="Person" class="FacultadIMG" />
+                    <img src="https://udv.edu.gt/wp-content/uploads/2018/07/favicon.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Arquitectura y Diseño</p>
+                        <p class="containerTitle">Facultad de Inginiería</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">La Facultad tiene más de 45 años de haberse instituido. Durante este tiempo se ha convertido en un referente importante de la arquitectura y el diseño en la región. Se destaca la formación centrada en el diseño, el arte, la tecnología, la investigación, la historia, la identidad y los valores. </p>
+                            <p class="containerParr">El egresado de la Carrera de Ingeniería de Sistemas de la Universidad Da Vinci de Guatemala, es un profesional capaz de analizar, diseñar, desarrollar sistemas y gestionar proyectos, que involucran personas, procesos e información, para automatizaciones mediante diseño, programación, mantenimiento e innovación de sistemas de información y de redes, aplicando las tecnologías de la información.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[7])} class="btn draw-border">Información</button>
@@ -235,14 +232,14 @@ export const Rafael = () => {
                 </div>
 
                 <div class="Facultades">
-                    <img src="https://seeklogo.com/images/U/universidad-rafael-landivar-logo-531484FDAB-seeklogo.com.png" alt="Person" class="FacultadIMG" />
+                    <img src="https://udv.edu.gt/wp-content/uploads/2018/07/favicon.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">Facultad de Ciencias Jurídicas y Sociales</p>
+                        <p class="containerTitle">Facultad de Ciencias Médicas y de la Vida</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">La Facultad de Ciencias Jurídicas y Sociales tiene como tarea fundamental la formación de profesionales de las ciencias jurídicas y sociales, y de la investigación criminal y forense, con excelencia académica, capaces de ejercer la profesión, aplicando de manera objetiva y efectiva los postulados deontológicos y derechos fundamentales, con un claro sentido de equidad, probidad y justicia social.</p>
+                            <p class="containerParr">La Facultad de Ciencias Médicas y de la vida se propone formar Recurso Humanos en Deportes, a través de un programa modular de dos y cuatro años, en tres áreas: Área de Formación Básica, Área de Formación Específica y Área de Formación Profesional. Integradas por las líneas curriculares de Investigación, Metabolismo Biomecánica Nutrición Salud y Principios y Valores.</p>
                         </div>
                         <div class="btn-container">
                             <button onClick={() => handleClick(urls[8])} class="btn draw-border">Información</button>
@@ -255,7 +252,58 @@ export const Rafael = () => {
             <br />
 
             <div class="container3mil fade-in-animation">
+
+            <div class="Facultades">
+                    <img src="https://udv.edu.gt/wp-content/uploads/2018/07/favicon.png" alt="Person" class="FacultadIMG" />
+                    <br />
+                    <center>
+                        <p class="containerTitle">Facultad de Música y Artes Visuales</p>
+                    </center>
+                    <div class="card_content3mil">
+                        <div class="containerText">
+                            <p class="containerParr">El grado académico de TÉCNICO UNIVERSITARIO consta de dos años de estudios (4 semestres) que abarcan el desarrollo de habilidades y adquisición de conocimiento a nivel técnico  en  áreas  de la producción de música y sonido digital.</p>
+                        </div>
+                        <div class="btn-container">
+                            <button onClick={() => handleClick(urls[9])} class="btn draw-border">Información</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Facultades">
+                    <img src="https://udv.edu.gt/wp-content/uploads/2018/07/favicon.png" alt="Person" class="FacultadIMG" />
+                    <br />
+                    <center>
+                        <p class="containerTitle">Facultad de Ciencias Administrativas y Comerciales</p>
+                    </center>
+                    <div class="card_content3mil">
+                        <div class="containerText">
+                            <p class="containerParr">La globalización de los mercados sustentados en la apertura comercial representa actualmente grandes oportunidades de negocios para las personas físicas y jurídicas.</p>
+                        </div>
+                        <div class="btn-container">
+                            <button onClick={() => handleClick(urls[9])} class="btn draw-border">Información</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Facultades">
+                    <img src="https://udv.edu.gt/wp-content/uploads/2018/07/favicon.png" alt="Person" class="FacultadIMG" />
+                    <br />
+                    <center>
+                        <p class="containerTitle">Facultad de Ciencias Agronómicas</p>
+                    </center>
+                    <div class="card_content3mil">
+                        <div class="containerText">
+                            <p class="containerParr">La Facultad de Ciencias Agronómicas ofrece la carrera de Ingeniería Agronómica, enfocada en profesionales con alto nivel académico en producción agrícola. Formamos graduados competitivos con habilidades empresariales y administrativas para satisfacer las demandas del sector productivo y académico.</p>
+                        </div>
+                        <div class="btn-container">
+                            <button onClick={() => handleClick(urls[9])} class="btn draw-border">Información</button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+            
+
             <br />
 
             <div class="container-bar fade-in-animation">

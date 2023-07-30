@@ -87,7 +87,7 @@ export const Universidades = () => {
           <div className="container">
             <div className="card card9">
               <div className="border">
-                <h2 className="tuniversidades">Universidad Da Vinci de Guatemala</h2>
+              <Link to='/Vinci'><h2 className="tuniversidades">Universidad Da Vinci de Guatemala</h2></Link>
               </div>
             </div>
           </div>
@@ -95,7 +95,7 @@ export const Universidades = () => {
           <div className="container">
             <div className="card card10">
               <div className="border">
-                <h2 className="tuniversidades">Universidad de San Pablo de Guatemala</h2>
+              <Link to='/Pablo'><h2 className="tuniversidades">Universidad de San Pablo de Guatemala</h2></Link>
               </div>
             </div>
           </div>
@@ -103,7 +103,7 @@ export const Universidades = () => {
           <div className="container">
             <div className="card card11">
               <div className="border">
-                <h2 className="tuniversidades">Universidad de Occidente de Guatemala</h2>
+              <Link to='/Occi'><h2 className="tuniversidades">Universidad de Occidente de Guatemala</h2></Link>
               </div>
             </div>
           </div>

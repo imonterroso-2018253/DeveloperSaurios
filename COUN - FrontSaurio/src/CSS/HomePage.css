@@ -1,6 +1,6 @@
 .body5mil {
     font-family: system-ui;
-
+    
 }
 
 .titulo {
@@ -10,10 +10,17 @@
 
 }
 
-.slogan{
+/* CSS para el slogan */
+.slogan {
     font-size: 40px;
     text-align: center;
-    align-items: center;
+    padding: 10px;
+    position: relative;
+}
+
+.container1HP {
+    margin: 0 auto;
+    padding: 3px;
 }
 
 .contenedorHP {
@@ -21,8 +28,6 @@
     justify-content: space-between;
     font-size: 18px;
     margin-bottom: 100px;
-    box-shadow: 0 1px 10px 1px rgb(8, 7, 7);
-
 }
 
 .containerHP {
@@ -39,14 +44,136 @@
 .hpIMG {
     height: 500px;
     width: 500px;
-    margin-top: 20px;
     margin-left: 75px;
-    
 }
 
+.pHP {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    color: #000000;
+  }
+
+/* Estilos para dispositivos móviles */
 @media screen and (max-width: 768px) {
+    .contenedorHP {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     .hpIMG {
-        height: 150px;
-        width: 150px;
+        max-width: 200px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .containerHP {
+        text-align: center;
     }
 }
+
+/*Search*/
+
+/* Estilos generales para el formulario de búsqueda */
+.search-form {
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .search-form input[type="text"] {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    outline: none;
+  }
+  
+  .dropdown-container {
+    position: relative;
+  }
+  
+  .dropdown-search {
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    outline: none;
+    background-color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  
+  .dropdown-search option {
+    font-size: 18px;
+  }
+  
+  button[type="submit"] {
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 20px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 20px;
+  }
+  
+  button[type="submit"] span {
+    margin-right: 10px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  a.searchClear {
+    color: #f00;
+    margin-left: 20px;
+    font-size: 24px;
+    text-decoration: none;
+  }
+  
+  /* Estilos para dispositivos móviles */
+  @media screen and (max-width: 768px) {
+    .search-form {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .search-form input[type="text"],
+    .dropdown-search {
+      margin-bottom: 10px;
+    }
+  
+    .search-form button[type="submit"] {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  }
+  
+  /* Estilos para el menú desplegable cuando está abierto */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content option {
+    padding: 10px;
+    font-size: 18px;
+    color: #000;
+  }
+  
+  .dropdown-container:hover .dropdown-content {
+    display: block;
+  }
+  

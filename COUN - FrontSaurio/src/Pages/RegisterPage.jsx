@@ -57,8 +57,8 @@ export const RegisterPage = () => {
   // Renderizar el formulario de registro
   return (
     <>
-      <body className='body21'>
-        <div className='wrapper'>
+      <body className='body21 login-register-page'>
+        <div className='wrapper21 register-container'>
           <form action="">
 
             <center><h1>Register</h1></center>
@@ -114,7 +114,7 @@ export const RegisterPage = () => {
                 placeholder="Correo" />
             </div>
 
-            <button type='submit' onClick={(e) => { e.preventDefault(); register(e) }} className='btn1 btn0'>Crear usuario</button>
+            <button type='submit' onClick={(e) => { e.preventDefault(); register(e) }} className='btn1 btn00'>Crear usuario</button>
 
           </form>
         </div>

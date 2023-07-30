@@ -1,0 +1,126 @@
+import { useState, useEffect } from "react";
+import { User } from './User'
+import axios from "axios";
+import NavBar from '../components/Navbar';
+import { Link, useNavigate } from 'react-router-dom'
+import React from 'react'
+
+export const Table = () => {
+  const [users, setUsers] = useState([{}])
+  const navigate = useNavigate()
+
+  const headers = {
+    'Content-Type': 'application/json',
+    'Authorization': localStorage.getItem('token')
+  }
+
+  const getUsers = async () => {
+    try {
+      const { data } = await axios(`http://localhost:3200/user/getUser`, { headers: headers })
+      setUsers(data.users)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+  const deleteUser = async (id) => {
+    try {
+      let confirmDelete = confirm('Are you sure to delete this user?')
+      if (confirmDelete) {
+        const { data } = await axios.delete(`http://localhost:3200/user/delete/${id}`, { headers: headers })
+        console.log(data)
+        alert(`${data.message}`)
+        getUsers();
+      }
+    } catch (err) {
+      console.error(err)
+    }
+  }
+
+  const navigateToAdd = async () => {
+    try {
+      navigate('/Register')
+    } catch (err) {
+
+    }
+  }
+
+  useEffect(() => {
+    getUsers();
+  }, []);
+
+  return (
+    <>
+       <div className="container-fluid12">
+        <div className="table-responsive table-sm ">
+          <br /><br />
+          <center>
+            <h1 className='text-dark'>Usuarios</h1><br />
+            <button onClick={() => navigateToAdd()} className="btn btn-info text-white" style={{backgroundColor:'#075a75'}}> &nbsp;&nbsp;&nbsp;&nbsp;Agregar Usuario &nbsp;&nbsp;&nbsp;&nbsp;</button>
+          </center>
+
+          <br /><br />
+          <table className="table table-light table-hover ">
+            <thead className="table-success border-dark">
+              <tr className="">
+                <th scope="col">Name</th>
+                
+                <th scope="col">Username</th>
+                <th scope="col">DPI</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Role</th>
+                <th scope="col">Job</th>
+                <th scope="col">Direction</th>
+                <th scope="col">Earnings</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {
+                users.map(({ _id, name, username, DPI, email, phone, role, job, direction, earnings }, index) => {
+                  return (
+                    <tr key={index}>
+
+                      <User
+                        name={name}
+                       
+                        username={username}
+                        DPI={DPI}
+                        email={email}
+                        phone={phone}
+                        role={role}
+                        job={job}
+                        direction={direction}
+                        earnings={earnings}
+                      ></User>
+
+                      <td>
+                        <Link className="btn8 text-dark" to={`/AccountP/${_id}`}>
+                          <i className="fa-solid fa-wallet"></i>
+                        </Link>
+                        <br />
+                        <Link className="btn8 text-dark" to={`/UpdateU/${_id}`}>
+                          <i class="fa-solid fa-pen-to-square"></i>
+                        </Link>
+                        <br />
+                        <div onClick={() => deleteUser(_id)} className="btn8 ">
+                          <i class="fa-solid fa-trash"></i>
+                        </div>
+                      </td>
+                      
+                    </tr>
+                  )
+                })
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </>
+  )
+}
+
+export default Table;

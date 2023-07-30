@@ -63,8 +63,8 @@ export const LoginPage = () => {
 
   return (
     <>
-      <body className='body20'>
-        <div className='wrapper'>
+      <body className='body20 login-register-page'>
+        <div className='wrapper login-container'>
           <form action="">
 
             <center><h1>LogIn</h1></center>
@@ -83,7 +83,7 @@ export const LoginPage = () => {
               <a href="#">¿Olvidaste tu contraseña?</a>
             </div>
 
-            <button type='submit' onClick={login} className='btn1 btn0'>Iniciar sesión</button>
+            <button type='submit' onClick={login} className='btn1 btn00'>Iniciar sesión</button>
 
             <div className='register-link'>
               <p>¿Aún no creas tu cuenta? <Link to="/Register">Registrarse</Link></p>

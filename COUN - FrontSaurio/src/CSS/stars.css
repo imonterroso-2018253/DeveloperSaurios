@@ -32,8 +32,8 @@
 }
 
 .btn0 {
-  --color: #00A97F;
-  --color2: rgb(10, 25, 30);
+  --color: #6CD2C6;
+  --color2: rgb(255, 255, 255);
   padding: 0.8em 1.75em;
   background-color: transparent;
   border-radius: 6px;
