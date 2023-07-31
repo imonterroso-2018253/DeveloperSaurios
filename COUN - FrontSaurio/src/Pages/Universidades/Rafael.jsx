@@ -3,33 +3,92 @@ import { Link } from "react-router-dom"
 import '../../CSS/istmocartas.css'
 import '../../CSS/cardsF.css'
 import '../../CSS/stars.css'
-import { useEffect } from "react"
-import { useState } from "react"
-import { Footer } from '../../components/Footer'
+import { useEffect, useContext } from "react";
+import { useState } from "react";
+import axios from "axios";
+import { useParams } from "react-router-dom";
+import StarRating from "../../components/StarRating";
+import { AuthContext } from "../../index";
 
 export const Rafael = () => {
     const MAX_STARS = 10;
-
+    const { name } = useParams();
+    const [university, setUniversity] = useState(null);
+    const [universityId, setUniversityId] = useState(null);
     const [rating, setRating] = useState(0);
-
+    const [calificarInicial, setCalificarInicial] = useState(true);
+    const [calificando, setCalificando] = useState(false);
+    const { dataUser } = useContext(AuthContext);
+  
+    const getUniversity = async () => {
+      try {
+        const { data } = await axios(`http://localhost:3200/university/getByName/${name}`);
+        setUniversity(data);
+        setUniversityId(data.university._id);
+        setRating(data.averageRating);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+  
     function abrirEnNuevaPestana(urls) {
-        urls.forEach((url) => {
-            window.open(url, "_blank");
-        });
+      urls.forEach((url) => {
+        window.open(url, "_blank");
+      });
     }
+  
+    const headers = {
+      'Content-Type': 'application/json',
+      'Authorization': localStorage.getItem('token')
+    };
+  
+    useEffect(() => {
+      getUniversity();
+    }, [name]);
+  
+    const handleCalificarClick = () => {
+      if(calificando == false){
+        setCalificando(true);
+      }else{
+        setCalificando(false);
+      }
+      
+    };
+  
+    const handleRatingChange = (newRating) => {
+      setRating(newRating);
+    };
+  
+    const addVote = async (universityId, userId, rating) => {
+      try {
+        const response = await axios.post("http://localhost:3200/university/vote", {
+          universityId,
+          userId,
+          stars: rating,
+        }, {headers});
+        getUniversity();
+        console.log(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+  
+    const handleAddVote = () => {
+      addVote(universityId, dataUser.sub, rating);
+      setCalificando(false);
+    };
 
     // Llamada a la función con un array de URLs
     const urls = [
-        "https://farusac.edu.gt/",
-        "http://fausac.gt/",
-        "http://economicas.usac.edu.gt/",
-        "https://derecho.cloud/",
-        "https://medicina.usac.edu.gt/",
-        "https://portal.ccqqfar.usac.edu.gt./",
-        "http://humanidades.usac.edu.gt/portal/",
-        "https://portal.ingenieria.usac.edu.gt/",
-        "https://odontologia.usac.edu.gt/",
-        "http://portal.fmvz.usac.edu.gt/"
+        "https://principal.url.edu.gt/category/facultades/facultad-de-ciencias-de-la-salud/",
+        "https://principal.url.edu.gt/category/facultades/facultad-de-ciencias-politicas-y-sociales/",
+        "https://principal.url.edu.gt/category/facultades/facultad-de-ingenieria/",
+        "https://principal.url.edu.gt/category/facultades/facultad-de-humanidades/",
+        "https://principal.url.edu.gt/category/facultades/facultad-de-teologia/",
+        "https://principal.url.edu.gt/category/facultades/facultad-de-ciencias-economicas-y-empresariales/",
+        "https://principal.url.edu.gt/category/facultades/facultad-de-ciencias-ambientales-y-agricolas/",
+        "https://principal.url.edu.gt/category/facultades/facultad-de-arquitectura-y-diseno/",
+        "https://principal.url.edu.gt/category/facultades/facultad-de-ciencias-juridicas-y-sociales/"
     ];
 
     // Función para abrir en nueva pestaña al hacer clic en un botón
@@ -44,7 +103,7 @@ export const Rafael = () => {
     return (
         <>
             <div className="containerRegresar">
-                <Link to="/Universidades"><button className="btnRegresar">Regresar</button></Link>
+                <Link to="/Universidades"><button className="btnRegresar"><i class="fa-solid fa-arrow-left"></i></button></Link>
             </div>
 
             <div className="UsacContainer fade-in-animation">
@@ -52,33 +111,48 @@ export const Rafael = () => {
                 <img src="https://seeklogo.com/images/U/universidad-rafael-landivar-logo-531484FDAB-seeklogo.com.png" alt="" width={'300vw'} height={'300vh'} />
 
                 <div className="TitulosUSAC">
-                    <h1 class="cssFont_2" >UNIVERSIDAD SAN CARLOS DE GUATEMALA</h1>
+                    <h1 class="cssFont_2" >UNIVERSIDAD Rafael Landivar</h1>
                     <p className="cssFont_3" >Promoviendo la eduación superior autónoma, pública y gratuita</p>
-                    <div className="App">
-                        <div className="App">
-                            <div className="star-rating">
-                                {[...Array(MAX_STARS)].map((_, index) => (
-                                    <span
-                                        key={index}
-                                        className={`star ${index + 1 <= rating ? 'filled' : ''} ${index + 0.5 === rating ? 'half-filled' : ''}`}
-                                        onClick={() => handleStarClick(index, false)}
-                                        onMouseEnter={() => handleStarClick(index, false)}
-                                        onMouseLeave={() => handleStarClick(Math.floor(rating) - 1, false)}
-                                    >
-                                        &#9733;
-                                    </span>
-                                ))}
-                            </div>
-                            <p>Valoración: {rating} de {MAX_STARS}</p>
-                        </div>
-                    </div>
-
+                    <p className="cssFont_4">Mensualidad: Ronda de Q2200 a Q2700 dependiendo la carrera incluyendo laboratorios</p>
                     <div>
-                        <Link to={'/Comentarios'}><button class="btn0"> Comentarios
-                        </button></Link>
-                        &nbsp; &nbsp;<button class="btn0"> Calificar
-                        </button>
-                    </div>
+          {calificando ? ( // Mostrar estrellas solo cuando se está calificando
+          <>
+            <StarRating
+              rating={rating}
+              maxStars={MAX_STARS}
+              readOnly={!calificando}
+              onChangeRating={handleRatingChange}
+            />
+            <p>Valoración: {rating} de {MAX_STARS}</p>
+            <button className="btn0" onClick={handleAddVote}>
+              Enviar Calificación
+            </button>
+            <button className="btn0" onClick={handleCalificarClick}>
+              Cancelar
+            </button>
+          </>
+        ) : (
+          <>
+            <StarRating
+              rating={rating}
+              maxStars={MAX_STARS}
+              readOnly={!calificando}
+              onChangeRating={handleRatingChange}
+            /><p>Valoración: {rating} de {MAX_STARS}</p>
+            <button className="btn0" onClick={handleCalificarClick}>
+              Calificar
+            </button>
+          </>
+        )}
+
+
+        
+            &nbsp;
+            <Link to={`/Comentarios/${universityId}`}> 
+              <button className="btn0">Comentarios</button>
+            </Link>
+
+          </div>
 
                 </div>
             </div>
@@ -263,7 +337,7 @@ export const Rafael = () => {
                 <label for="btn-social" class="fa fa-play"></label>
                 <div class="icon-social">
                     <a href="https://principal.url.edu.gt/" target="_blank" rel="noopener noreferrer">
-                        <img src="https://seeklogo.com/images/U/universidad-rafael-landivar-logo-531484FDAB-seeklogo.com.png" alt="" />
+                        <img src="https://seeklogo.com/images/U/universidad-rafael-landivar-logo-531484FDAB-seeklogo.com.png" alt="" class="social-logo"/>
                     </a>
                     <a href="https://www.facebook.com/url.landivar" target="_blank" rel="noopener noreferrer" class="fa fa-facebook">
                     </a>

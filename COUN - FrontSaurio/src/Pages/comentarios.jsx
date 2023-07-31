@@ -16,7 +16,7 @@ export const Comentarios = () => {
 		'Authorization': localStorage.getItem('token')
 	  };
 
-	const [university, setUniversity] = useState([])
+	const [university, setUniversity] = useState({})
 	const [comments, setComments] = useState([]);
 
 	const [form, setForm] = useState({
@@ -42,9 +42,6 @@ export const Comentarios = () => {
 		}
 	}
 
-	
-
-
 	const getComments = async () => {
         try {
           const { data } = await axios(`http://localhost:3200/comments/get/${id}`, { headers: headers })
@@ -56,25 +53,37 @@ export const Comentarios = () => {
       }
 
 	  const getUniversity = async () => {
-        try {
-          const { data } = await axios(`http://localhost:3200/university/get/${id}`, { headers: headers })
-          setUniversity(data)
-          console.log(data)
-        } catch (err) {
-          console.log(err)
-        }
-      }
+		try {
+		  const { data } = await axios(`http://localhost:3200/university/get/${id}`, { headers: headers });
+		  setUniversity(data.university);
+		  console.log(data);
+		} catch (err) {
+		  console.log(err);
+		}
+	  };
+	  
+	  useEffect(() => {
+		getUniversity();
+	  }, [dataUser]);
+	  
+	  useEffect(() => {
+		console.log(university); // Realizar acciones con university después de que se actualiza
+	  }, [university]);
 
 	  useEffect(() => {
-        getUniversity();
+       
         getComments();
     }, [dataUser])
 
     return (
         <>
         <br /><br />
-        <div className="containerC">
-		<h1>Comentarios sobre {university.length > 0 ? university[0].name : 'Universidad Desconocida'}</h1>
+		{
+			dataUser.role?(<>
+			
+			<div className="containerC">
+
+			<h1 className="mb-4">Comentarios sobre {university && university.name ? university.name.replace(/_/g, ' ') : ''}</h1>
 
             <br /><br />
             <h4>Puedes comentar y ver comentarios de otros usuarios</h4>
@@ -87,15 +96,20 @@ export const Comentarios = () => {
             
             <form action="#">
              <ul>         
-         <div class="comment-container">
-             <textarea class="comment-textarea"  onChange={handleChange} name='comment' id="comment" placeholder="Escribe tu comentario aquí..."></textarea>
-             <button class="btn0" onClick={(e) => {  addComment(e) }}> Comentar</button>
-         </div>
-        
-      </ul>
-    </form>  
+			<div class="comment-container">
+				<textarea class="comment-textarea"  onChange={handleChange} name='comment' id="comment" placeholder="Escribe tu comentario aquí..."></textarea>
+				<button class="btn0" onClick={(e) => {  addComment(e) }}> Comentar</button>
+			</div>
+			
+		</ul>
+		</form>  
   
-</div>
+		</div>
+
+			</>):<><div className="containerC"><h4>Accede a una cuenta para poder comentar</h4></div></>
+		}
+
+        
 
 <br /><br />
 <div class="comments-container">
@@ -106,22 +120,22 @@ export const Comentarios = () => {
 				
 				
 				
-				{
-					Array.isArray(comments) &&
-					comments.map(({ _id, user, date, comment, likesCount }, i) => {
-						return (
-						<Comment
-							key={i}
-							id={_id}
-							user={user?.username}
-							date={date}
-							comment={comment}
-							likesN={likesCount}
-							
-						/>
-						);
-					})
-					}
+		{Array.isArray(comments) && comments.length > 0 ? (
+		comments.map(({ _id, user, date, comment, likesCount }, i) => (
+			<Comment
+			key={i}
+			id={_id}
+			user={user?.username}
+			date={date}
+			comment={comment}
+			likesN={likesCount}
+			universityName={university && university.name ? university.name.replace(/_/g, ' ') : ''}
+			/>
+		))
+		) : (
+		<h3>No hay comentarios</h3>
+		)}
+
 
 
 					
@@ -131,12 +145,7 @@ export const Comentarios = () => {
 		</ul>
 	</div>
 
-{/* <div className="cuadrado">
-    <h3>(nombre de la persona)</h3>
-    <br />
-    <h6>Comentario</h6>
-    <p>Muchas mujeres de pelo rubio</p>
-</div> */}
+
 
         </>
     )

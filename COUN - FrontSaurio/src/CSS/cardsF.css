@@ -83,7 +83,7 @@
   }
 
   .cssFont_3 {
-    font-size: 16px;
+    font-size: 25px;
   }
 
   .star-rating {
@@ -93,6 +93,11 @@
 
 .containerRegresar {
   position: relative;
+}
+
+.cssFont_4{
+  font-size: 22px;
+  font-family:'Times New Roman';
 }
 
 .btnRegresar {

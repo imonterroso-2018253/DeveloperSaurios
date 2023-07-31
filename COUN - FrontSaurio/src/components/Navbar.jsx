@@ -12,7 +12,8 @@ const NavBar = () => {
 
     const logOut = () => {
         localStorage.clear();
-
+        localStorage.clear();
+        window.location.reload();
     };
 
     const getUserLogged = () => {

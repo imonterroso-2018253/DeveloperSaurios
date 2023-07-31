@@ -3,33 +3,92 @@ import { Link } from "react-router-dom"
 import '../../CSS/istmocartas.css'
 import '../../CSS/cardsF.css'
 import '../../CSS/stars.css'
-import { useEffect } from "react"
-import { useState } from "react"
-import { Footer } from '../../components/Footer'
+import { useEffect, useContext } from "react";
+import { useState } from "react";
+import axios from "axios";
+import { useParams } from "react-router-dom";
+import StarRating from "../../components/StarRating";
+import { AuthContext } from "../../index";
 
 export const Occi = () => {
     const MAX_STARS = 10;
-
+    const { name } = useParams();
+    const [university, setUniversity] = useState(null);
+    const [universityId, setUniversityId] = useState(null);
     const [rating, setRating] = useState(0);
-
+    const [calificarInicial, setCalificarInicial] = useState(true);
+    const [calificando, setCalificando] = useState(false);
+    const { dataUser } = useContext(AuthContext);
+  
+    const getUniversity = async () => {
+      try {
+        const { data } = await axios(`http://localhost:3200/university/getByName/${name}`);
+        setUniversity(data);
+        setUniversityId(data.university._id);
+        setRating(data.averageRating);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+  
     function abrirEnNuevaPestana(urls) {
-        urls.forEach((url) => {
-            window.open(url, "_blank");
-        });
+      urls.forEach((url) => {
+        window.open(url, "_blank");
+      });
     }
+  
+    const headers = {
+      'Content-Type': 'application/json',
+      'Authorization': localStorage.getItem('token')
+    };
+  
+    useEffect(() => {
+      getUniversity();
+    }, [name]);
+  
+    const handleCalificarClick = () => {
+      if(calificando == false){
+        setCalificando(true);
+      }else{
+        setCalificando(false);
+      }
+      
+    };
+  
+    const handleRatingChange = (newRating) => {
+      setRating(newRating);
+    };
+  
+    const addVote = async (universityId, userId, rating) => {
+      try {
+        const response = await axios.post("http://localhost:3200/university/vote", {
+          universityId,
+          userId,
+          stars: rating,
+        }, {headers});
+        getUniversity();
+        console.log(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+  
+    const handleAddVote = () => {
+      addVote(universityId, dataUser.sub, rating);
+      setCalificando(false);
+    };
 
     // Llamada a la función con un array de URLs
     const urls = [
-        "https://farusac.edu.gt/",
-        "http://fausac.gt/",
-        "http://economicas.usac.edu.gt/",
-        "https://derecho.cloud/",
-        "https://medicina.usac.edu.gt/",
-        "https://portal.ccqqfar.usac.edu.gt./",
-        "http://humanidades.usac.edu.gt/portal/",
-        "https://portal.ingenieria.usac.edu.gt/",
-        "https://odontologia.usac.edu.gt/",
-        "http://portal.fmvz.usac.edu.gt/"
+        "https://www.udeo.edu.gt/arqui/",
+        "https://www.udeo.edu.gt/pem_admon_edu/",
+        "https://www.udeo.edu.gt/pem_ciencias_edu/",
+        "https://www.udeo.edu.gt/electronica/",
+        "https://www.udeo.edu.gt/juridicas/",
+        "https://www.udeo.edu.gt/admon/",
+        "https://www.udeo.edu.gt/tecenferemeria/",
+        "https://www.udeo.edu.gt/enfermeria/"
+
     ];
 
     // Función para abrir en nueva pestaña al hacer clic en un botón
@@ -44,7 +103,7 @@ export const Occi = () => {
     return (
         <>
             <div className="containerRegresar">
-                <Link to="/Universidades"><button className="btnRegresar">Regresar</button></Link>
+                <Link to="/Universidades"><button className="btnRegresar"><i class="fa-solid fa-arrow-left"></i></button></Link>
             </div>
 
             <div className="UsacContainer fade-in-animation">
@@ -54,31 +113,46 @@ export const Occi = () => {
                 <div className="TitulosUSAC">
                     <h1 class="cssFont_2" >UNIVERSIDAD OCCIDENTAL DE GUATEMALA</h1>
                     <p className="cssFont_3" >Promoviendo la eduación superior autónoma, pública y gratuita</p>
-                    <div className="App">
-                        <div className="App">
-                            <div className="star-rating">
-                                {[...Array(MAX_STARS)].map((_, index) => (
-                                    <span
-                                        key={index}
-                                        className={`star ${index + 1 <= rating ? 'filled' : ''} ${index + 0.5 === rating ? 'half-filled' : ''}`}
-                                        onClick={() => handleStarClick(index, false)}
-                                        onMouseEnter={() => handleStarClick(index, false)}
-                                        onMouseLeave={() => handleStarClick(Math.floor(rating) - 1, false)}
-                                    >
-                                        &#9733;
-                                    </span>
-                                ))}
-                            </div>
-                            <p>Valoración: {rating} de {MAX_STARS}</p>
-                        </div>
-                    </div>
-
+                    <p className="cssFont_4">Mensualidad: Ronda de Q700 a Q1300 dependiendo la carrera</p>
                     <div>
-                        <Link to={'/Comentarios'}><button class="btn0"> Comentarios
-                        </button></Link>
-                        &nbsp; &nbsp;<button class="btn0"> Calificar
-                        </button>
-                    </div>
+          {calificando ? ( // Mostrar estrellas solo cuando se está calificando
+          <>
+            <StarRating
+              rating={rating}
+              maxStars={MAX_STARS}
+              readOnly={!calificando}
+              onChangeRating={handleRatingChange}
+            />
+            <p>Valoración: {rating} de {MAX_STARS}</p>
+            <button className="btn0" onClick={handleAddVote}>
+              Enviar Calificación
+            </button>
+            <button className="btn0" onClick={handleCalificarClick}>
+              Cancelar
+            </button>
+          </>
+        ) : (
+          <>
+            <StarRating
+              rating={rating}
+              maxStars={MAX_STARS}
+              readOnly={!calificando}
+              onChangeRating={handleRatingChange}
+            /><p>Valoración: {rating} de {MAX_STARS}</p>
+            <button className="btn0" onClick={handleCalificarClick}>
+              Calificar
+            </button>
+          </>
+        )}
+
+
+        
+            &nbsp;
+            <Link to={`/Comentarios/${universityId}`}> 
+              <button className="btn0">Comentarios</button>
+            </Link>
+
+          </div>
 
                 </div>
             </div>
@@ -188,7 +262,7 @@ export const Occi = () => {
                             <p class="containerParr">Esta es una carrera de mucha transcendencia. La abogacía es una profesión que debe mantenerse al día de los diversos cambios legislativos que afectan a sus áreas de trabajo para desempeñar su labor con diligencia y efectividad.</p>
                         </div>
                         <div class="btn-container">
-                            <button onClick={() => handleClick(urls[4])} class="btn draw-border">Información</button>
+                            <button onClick={() => handleClick(urls[5])} class="btn draw-border">Información</button>
                         </div>
                     </div>
                 </div>
@@ -207,7 +281,7 @@ export const Occi = () => {
                             <p class="containerParr">Los aspirantes a esta carrera, se caracterizan por ser personas respetuosas, comunicativas, empáticas y con un gran sentido humano, capaces de sobrellevar situaciones estresantes por el bien del prójimo.</p>
                         </div>
                         <div class="btn-container">
-                            <button onClick={() => handleClick(urls[3])} class="btn draw-border">Información</button>
+                            <button onClick={() => handleClick(urls[6])} class="btn draw-border">Información</button>
                         </div>
                     </div>
                 </div>
@@ -216,14 +290,14 @@ export const Occi = () => {
                     <img src="https://losabogadosenguatemala.com/wp-content/uploads/2022/01/LOGO-UNIVERSIDAD-DE-OCCIDENTE-2022.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">ODONTOLOGÍA</p>
+                        <p class="containerTitle">Licenciatura de la Salud</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
                             <p class="containerParr">El modelo educativo de la facultad de Odontología se entremezcla en un modelo tradicional de enseñanza y uno creciente por competencias. En este último se busca que la enseñanza se centralice en el estudiante, pretendiendo como fin último un aprendizaje significativo, mediante la individualización y la estimulación de la creatividad en la construcción de su propio conocimiento.</p>
                         </div>
                         <div class="btn-container">
-                            <button onClick={() => handleClick(urls[4])} class="btn draw-border">Información</button>
+                            <button onClick={() => handleClick(urls[7])} class="btn draw-border">Información</button>
                         </div>
                     </div>
                 </div>
@@ -237,10 +311,10 @@ export const Occi = () => {
                 <input type="checkbox" id="btn-social" />
                 <label for="btn-social" class="fa fa-play"></label>
                 <div class="icon-social">
-                    <a href="https://www.usac.edu.gt/index.php" target="_blank" rel="noopener noreferrer">
-                        <img src="https://www.usac.edu.gt/img/logo_usac2018.svg" alt="" />
+                    <a href="https://www.udeo.edu.gt/" target="_blank" rel="noopener noreferrer">
+                        <img src="https://losabogadosenguatemala.com/wp-content/uploads/2022/01/LOGO-UNIVERSIDAD-DE-OCCIDENTE-2022.png" height="50 px" width="50px" />
                     </a>
-                    <a href="https://www.facebook.com/UsacOficial" target="_blank" rel="noopener noreferrer" class="fa fa-facebook">
+                    <a href="https://www.facebook.com/UdeOMontesquieu/?locale=es_LA" target="_blank" rel="noopener noreferrer" class="fa fa-facebook">
                     </a>
                 </div>
             </div>

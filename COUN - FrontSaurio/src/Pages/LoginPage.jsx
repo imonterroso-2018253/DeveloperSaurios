@@ -94,12 +94,10 @@ export const LoginPage = () => {
               <i className="fa-solid fa-lock "></i>
             </div>
 
-            <div className='remember-forgot'>
-              <Link to="/forgotPassword">¿Olvidaste tu contraseña?</Link>
+            
+            <div className='input-box1'>
+            <button type='submit' onClick={login} className='btn1'>Iniciar sesión</button>
             </div>
-
-            <button type='submit' onClick={login} className='btn1 btn00'>Iniciar sesión</button>
-
             <div className='register-link'>
               <p>¿Aún no creas tu cuenta? <Link to="/Register">Registrarse</Link></p>
             </div>

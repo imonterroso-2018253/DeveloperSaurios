@@ -17,6 +17,7 @@ import { SanCarlos } from './Pages/Universidades/SanCarlos';
 import { UVG } from './Pages/Universidades/UVG'
 import { Galileo } from './Pages/Universidades/Galileo'
 import { UMG } from './Pages/Universidades/UMG'
+import { Marro } from './Pages/Universidades/Marro'
 import { Vinci } from './Pages/Universidades/Vinci'
 import { Pablo } from './Pages/Universidades/Pablo'
 import { Occi } from './Pages/Universidades/Occi'
@@ -26,6 +27,7 @@ import { Perfil } from './Pages/USER/Perfil'
 import { ForgotPasswordPage } from './components/ForgotPasswordPage'
 import { UpdateUser } from './Pages/UpdateUser';
 import { UpdateProfile } from './Pages/USER/UpdateProfile';
+import { Ranking } from './Pages/Ranking'
 
 export const AuthContext = createContext();
 export const Index = () => {
@@ -101,48 +103,52 @@ export const Index = () => {
           element: <Universidades />
         },
         {
-          path: '/Istmo',
+          path: '/Istmo/:name',
           element: <Istmo />
         },
         {
-          path: '/Rafael',
+          path: '/Rafael/:name',
           element: <Rafael />
         },
         {
-          path: '/Meso',
+          path: '/Meso/:name',
           element: <Meso />
         },
         {
-          path: '/Pana',
+          path: '/Pana/:name',
           element: <Pana />
 
         },
         {
-          path: '/SanCarlos',
+          path: '/SanCarlos/:name',
           element: <SanCarlos />
         },
         {
-          path: '/UVG',
+          path: '/UVG/:name',
           element: <UVG />
         },
         {
-          path: '/Galileo',
+          path: '/Galileo/:name',
           element: <Galileo />
         },
         {
-          path: '/UMG',
+          path: '/UMG/:name',
           element: <UMG />
         },
         {
-          path: '/Vinci',
+          path: '/Marroquin/:name',
+          element: <Marro />
+        },
+        {
+          path: '/Vinci/:name',
           element: <Vinci />
         },
         {
-          path: '/Pablo',
+          path: '/Pablo/:name',
           element: <Pablo />
         },
         {
-          path: '/Occi',
+          path: '/Occi/:name',
           element: <Occi />
         },
         {
@@ -166,6 +172,10 @@ export const Index = () => {
         {
           path: '/Comentarios/:id',
           element: <Comentarios />
+        },
+        {
+          path: 'Ranking',
+          element: <Ranking />
         }
       ]
     }

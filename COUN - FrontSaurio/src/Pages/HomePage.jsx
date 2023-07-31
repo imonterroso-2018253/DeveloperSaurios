@@ -3,18 +3,7 @@ import logo from '../assets/logo.png';
 import '../CSS/HomePage.css';
 
 export const HomePage = () => {
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Aquí puedes agregar la lógica para manejar el envío del formulario
-    // Por ejemplo, puedes obtener los valores del input y el menú desplegable y enviarlos a la página de búsqueda
-    // Puedes usar el método fetch() o axios para realizar la solicitud
-    // Ejemplo:
-    // const searchText = event.target.elements.searchText.value;
-    // const selectedOption = event.target.elements.selectedOption.value;
-    // Realizar la solicitud de búsqueda con los valores obtenidos
-  };
-
+  
   return (
     <>
       <body className="fade-in-animation body5mil">
@@ -41,39 +30,6 @@ export const HomePage = () => {
 
         </div>
 
-        <div className='search-container'>
-          <form className='search-form' onSubmit={handleSubmit}>
-            <input
-              name='searchText'
-              autoComplete='off'
-              placeholder='Busca carreras, maestrías o cursos...'
-              type='text'
-            />
-            <div className='dropdown-container'>
-              <select name='selectedOption' className='dropdown-search'>
-                <option selected disabled>
-                  GRADO ACADÉMICO
-                </option>
-                <option value='27'>Posgrado</option>
-                <option value='13'>Curso libre</option>
-                <option value='9'>Maestría</option>
-                <option value='8'>Licenciatura</option>
-                <option value='6'>Diplomado</option>
-                <option value='4'>Técnico superior</option>
-                <option value='3'>Técnico</option>
-                <option value='2'>Bachillerato</option>
-              </select>
-              <div className='dropdown-content'>
-                {/* Aquí van las opciones del menú desplegable */}
-              </div>
-            </div>
-            <button type='submit'>
-              <span>Encontrar carrera</span>
-              <i className='fa fa-search'></i>
-            </button>
-            <a href='#' className='searchClear fa fa-times-circle hidden'></a>
-          </form>
-        </div>
 
       </body>
     </>

@@ -3,33 +3,86 @@ import { Link } from "react-router-dom"
 import '../../CSS/istmocartas.css'
 import '../../CSS/cardsF.css'
 import '../../CSS/stars.css'
-import { useEffect } from "react"
-import { useState } from "react"
-import { Footer } from '../../components/Footer'
+import { useEffect, useContext } from "react";
+import { useState } from "react";
+import axios from "axios";
+import { useParams } from "react-router-dom";
+import StarRating from "../../components/StarRating";
+import { AuthContext } from "../../index";
 
 export const Meso = () => {
     const MAX_STARS = 10;
+  const { name } = useParams();
+  const [university, setUniversity] = useState(null);
+  const [universityId, setUniversityId] = useState(null);
+  const [rating, setRating] = useState(0);
+  const [calificarInicial, setCalificarInicial] = useState(true);
+  const [calificando, setCalificando] = useState(false);
+  const { dataUser } = useContext(AuthContext);
 
-    const [rating, setRating] = useState(0);
-
-    function abrirEnNuevaPestana(urls) {
-        urls.forEach((url) => {
-            window.open(url, "_blank");
-        });
+  const getUniversity = async () => {
+    try {
+      const { data } = await axios(`http://localhost:3200/university/getByName/${name}`);
+      setUniversity(data);
+      setUniversityId(data.university._id);
+      setRating(data.averageRating);
+    } catch (err) {
+      console.log(err);
     }
+  };
+
+  function abrirEnNuevaPestana(urls) {
+    urls.forEach((url) => {
+      window.open(url, "_blank");
+    });
+  }
+
+  const headers = {
+    'Content-Type': 'application/json',
+    'Authorization': localStorage.getItem('token')
+  };
+
+  useEffect(() => {
+    getUniversity();
+  }, [name]);
+
+  const handleCalificarClick = () => {
+    if(calificando == false){
+      setCalificando(true);
+    }else{
+      setCalificando(false);
+    }
+    
+  };
+
+  const handleRatingChange = (newRating) => {
+    setRating(newRating);
+  };
+
+  const addVote = async (universityId, userId, rating) => {
+    try {
+      const response = await axios.post("http://localhost:3200/university/vote", {
+        universityId,
+        userId,
+        stars: rating,
+      }, {headers});
+      getUniversity();
+      console.log(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const handleAddVote = () => {
+    addVote(universityId, dataUser.sub, rating);
+    setCalificando(false);
+  };
 
     // Llamada a la función con un array de URLs
     const urls = [
-        "https://farusac.edu.gt/",
-        "http://fausac.gt/",
-        "http://economicas.usac.edu.gt/",
-        "https://derecho.cloud/",
-        "https://medicina.usac.edu.gt/",
-        "https://portal.ccqqfar.usac.edu.gt./",
-        "http://humanidades.usac.edu.gt/portal/",
-        "https://portal.ingenieria.usac.edu.gt/",
-        "https://odontologia.usac.edu.gt/",
-        "http://portal.fmvz.usac.edu.gt/"
+        "https://www.umes.edu.gt/facultades/ciencias-de-la-comunicacion-social/",
+        "https://www.umes.edu.gt/facultades/ciencias-juridicas-y-sociales/",
+        "https://www.umes.edu.gt/facultades/ciencias-humanas-y-sociales/"
     ];
 
     // Función para abrir en nueva pestaña al hacer clic en un botón
@@ -44,7 +97,7 @@ export const Meso = () => {
     return (
         <>
             <div className="containerRegresar">
-                <Link to="/Universidades"><button className="btnRegresar">Regresar</button></Link>
+                <Link to="/Universidades"><button className="btnRegresar"><i class="fa-solid fa-arrow-left"></i></button></Link>
             </div>
 
             <div className="UsacContainer fade-in-animation">
@@ -54,31 +107,46 @@ export const Meso = () => {
                 <div className="TitulosUSAC">
                     <h1 class="cssFont_2" >UNIVERSIDAD MESOAMERICANA</h1>
                     <p className="cssFont_3" >Promoviendo la eduación superior autónoma, pública y gratuita</p>
-                    <div className="App">
-                        <div className="App">
-                            <div className="star-rating">
-                                {[...Array(MAX_STARS)].map((_, index) => (
-                                    <span
-                                        key={index}
-                                        className={`star ${index + 1 <= rating ? 'filled' : ''} ${index + 0.5 === rating ? 'half-filled' : ''}`}
-                                        onClick={() => handleStarClick(index, false)}
-                                        onMouseEnter={() => handleStarClick(index, false)}
-                                        onMouseLeave={() => handleStarClick(Math.floor(rating) - 1, false)}
-                                    >
-                                        &#9733;
-                                    </span>
-                                ))}
-                            </div>
-                            <p>Valoración: {rating} de {MAX_STARS}</p>
-                        </div>
-                    </div>
-
+                    <p className="cssFont_4">Mensualidad: Ronda de Q3000 de inicio pero depende la carrera</p>
                     <div>
-                        <Link to={'/Comentarios'}><button class="btn0"> Comentarios
-                        </button></Link>
-                        &nbsp; &nbsp;<button class="btn0"> Calificar
-                        </button>
-                    </div>
+          {calificando ? ( // Mostrar estrellas solo cuando se está calificando
+          <>
+            <StarRating
+              rating={rating}
+              maxStars={MAX_STARS}
+              readOnly={!calificando}
+              onChangeRating={handleRatingChange}
+            />
+            <p>Valoración: {rating} de {MAX_STARS}</p>
+            <button className="btn0" onClick={handleAddVote}>
+              Enviar Calificación
+            </button>
+            <button className="btn0" onClick={handleCalificarClick}>
+              Cancelar
+            </button>
+          </>
+        ) : (
+          <>
+            <StarRating
+              rating={rating}
+              maxStars={MAX_STARS}
+              readOnly={!calificando}
+              onChangeRating={handleRatingChange}
+            /><p>Valoración: {rating} de {MAX_STARS}</p>
+            <button className="btn0" onClick={handleCalificarClick}>
+              Calificar
+            </button>
+          </>
+        )}
+
+
+        
+            &nbsp;
+            <Link to={`/Comentarios/${universityId}`}> 
+              <button className="btn0">Comentarios</button>
+            </Link>
+
+          </div>
 
                 </div>
             </div>
@@ -111,22 +179,6 @@ export const Meso = () => {
                     <img src="https://www.mesoamericana.edu.gt/wp-content/uploads/2012/01/Logo-Meso-Color.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">CIENCIAS DE LA COMUNICACIÓN SOCIAL</p>
-                    </center>
-                    <div class="card_content3mil">
-                        <div class="containerText">
-                            <p class="containerParr">Se ha caracterizado por ser una Unidad Académica que va a la vanguardia educativa en el ámbito de nuestra tricentenaria Universidad de San Carlos de Guatemala.</p>
-                        </div>
-                        <div class="btn-container">
-                            <button onClick={() => handleClick(urls[1])} class="btn draw-border">Información</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="Facultades">
-                    <img src="https://www.mesoamericana.edu.gt/wp-content/uploads/2012/01/Logo-Meso-Color.png" alt="Person" class="FacultadIMG" />
-                    <br />
-                    <center>
                         <p class="containerTitle">FACULTAD DE CIENCIAS JURÍDICAS Y SOCIALES</p>
                     </center>
                     <div class="card_content3mil">
@@ -134,7 +186,7 @@ export const Meso = () => {
                             <p class="containerParr">Prepara profesionales con alto nivel académico, formación integral, científica, técnica y social humanística, en las áreas de conocimiento de: Economía, Contaduría Pública y Auditoría, Administración de Empresas.</p>
                         </div>
                         <div class="btn-container">
-                            <button onClick={() => handleClick(urls[2])} class="btn draw-border">Información</button>
+                            <button onClick={() => handleClick(urls[1])} class="btn draw-border">Información</button>
                         </div>
                     </div>
                 </div>
@@ -149,30 +201,14 @@ export const Meso = () => {
                     <img src="https://www.mesoamericana.edu.gt/wp-content/uploads/2012/01/Logo-Meso-Color.png" alt="Person" class="FacultadIMG" />
                     <br />
                     <center>
-                        <p class="containerTitle">CIENCIAS ECONÓMICAS</p>
+                        <p class="containerTitle">FACULTAD DE CIENCIAS HUMANAS Y SOCIALES</p>
                     </center>
                     <div class="card_content3mil">
                         <div class="containerText">
-                            <p class="containerParr">Ofrece programas de estudio en el campo del derecho, como la Licenciatura en Ciencias Jurídicas y Sociales, Abogado y Notario. También realiza actividades de investigación, extensión y servicio social.</p>
+                            <p class="containerParr">Es una unidad académica que busca contribuir a la educación integral de los estudiantes en las áreas afines a las humanidades, con el fin de formar ciudadanos capaces de interactuar positivamente con la sociedad bajo principios éticos y democráticos.</p>
                         </div>
                         <div class="btn-container">
-                            <button onClick={() => handleClick(urls[3])} class="btn draw-border">Información</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="Facultades">
-                    <img src="https://www.mesoamericana.edu.gt/wp-content/uploads/2012/01/Logo-Meso-Color.png" alt="Person" class="FacultadIMG" />
-                    <br />
-                    <center>
-                        <p class="containerTitle">INGENIERÍA</p>
-                    </center>
-                    <div class="card_content3mil">
-                        <div class="containerText">
-                            <p class="containerParr">Fue fundada en 1681 y es el centro de enseñanza superior de Medicina más grande e importante de Guatemala.</p>
-                        </div>
-                        <div class="btn-container">
-                            <button onClick={() => handleClick(urls[4])} class="btn draw-border">Información</button>
+                            <button onClick={() => handleClick(urls[2])} class="btn draw-border">Información</button>
                         </div>
                     </div>
                 </div>
@@ -185,10 +221,10 @@ export const Meso = () => {
                 <input type="checkbox" id="btn-social" />
                 <label for="btn-social" class="fa fa-play"></label>
                 <div class="icon-social">
-                    <a href="https://www.usac.edu.gt/index.php" target="_blank" rel="noopener noreferrer">
-                        <img src="https://www.usac.edu.gt/img/logo_usac2018.svg" alt="" />
+                    <a href="https://www.umes.edu.gt/" target="_blank" rel="noopener noreferrer">
+                        <img src="https://www.mesoamericana.edu.gt/wp-content/uploads/2012/01/Logo-Meso-Color.png" height="50px" width="50px" />
                     </a>
-                    <a href="https://www.facebook.com/UsacOficial" target="_blank" rel="noopener noreferrer" class="fa fa-facebook">
+                    <a href="https://www.facebook.com/mesoamericana/?locale=es_LA" target="_blank" rel="noopener noreferrer" class="fa fa-facebook">
                     </a>
                 </div>
             </div>

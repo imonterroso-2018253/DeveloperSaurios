@@ -14,7 +14,7 @@ api.put('/update/:id', ensureAuth, commentController.updateComment);
 api.put('/addLike/:id/:user',  likeController.updateComment)
 
 // Ruta para obtener todos los comentarios
-api.get('/get/:id', ensureAuth, commentController.getComments);
+api.get('/get/:id', commentController.getComments);
 api.get('/getLikes/:id', likeController.getLikesByComment)
 
 // Ruta para eliminar un comentario

@@ -42,8 +42,12 @@
     color: #fff;
     font-size: 30px;
     line-height: 1;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
-}
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8), 8px 8px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  
+  
+  
 
 .cards-container {
     padding: 5vw;
@@ -185,6 +189,8 @@
 /*-------------------------------- */
 
 .card3 {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://www.cig.org.gt/assets/img/icons/logo%20Universidad%20Galileo.jpg)  center center no-repeat ;
     background: url(https://www.cig.org.gt/assets/img/icons/logo%20Universidad%20Galileo.jpg) center center no-repeat;
     background-size: 300px;
     background-color: white;

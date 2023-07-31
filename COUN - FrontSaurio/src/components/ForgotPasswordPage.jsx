@@ -8,6 +8,13 @@ export const ForgotPasswordPage = () => {
         setEmail(e.target.value);
     };
 
+    const { dataUser } = useContext(AuthContext);
+    
+    const headers = {
+        'Content-Type': 'application/json',
+        'Authorization': localStorage.getItem('token')
+      }
+
     const handleResetPassword = async (e) => {
         e.preventDefault();
         try {
