@@ -14,7 +14,7 @@ exports.defaultUniversityItsmo = async () => {
         let existUniversity = await University.findOne({ name: 'Universidad_del_Itsmo' });
         if (existUniversity) return console.log('Default university already created');
 
-        let faculty = await Faculty.find({ name: { $in: ['Facultad de Arquitectura', 'Facultad de Artes y Diseño'] } });
+        let faculty = await Faculty.find({ name: { $in: [ 'Facultad de Artes y Diseño'] } });
         if (faculty.length !== 1) {
             return console.log('Faculties not found');
         }
