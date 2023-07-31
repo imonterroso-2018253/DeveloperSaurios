@@ -46,7 +46,7 @@ export const RegisterPage = () => {
   // Función para registrar un nuevo usuario
   const register = async (e) => {
     try {
-      const { data } = await axios.post(`http://localhost:3200/user/register`, form, { headers: headers });
+      const { data } = await axios.post(`https://coun-back-saurio.vercel.app/user/register`, form, { headers: headers });
   
       // Mostrar alerta de éxito utilizando sweetalert2 después del registro exitoso
       Swal.fire({

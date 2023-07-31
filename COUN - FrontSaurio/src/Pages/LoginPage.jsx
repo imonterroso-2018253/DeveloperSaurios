@@ -39,7 +39,7 @@ export const LoginPage = () => {
       e.preventDefault(); // Evitar envío del formulario y recarga de página
   
       // Realizar la petición al backend para iniciar sesión
-      const { data } = await axios.post('http://localhost:3200/user/login', credentials);
+      const { data } = await axios.post('https://coun-back-saurio.vercel.app/user/login', credentials);
   
       // Si el inicio de sesión es exitoso, actualizar el estado global y redirigir a la página principal
       if (data.token) {

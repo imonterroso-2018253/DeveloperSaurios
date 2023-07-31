@@ -19,7 +19,7 @@ export const Ranking = () => {
 
   const getUniversity = async () => {
     try {
-      const { data } = await axios(`http://localhost:3200/university/get`, { headers: headers });
+      const { data } = await axios(`https://coun-back-saurio.vercel.app/university/get`, { headers: headers });
       await setUniversities(data);
       console.log(data)
       

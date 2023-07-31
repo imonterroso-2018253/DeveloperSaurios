@@ -17,7 +17,7 @@ export const Table = () => {
 
   const getUsers = async () => {
     try {
-      const { data } = await axios(`http://localhost:3200/user/getUser`, { headers: headers })
+      const { data } = await axios(`https://coun-back-saurio.vercel.app/user/getUser`, { headers: headers })
       setUsers(data.users)
     } catch (err) {
       console.log(err)
@@ -28,7 +28,7 @@ export const Table = () => {
     try {
       let confirmDelete = confirm('Are you sure to delete this user?')
       if (confirmDelete) {
-        const { data } = await axios.delete(`http://localhost:3200/user/delete/${id}`, { headers: headers })
+        const { data } = await axios.delete(`https://coun-back-saurio.vercel.app/user/delete/${id}`, { headers: headers })
         console.log(data)
         alert(`${data.message}`)
         getUsers();

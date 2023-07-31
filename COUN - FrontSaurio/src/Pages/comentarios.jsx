@@ -35,7 +35,7 @@ export const Comentarios = () => {
 
 	const addComment = async(e) =>{
 		try {
-			const { data } = await axios.post(`http://localhost:3200/comments/save`, form, { headers: headers });
+			const { data } = await axios.post(`https://coun-back-saurio.vercel.app/comments/save`, form, { headers: headers });
 			console.log(form)
 		} catch (err) {
 			console.log(err)
@@ -44,7 +44,7 @@ export const Comentarios = () => {
 
 	const getComments = async () => {
         try {
-          const { data } = await axios(`http://localhost:3200/comments/get/${id}`, { headers: headers })
+          const { data } = await axios(`https://coun-back-saurio.vercel.app/comments/get/${id}`, { headers: headers })
           setComments(data)
           
         } catch (err) {
@@ -54,7 +54,7 @@ export const Comentarios = () => {
 
 	  const getUniversity = async () => {
 		try {
-		  const { data } = await axios(`http://localhost:3200/university/get/${id}`, { headers: headers });
+		  const { data } = await axios(`https://coun-back-saurio.vercel.app/university/get/${id}`, { headers: headers });
 		  setUniversity(data.university);
 		  console.log(data);
 		} catch (err) {

@@ -19,7 +19,7 @@ export const UpdateUser = () => {
 
   const getUser = async () => {
     try {
-      const { data } = await axios(`http://localhost:3200/user/get/${id}`, { headers: headers })
+      const { data } = await axios(`https://coun-back-saurio.vercel.app/user/get/${id}`, { headers: headers })
       setUser(data.user)
     } catch (err) {
       console.error(err)
@@ -35,7 +35,7 @@ export const UpdateUser = () => {
         role: document.getElementById('role').value,
       }
 
-      const { data } = await axios.put(`http://localhost:3200/user/update/${id}`, updatedUser, { headers: headers })
+      const { data } = await axios.put(`https://coun-back-saurio.vercel.app/user/update/${id}`, updatedUser, { headers: headers })
       alert(`${data.message}`)
 
     } catch (err) {

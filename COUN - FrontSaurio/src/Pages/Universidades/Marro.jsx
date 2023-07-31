@@ -22,7 +22,7 @@ export const Marro = () => {
 
   const getUniversity = async () => {
     try {
-      const { data } = await axios(`http://localhost:3200/university/getByName/${name}`);
+      const { data } = await axios(`https://coun-back-saurio.vercel.app/university/getByName/${name}`);
       setUniversity(data);
       setUniversityId(data.university._id);
       setRating(data.averageRating);
@@ -61,7 +61,7 @@ export const Marro = () => {
 
   const addVote = async (universityId, userId, rating) => {
     try {
-      const response = await axios.post("http://localhost:3200/university/vote", {
+      const response = await axios.post("https://coun-back-saurio.vercel.app/university/vote", {
         universityId,
         userId,
         stars: rating,

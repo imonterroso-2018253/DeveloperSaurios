@@ -19,7 +19,7 @@ export const ForgotPasswordPage = () => {
         e.preventDefault();
         try {
             // Enviar solicitud al backend para el proceso de recuperación de contraseña
-            const { data } = await axios.post('http://localhost:3200/forgotPassword/forgot-password', { email });
+            const { data } = await axios.post('https://coun-back-saurio.vercel.app/forgotPassword/forgot-password', { email });
             alert(data.message);
         } catch (err) {
             alert(err.response.data.message);

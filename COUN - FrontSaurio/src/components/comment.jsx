@@ -24,7 +24,7 @@ const Comment = ({id, user, date, comment, likesN }) => {
     
     const getLikes = async () => {
         try {
-            const { data } = await axios(`http://localhost:3200/comments/getLikes/${id}`, { headers: headers });
+            const { data } = await axios(`https://coun-back-saurio.vercel.app/comments/getLikes/${id}`, { headers: headers });
             setLikes(data.likes);
             setHasUserLiked(data.likes.some(like => like.user === dataUser.sub));
         } catch (err) {
@@ -34,7 +34,7 @@ const Comment = ({id, user, date, comment, likesN }) => {
     
     const addLike = async () => {
       try {
-        const { data } = await axios.put(`http://localhost:3200/comments/addLike/${id}/${dataUser.sub}`, { headers: headers });
+        const { data } = await axios.put(`https://coun-back-saurio.vercel.app/comments/addLike/${id}/${dataUser.sub}`, { headers: headers });
         setLikes(data.likes);
         setHasUserLiked(true);
         
@@ -45,7 +45,7 @@ const Comment = ({id, user, date, comment, likesN }) => {
     
     const deleteLike = async () => {
       try {
-        const { data } = await axios.delete(`http://localhost:3200/comments/deleteLike/${id}/${dataUser.sub}`, { headers: headers });
+        const { data } = await axios.delete(`https://coun-back-saurio.vercel.app/comments/deleteLike/${id}/${dataUser.sub}`, { headers: headers });
         setLikes(data.likes);
         setHasUserLiked(false);
       } catch (err) {

@@ -25,7 +25,7 @@ export const UpdateProfile = () => {
 
     const getAccount = async () => {
         try {
-            const { data } = await axios(`http://localhost:3200/user/get/${id}`, {headers})
+            const { data } = await axios(`https://coun-back-saurio.vercel.app/user/get/${id}`, {headers})
             setTbleUserInfo(data.user)
         } catch (e) {
             console.log(e);
@@ -38,7 +38,7 @@ export const UpdateProfile = () => {
                 username: document.getElementById('inputUsername').value,
                 email: document.getElementById('inputEmail').value,
             }
-            const { data } = await axios.put(`http://localhost:3200/user/update/${id}`, updatedAccountUser, {headers: headers})
+            const { data } = await axios.put(`https://coun-back-saurio.vercel.app/user/update/${id}`, updatedAccountUser, {headers: headers})
             Swal.fire({
                 icon: 'success',
                 title: data.message
